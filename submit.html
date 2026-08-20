@@ -181,30 +181,6 @@
     .submit-btn:hover:not(:disabled) { background: #333; }
     .submit-btn:disabled { background: #999; cursor: not-allowed; }
 
-    .resistbot-inline {
-      margin-top: 14px;
-      margin-bottom: 4px;
-    }
-    .resistbot-inline-head {
-      font-size: 11px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-      color: #555;
-    }
-    .resistbot-inline-cmd {
-      font-size: 15px;
-      font-weight: bold;
-      margin-bottom: 6px;
-    }
-    .resistbot-inline-body {
-      font-size: 12px;
-      line-height: 1.5;
-      color: #333;
-    }
-    .resistbot-inline-body a {
-      color: #000;
-    }
     .resistbot-sms-btn {
       display: block;
       background: #000;
@@ -481,12 +457,6 @@ function renderForm(doc) {
           required maxlength="2000">${esc(prevResponse)}</textarea>
       </div>
 
-      <div class="resistbot-inline">
-        <div class="resistbot-inline-head">${t('rb_head')}</div>
-        <div class="resistbot-inline-cmd">${t('rb_cmd')}</div>
-        <div class="resistbot-inline-body">${t('rb_body')}</div>
-      </div>
-
       <div class="row-2">
         <div class="form-group">
           <label class="field-label" for="age_range">${t('age')}</label>
@@ -527,7 +497,7 @@ function renderForm(doc) {
 
       <div class="resistbot-opt">
         <div class="resistbot-opt-row">
-          <input type="checkbox" id="resistbot-opt-in" checked />
+          <input type="checkbox" id="resistbot-opt-in" />
           <label class="resistbot-opt-label" for="resistbot-opt-in">${t('rb_opt_label')}</label>
         </div>
       </div>

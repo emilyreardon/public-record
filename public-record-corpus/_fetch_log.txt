@@ -1,0 +1,183 @@
+=== checking connectivity ===
+loc.gov reachable: HTTP 200
+=== fetching into /Users/emilyreardon/new-public-systems-project/new-public-systems-corpus/core/federalist ===
+Fetching https://guides.loc.gov/federalist-papers/text-1-10 (attempt 1)...
+OK: saved federalist_01-10_raw.html (157867 bytes)
+Fetching https://guides.loc.gov/federalist-papers/text-11-20 (attempt 1)...
+OK: saved federalist_11-20_raw.html (169310 bytes)
+Fetching https://guides.loc.gov/federalist-papers/text-21-30 (attempt 1)...
+OK: saved federalist_21-30_raw.html (165494 bytes)
+Fetching https://guides.loc.gov/federalist-papers/text-31-40 (attempt 1)...
+OK: saved federalist_31-40_raw.html (182060 bytes)
+Fetching https://guides.loc.gov/federalist-papers/text-41-50 (attempt 1)...
+OK: saved federalist_41-50_raw.html (190279 bytes)
+Fetching https://guides.loc.gov/federalist-papers/text-51-60 (attempt 1)...
+OK: saved federalist_51-60_raw.html (159320 bytes)
+Fetching https://guides.loc.gov/federalist-papers/text-61-70 (attempt 1)...
+OK: saved federalist_61-70_raw.html (176282 bytes)
+Fetching https://guides.loc.gov/federalist-papers/text-71-80 (attempt 1)...
+OK: saved federalist_71-80_raw.html (156303 bytes)
+Fetching https://guides.loc.gov/federalist-papers/text-81-85 (attempt 1)...
+OK: saved federalist_81-85_raw.html (143978 bytes)
+=== summary ===
+OK    federalist_01-10_raw.html
+OK    federalist_11-20_raw.html
+OK    federalist_21-30_raw.html
+OK    federalist_31-40_raw.html
+OK    federalist_41-50_raw.html
+OK    federalist_51-60_raw.html
+OK    federalist_61-70_raw.html
+OK    federalist_71-80_raw.html
+OK    federalist_81-85_raw.html
+done
+=== checking connectivity ===
+archives.gov reachable: HTTP 200
+=== fetching core docs into /Users/emilyreardon/new-public-systems-project/new-public-systems-corpus/_raw_core ===
+Fetching https://www.archives.gov/founding-docs/declaration-transcript (attempt 1)...
+OK: saved declaration_raw.html (50136 bytes)
+Fetching https://www.archives.gov/founding-docs/constitution-transcript (attempt 1)...
+OK: saved constitution_raw.html (71802 bytes)
+Fetching https://www.archives.gov/founding-docs/bill-of-rights-transcript (attempt 1)...
+OK: saved amendments_1-10_raw.html (48704 bytes)
+Fetching https://www.archives.gov/founding-docs/amendments-11-27 (attempt 1)...
+OK: saved amendments_11-27_raw.html (59109 bytes)
+=== summary ===
+OK    declaration_raw.html
+OK    constitution_raw.html
+OK    amendments_1-10_raw.html
+OK    amendments_11-27_raw.html
+done
+=== checking connectivity ===
+https://www.nps.gov reachable: HTTP 200
+https://teachingamericanhistory.org reachable: HTTP 200
+https://avalon.law.yale.edu reachable: HTTP 200
+https://www.law.cornell.edu reachable: HTTP 200
+https://www.archives.gov reachable: HTTP 200
+https://www.govinfo.gov reachable: HTTP 200
+=== fetching expansive batch 1 into /Users/emilyreardon/new-public-systems-project/new-public-systems-corpus/_raw_expansive ===
+Fetching https://www.nps.gov/wori/learn/historyculture/declaration-of-sentiments.htm (attempt 1)...
+OK: saved declaration_of_sentiments_raw.html (47381 bytes)
+Fetching https://teachingamericanhistory.org/document/what-to-the-slave-is-the-fourth-of-july-3/ (attempt 1)...
+OK: saved douglass_fourth_of_july_raw.html (306162 bytes)
+Fetching https://teachingamericanhistory.org/document/aint-i-a-woman/ (attempt 1)...
+OK: saved sojourner_truth_raw.html (276935 bytes)
+Fetching https://teachingamericanhistory.org/document/i-will-fight-no-more-forever/ (attempt 1)...
+OK: saved chief_joseph_surrender_raw.html (272694 bytes)
+Fetching https://avalon.law.yale.edu/19th_century/nt001.asp (attempt 1)...
+OK: saved fort_laramie_treaty_1868_raw.html (37341 bytes)
+Fetching https://www.law.cornell.edu/supremecourt/text/60/393 (attempt 1)...
+OK: saved dred_scott_raw.html (755020 bytes)
+Fetching https://www.law.cornell.edu/supremecourt/text/163/537 (attempt 1)...
+OK: saved plessy_v_ferguson_raw.html (92465 bytes)
+Fetching https://www.law.cornell.edu/supremecourt/text/323/214 (attempt 1)...
+OK: saved korematsu_raw.html (109807 bytes)
+Fetching https://www.archives.gov/milestone-documents/executive-order-9066 (attempt 1)...
+OK: saved eo_9066_raw.html (46296 bytes)
+Fetching https://www.archives.gov/milestone-documents/executive-order-8802 (attempt 1)...
+OK: saved eo_8802_raw.html (42564 bytes)
+Fetching PDF https://www.govinfo.gov/content/pkg/STATUTE-7/pdf/STATUTE-7-Pg478.pdf (attempt 1)...
+OK: saved treaty_new_echota_1835_raw.pdf (2273793 bytes)
+=== summary ===
+OK    declaration_of_sentiments_raw.html
+OK    douglass_fourth_of_july_raw.html
+OK    sojourner_truth_raw.html
+OK    chief_joseph_surrender_raw.html
+OK    fort_laramie_treaty_1868_raw.html
+OK    dred_scott_raw.html
+OK    plessy_v_ferguson_raw.html
+OK    korematsu_raw.html
+OK    eo_9066_raw.html
+OK    eo_8802_raw.html
+OK    treaty_new_echota_1835_raw.pdf
+done
+=== fetching civil rights acts into /Users/emilyreardon/new-public-systems-project/new-public-systems-corpus/_raw_expansive ===
+Fetching https://www.archives.gov/milestone-documents/civil-rights-act (attempt 1)...
+OK: saved civil_rights_act_1964_raw.html (141436 bytes)
+Fetching https://www.archives.gov/milestone-documents/voting-rights-act (attempt 1)...
+OK: saved voting_rights_act_1965_raw.html (74242 bytes)
+=== summary ===
+OK    civil_rights_act_1964_raw.html
+OK    voting_rights_act_1965_raw.html
+done
+[2026-08-20 19:19:49] === fetch_ratification_debates.py started ===
+[2026-08-20 19:19:49] URL confidence: CONFIRMED -- https://www.govinfo.gov/content/pkg/GPO-CRECB-1919-pt2-v58/pdf/GPO-CRECB-1919-pt2-v58-6-1.pdf
+[2026-08-20 19:19:49] Fetching (attempt 1): https://www.govinfo.gov/content/pkg/GPO-CRECB-1919-pt2-v58/pdf/GPO-CRECB-1919-pt2-v58-6-1.pdf
+[2026-08-20 19:19:49] ERROR attempt 1: HTTPSConnectionPool(host='www.govinfo.gov', port=443): Max retries exceeded with url: /content/pkg/GPO-CRECB-1919-pt2-v58/pdf/GPO-CRECB-1919-pt2-v58-6-1.pdf (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+[2026-08-20 19:19:54] Fetching (attempt 2): https://www.govinfo.gov/content/pkg/GPO-CRECB-1919-pt2-v58/pdf/GPO-CRECB-1919-pt2-v58-6-1.pdf
+[2026-08-20 19:19:54] ERROR attempt 2: HTTPSConnectionPool(host='www.govinfo.gov', port=443): Max retries exceeded with url: /content/pkg/GPO-CRECB-1919-pt2-v58/pdf/GPO-CRECB-1919-pt2-v58-6-1.pdf (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+[2026-08-20 19:19:59] Fetching (attempt 3): https://www.govinfo.gov/content/pkg/GPO-CRECB-1919-pt2-v58/pdf/GPO-CRECB-1919-pt2-v58-6-1.pdf
+[2026-08-20 19:19:59] ERROR attempt 3: HTTPSConnectionPool(host='www.govinfo.gov', port=443): Max retries exceeded with url: /content/pkg/GPO-CRECB-1919-pt2-v58/pdf/GPO-CRECB-1919-pt2-v58-6-1.pdf (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+[2026-08-20 19:19:59] FAILED: 19th_amendment_senate_debate_1919.md
+[2026-08-20 19:19:59]   Manual fallback: open https://www.govinfo.gov/content/pkg/GPO-CRECB-1919-pt2-v58/pdf/GPO-CRECB-1919-pt2-v58-6-1.pdf in browser, download PDF,
+[2026-08-20 19:19:59]   extract text, and prepend the header block from this script.
+[2026-08-20 19:19:59] URL confidence: ESTIMATED -- https://www.govinfo.gov/content/pkg/GPO-CRECB-1919-pt1-v58/pdf/GPO-CRECB-1919-pt1-v58-1-2.pdf
+[2026-08-20 19:19:59] Fetching (attempt 1): https://www.govinfo.gov/content/pkg/GPO-CRECB-1919-pt1-v58/pdf/GPO-CRECB-1919-pt1-v58-1-2.pdf
+[2026-08-20 19:19:59] ERROR attempt 1: HTTPSConnectionPool(host='www.govinfo.gov', port=443): Max retries exceeded with url: /content/pkg/GPO-CRECB-1919-pt1-v58/pdf/GPO-CRECB-1919-pt1-v58-1-2.pdf (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+[2026-08-20 19:20:04] Fetching (attempt 2): https://www.govinfo.gov/content/pkg/GPO-CRECB-1919-pt1-v58/pdf/GPO-CRECB-1919-pt1-v58-1-2.pdf
+[2026-08-20 19:20:04] ERROR attempt 2: HTTPSConnectionPool(host='www.govinfo.gov', port=443): Max retries exceeded with url: /content/pkg/GPO-CRECB-1919-pt1-v58/pdf/GPO-CRECB-1919-pt1-v58-1-2.pdf (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+[2026-08-20 19:20:09] Fetching (attempt 3): https://www.govinfo.gov/content/pkg/GPO-CRECB-1919-pt1-v58/pdf/GPO-CRECB-1919-pt1-v58-1-2.pdf
+[2026-08-20 19:20:09] ERROR attempt 3: HTTPSConnectionPool(host='www.govinfo.gov', port=443): Max retries exceeded with url: /content/pkg/GPO-CRECB-1919-pt1-v58/pdf/GPO-CRECB-1919-pt1-v58-1-2.pdf (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+[2026-08-20 19:20:09] FAILED: 19th_amendment_house_debate_1919.md
+[2026-08-20 19:20:09]   Manual fallback: open https://www.govinfo.gov/content/pkg/GPO-CRECB-1919-pt1-v58/pdf/GPO-CRECB-1919-pt1-v58-1-2.pdf in browser, download PDF,
+[2026-08-20 19:20:09]   extract text, and prepend the header block from this script.
+[2026-08-20 19:20:09] URL confidence: CONFIRMED -- https://www.govinfo.gov/content/pkg/GPO-CRECB-1962-pt4/pdf/GPO-CRECB-1962-pt4-9-1.pdf
+[2026-08-20 19:20:09] Fetching (attempt 1): https://www.govinfo.gov/content/pkg/GPO-CRECB-1962-pt4/pdf/GPO-CRECB-1962-pt4-9-1.pdf
+[2026-08-20 19:20:09] ERROR attempt 1: HTTPSConnectionPool(host='www.govinfo.gov', port=443): Max retries exceeded with url: /content/pkg/GPO-CRECB-1962-pt4/pdf/GPO-CRECB-1962-pt4-9-1.pdf (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+[2026-08-20 19:20:14] Fetching (attempt 2): https://www.govinfo.gov/content/pkg/GPO-CRECB-1962-pt4/pdf/GPO-CRECB-1962-pt4-9-1.pdf
+[2026-08-20 19:20:14] ERROR attempt 2: HTTPSConnectionPool(host='www.govinfo.gov', port=443): Max retries exceeded with url: /content/pkg/GPO-CRECB-1962-pt4/pdf/GPO-CRECB-1962-pt4-9-1.pdf (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+[2026-08-20 19:20:19] Fetching (attempt 3): https://www.govinfo.gov/content/pkg/GPO-CRECB-1962-pt4/pdf/GPO-CRECB-1962-pt4-9-1.pdf
+[2026-08-20 19:20:19] ERROR attempt 3: HTTPSConnectionPool(host='www.govinfo.gov', port=443): Max retries exceeded with url: /content/pkg/GPO-CRECB-1962-pt4/pdf/GPO-CRECB-1962-pt4-9-1.pdf (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+[2026-08-20 19:20:19] FAILED: 24th_amendment_senate_debate_1962.md
+[2026-08-20 19:20:19]   Manual fallback: open https://www.govinfo.gov/content/pkg/GPO-CRECB-1962-pt4/pdf/GPO-CRECB-1962-pt4-9-1.pdf in browser, download PDF,
+[2026-08-20 19:20:19]   extract text, and prepend the header block from this script.
+[2026-08-20 19:20:19] URL confidence: ESTIMATED -- https://www.govinfo.gov/content/pkg/GPO-CRECB-1962-pt12/pdf/GPO-CRECB-1962-pt12-1-2.pdf
+[2026-08-20 19:20:19] Fetching (attempt 1): https://www.govinfo.gov/content/pkg/GPO-CRECB-1962-pt12/pdf/GPO-CRECB-1962-pt12-1-2.pdf
+[2026-08-20 19:20:19] ERROR attempt 1: HTTPSConnectionPool(host='www.govinfo.gov', port=443): Max retries exceeded with url: /content/pkg/GPO-CRECB-1962-pt12/pdf/GPO-CRECB-1962-pt12-1-2.pdf (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+[2026-08-20 19:20:24] Fetching (attempt 2): https://www.govinfo.gov/content/pkg/GPO-CRECB-1962-pt12/pdf/GPO-CRECB-1962-pt12-1-2.pdf
+[2026-08-20 19:20:24] ERROR attempt 2: HTTPSConnectionPool(host='www.govinfo.gov', port=443): Max retries exceeded with url: /content/pkg/GPO-CRECB-1962-pt12/pdf/GPO-CRECB-1962-pt12-1-2.pdf (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+[2026-08-20 19:20:29] Fetching (attempt 3): https://www.govinfo.gov/content/pkg/GPO-CRECB-1962-pt12/pdf/GPO-CRECB-1962-pt12-1-2.pdf
+[2026-08-20 19:20:29] ERROR attempt 3: HTTPSConnectionPool(host='www.govinfo.gov', port=443): Max retries exceeded with url: /content/pkg/GPO-CRECB-1962-pt12/pdf/GPO-CRECB-1962-pt12-1-2.pdf (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+[2026-08-20 19:20:29] Primary URL failed. Trying alt_url...
+[2026-08-20 19:20:29] Fetching (attempt 1): https://www.govinfo.gov/content/pkg/GPO-CRECB-1962-pt13/pdf/GPO-CRECB-1962-pt13-1-2.pdf
+[2026-08-20 19:20:29] ERROR attempt 1: HTTPSConnectionPool(host='www.govinfo.gov', port=443): Max retries exceeded with url: /content/pkg/GPO-CRECB-1962-pt13/pdf/GPO-CRECB-1962-pt13-1-2.pdf (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+[2026-08-20 19:20:36] === fetch_ratification_debates.py started ===
+[2026-08-20 19:20:36] URL confidence: CONFIRMED -- https://www.govinfo.gov/content/pkg/GPO-CRECB-1919-pt2-v58/pdf/GPO-CRECB-1919-pt2-v58-6-1.pdf
+[2026-08-20 19:20:36] Fetching (attempt 1): https://www.govinfo.gov/content/pkg/GPO-CRECB-1919-pt2-v58/pdf/GPO-CRECB-1919-pt2-v58-6-1.pdf
+[2026-08-20 19:20:36] ERROR attempt 1: HTTPSConnectionPool(host='www.govinfo.gov', port=443): Max retries exceeded with url: /content/pkg/GPO-CRECB-1919-pt2-v58/pdf/GPO-CRECB-1919-pt2-v58-6-1.pdf (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+[2026-08-20 19:20:41] Fetching (attempt 2): https://www.govinfo.gov/content/pkg/GPO-CRECB-1919-pt2-v58/pdf/GPO-CRECB-1919-pt2-v58-6-1.pdf
+[2026-08-20 19:20:41] ERROR attempt 2: HTTPSConnectionPool(host='www.govinfo.gov', port=443): Max retries exceeded with url: /content/pkg/GPO-CRECB-1919-pt2-v58/pdf/GPO-CRECB-1919-pt2-v58-6-1.pdf (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+[2026-08-20 19:20:46] Fetching (attempt 3): https://www.govinfo.gov/content/pkg/GPO-CRECB-1919-pt2-v58/pdf/GPO-CRECB-1919-pt2-v58-6-1.pdf
+[2026-08-20 19:20:46] ERROR attempt 3: HTTPSConnectionPool(host='www.govinfo.gov', port=443): Max retries exceeded with url: /content/pkg/GPO-CRECB-1919-pt2-v58/pdf/GPO-CRECB-1919-pt2-v58-6-1.pdf (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+[2026-08-20 19:20:46] FAILED: 19th_amendment_senate_debate_1919.md
+[2026-08-20 19:20:46]   Manual fallback: open https://www.govinfo.gov/content/pkg/GPO-CRECB-1919-pt2-v58/pdf/GPO-CRECB-1919-pt2-v58-6-1.pdf in browser, download PDF,
+[2026-08-20 19:20:46]   extract text, and prepend the header block from this script.
+[2026-08-20 19:20:46] URL confidence: ESTIMATED -- https://www.govinfo.gov/content/pkg/GPO-CRECB-1919-pt1-v58/pdf/GPO-CRECB-1919-pt1-v58-1-2.pdf
+[2026-08-20 19:20:46] Fetching (attempt 1): https://www.govinfo.gov/content/pkg/GPO-CRECB-1919-pt1-v58/pdf/GPO-CRECB-1919-pt1-v58-1-2.pdf
+[2026-08-20 19:20:46] ERROR attempt 1: HTTPSConnectionPool(host='www.govinfo.gov', port=443): Max retries exceeded with url: /content/pkg/GPO-CRECB-1919-pt1-v58/pdf/GPO-CRECB-1919-pt1-v58-1-2.pdf (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+[2026-08-20 19:20:51] Fetching (attempt 2): https://www.govinfo.gov/content/pkg/GPO-CRECB-1919-pt1-v58/pdf/GPO-CRECB-1919-pt1-v58-1-2.pdf
+[2026-08-20 19:20:51] ERROR attempt 2: HTTPSConnectionPool(host='www.govinfo.gov', port=443): Max retries exceeded with url: /content/pkg/GPO-CRECB-1919-pt1-v58/pdf/GPO-CRECB-1919-pt1-v58-1-2.pdf (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+[2026-08-20 19:20:56] Fetching (attempt 3): https://www.govinfo.gov/content/pkg/GPO-CRECB-1919-pt1-v58/pdf/GPO-CRECB-1919-pt1-v58-1-2.pdf
+[2026-08-20 19:20:56] ERROR attempt 3: HTTPSConnectionPool(host='www.govinfo.gov', port=443): Max retries exceeded with url: /content/pkg/GPO-CRECB-1919-pt1-v58/pdf/GPO-CRECB-1919-pt1-v58-1-2.pdf (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+[2026-08-20 19:20:56] FAILED: 19th_amendment_house_debate_1919.md
+[2026-08-20 19:20:56]   Manual fallback: open https://www.govinfo.gov/content/pkg/GPO-CRECB-1919-pt1-v58/pdf/GPO-CRECB-1919-pt1-v58-1-2.pdf in browser, download PDF,
+[2026-08-20 19:20:56]   extract text, and prepend the header block from this script.
+[2026-08-20 19:20:56] URL confidence: CONFIRMED -- https://www.govinfo.gov/content/pkg/GPO-CRECB-1962-pt4/pdf/GPO-CRECB-1962-pt4-9-1.pdf
+[2026-08-20 19:20:56] Fetching (attempt 1): https://www.govinfo.gov/content/pkg/GPO-CRECB-1962-pt4/pdf/GPO-CRECB-1962-pt4-9-1.pdf
+[2026-08-20 19:20:56] ERROR attempt 1: HTTPSConnectionPool(host='www.govinfo.gov', port=443): Max retries exceeded with url: /content/pkg/GPO-CRECB-1962-pt4/pdf/GPO-CRECB-1962-pt4-9-1.pdf (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+[2026-08-20 19:21:01] Fetching (attempt 2): https://www.govinfo.gov/content/pkg/GPO-CRECB-1962-pt4/pdf/GPO-CRECB-1962-pt4-9-1.pdf
+[2026-08-20 19:21:01] ERROR attempt 2: HTTPSConnectionPool(host='www.govinfo.gov', port=443): Max retries exceeded with url: /content/pkg/GPO-CRECB-1962-pt4/pdf/GPO-CRECB-1962-pt4-9-1.pdf (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+[2026-08-20 19:21:06] Fetching (attempt 3): https://www.govinfo.gov/content/pkg/GPO-CRECB-1962-pt4/pdf/GPO-CRECB-1962-pt4-9-1.pdf
+[2026-08-20 19:21:06] ERROR attempt 3: HTTPSConnectionPool(host='www.govinfo.gov', port=443): Max retries exceeded with url: /content/pkg/GPO-CRECB-1962-pt4/pdf/GPO-CRECB-1962-pt4-9-1.pdf (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+[2026-08-20 19:21:06] FAILED: 24th_amendment_senate_debate_1962.md
+[2026-08-20 19:21:06]   Manual fallback: open https://www.govinfo.gov/content/pkg/GPO-CRECB-1962-pt4/pdf/GPO-CRECB-1962-pt4-9-1.pdf in browser, download PDF,
+[2026-08-20 19:21:06]   extract text, and prepend the header block from this script.
+[2026-08-20 19:21:06] URL confidence: ESTIMATED -- https://www.govinfo.gov/content/pkg/GPO-CRECB-1962-pt12/pdf/GPO-CRECB-1962-pt12-1-2.pdf
+[2026-08-20 19:21:06] Fetching (attempt 1): https://www.govinfo.gov/content/pkg/GPO-CRECB-1962-pt12/pdf/GPO-CRECB-1962-pt12-1-2.pdf
+[2026-08-20 19:21:06] ERROR attempt 1: HTTPSConnectionPool(host='www.govinfo.gov', port=443): Max retries exceeded with url: /content/pkg/GPO-CRECB-1962-pt12/pdf/GPO-CRECB-1962-pt12-1-2.pdf (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+[2026-08-20 19:21:11] Fetching (attempt 2): https://www.govinfo.gov/content/pkg/GPO-CRECB-1962-pt12/pdf/GPO-CRECB-1962-pt12-1-2.pdf
+[2026-08-20 19:21:11] ERROR attempt 2: HTTPSConnectionPool(host='www.govinfo.gov', port=443): Max retries exceeded with url: /content/pkg/GPO-CRECB-1962-pt12/pdf/GPO-CRECB-1962-pt12-1-2.pdf (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+[2026-08-20 19:21:16] Fetching (attempt 3): https://www.govinfo.gov/content/pkg/GPO-CRECB-1962-pt12/pdf/GPO-CRECB-1962-pt12-1-2.pdf
+[2026-08-20 19:21:16] ERROR attempt 3: HTTPSConnectionPool(host='www.govinfo.gov', port=443): Max retries exceeded with url: /content/pkg/GPO-CRECB-1962-pt12/pdf/GPO-CRECB-1962-pt12-1-2.pdf (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+[2026-08-20 19:21:16] Primary URL failed. Trying alt_url...
+[2026-08-20 19:21:16] Fetching (attempt 1): https://www.govinfo.gov/content/pkg/GPO-CRECB-1962-pt13/pdf/GPO-CRECB-1962-pt13-1-2.pdf
+[2026-08-20 19:21:16] ERROR attempt 1: HTTPSConnectionPool(host='www.govinfo.gov', port=443): Max retries exceeded with url: /content/pkg/GPO-CRECB-1962-pt13/pdf/GPO-CRECB-1962-pt13-1-2.pdf (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))

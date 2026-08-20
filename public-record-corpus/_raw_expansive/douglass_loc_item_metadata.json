@@ -1,0 +1,2146 @@
+{
+  "articles_and_essays": [
+    {
+      "score": 5.893575,
+      "title": "\u201cWhat, to the American Slave, Is Your 4th of July?\u201d",
+      "url": "https://blogs.loc.gov/teachers/2021/06/what-to-the-american-slave-is-your-4th-of-july/"
+    },
+    {
+      "score": 5.893575,
+      "title": "Resources for African American History Month: Selected Digital Collections",
+      "url": "https://blogs.loc.gov/teachers/2026/02/resources-for-african-american-history-month-selected-digital-collections/"
+    },
+    {
+      "score": 5.893575,
+      "title": "Update: Frederick Douglass Newspapers: More Issues Online",
+      "url": "https://blogs.loc.gov/headlinesandheroes/2020/03/update-frederick-douglass-newspapers-more-issues-online/"
+    },
+    {
+      "score": 5.893575,
+      "title": "\u201cWhat, to the American Slave, Is Your 4th of July?\u201d",
+      "url": "https://blogs.loc.gov/headlinesandheroes/2020/07/what-to-the-american-slave-is-your-4th-of-july/"
+    }
+  ],
+  "calendar_url": "https://www.loc.gov/item/sn84026366/?st=calendar",
+  "cite_this": {
+    "apa": "(1852, July 9)  <cite>Frederick Douglass' paper</cite>. Retrieved from the Library of Congress, https://www.loc.gov/item/sn84026366/1852-07-09/ed-1/.",
+    "chicago": "<cite>Frederick Douglass' paper</cite>. (Rochester, NY), Jul. 9 1852. https://www.loc.gov/item/sn84026366/1852-07-09/ed-1/.",
+    "mla": "<cite>Frederick Douglass' paper</cite>. (Rochester, NY) 9 Jul. 1852. Retrieved from the Library of Congress, www.loc.gov/item/sn84026366/1852-07-09/ed-1/."
+  },
+  "item": {
+    "_version_": 1749972936406597632,
+    "access_restricted": false,
+    "aka": [
+      "http://www.loc.gov/item/sn84026366/1852-07-09/ed-1/",
+      "http://www.loc.gov/resource/sn84026366/1852-07-09/ed-1/"
+    ],
+    "batch": [
+      "dlc_coneflower_ver01"
+    ],
+    "call_number": [
+      "Newspaper",
+      "AN"
+    ],
+    "campaigns": [],
+    "composite_location": [
+      "0/united states/",
+      "1/united states/new york/",
+      "2/united states/new york/monroe/",
+      "3/united states/new york/monroe/rochester/"
+    ],
+    "contributor_names": [
+      "Library of Congress, Washington, DC"
+    ],
+    "contributors": [
+      {
+        "library of congress, washington, dc": "https://www.loc.gov/search/?fa=contributor:library+of+congress,+washington,+dc&fo=json"
+      }
+    ],
+    "created_published": [
+      "Rochester, N.Y., July 9, 1852"
+    ],
+    "date": "1852-07-09",
+    "date_issued": "1852-07-09",
+    "dates": [
+      {
+        "1852-07-09": "https://www.loc.gov/search/?dates=1852-07-09/1852-07-09&fo=json"
+      }
+    ],
+    "dates_of_publication": "1851-18??",
+    "description": [
+      "Rochester, N.Y."
+    ],
+    "digitized": true,
+    "digitized_label": "Present",
+    "display_offsite": true,
+    "extract_timestamp": "2020-09-19T00:33:33.031Z",
+    "extract_urls": [
+      "file:/service/sgp/sgpbatches/batch_dlc_coneflower_ver01/data/sn84026366/0041755726A/1852070901/1852070901_1.xml#sgpfdaan/dlc"
+    ],
+    "format": [
+      {
+        "newspaper": "https://www.loc.gov/search/?fa=original_format:newspaper&fo=json"
+      }
+    ],
+    "genre": [
+      "African American newspapers--New York (State)",
+      "Newspapers"
+    ],
+    "group": [
+      "sgpfdaan/dlc",
+      "frederick-douglas-newspapers"
+    ],
+    "hassegments": true,
+    "id": "http://www.loc.gov/item/sn84026366/1852-07-09/ed-1/",
+    "iiif_manifest_url": "https://www.loc.gov/item/sn84026366/1852-07-09/ed-1/manifest.json",
+    "image_url": [
+      "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_coneflower_ver01:data:sn84026366:0041755726A:1852070901:0001/full/pct:3.125/0/default.jpg#h=333&w=234",
+      "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_coneflower_ver01:data:sn84026366:0041755726A:1852070901:0001/full/pct:6.25/0/default.jpg#h=666&w=468"
+    ],
+    "index": 1,
+    "item": {
+      "batch": [
+        "dlc_coneflower_ver01"
+      ],
+      "call_number": [
+        "Newspaper",
+        "AN"
+      ],
+      "contributor_names": [
+        "Library of Congress, Washington, DC"
+      ],
+      "contributors": [
+        "Douglass, Frederick, 1818-1895."
+      ],
+      "created_published": [
+        "Rochester, N.Y., July 9, 1852"
+      ],
+      "date": "1851",
+      "date_issued": "1852-07-09",
+      "dates": [
+        "1852-07-09"
+      ],
+      "digitized_label": "Present",
+      "format": [
+        "newspaper"
+      ],
+      "genre": [
+        "African American newspapers--New York (State)",
+        "Newspapers"
+      ],
+      "language": [
+        "eng"
+      ],
+      "library_of_congress_control_number": "sn84026366",
+      "location": [
+        "New York (State)",
+        "Rochester (N.Y.)",
+        "Monroe County (N.Y.)",
+        "New York (State)--Monroe County",
+        "New York (State)--Rochester"
+      ],
+      "medium": "4 pages",
+      "newspaper_title": [
+        "Frederick Douglass' paper."
+      ],
+      "notes": [
+        "Weekly",
+        "Began 1851.",
+        "Also issued on microfilm from the Library of Congress Photoduplication Service.",
+        "Also available in digital format on the Library of Congress website.",
+        "Description based on: Vol. 4, no. 27 (June 26, 1851)."
+      ],
+      "other_formats": [
+        "https://tile.loc.gov/storage-services/service/sgp/sgpbatches/batch_dlc_coneflower_ver01/data/sn84026366/0041755726A/1852070901/1852070901_1.xml",
+        "http://lccn.loc.gov/sn84026366/marcxml"
+      ],
+      "place_of_publication": "Rochester, N.Y.",
+      "raw_lccn": "sn 84026366 ",
+      "reel_numbers": [
+        "0041755726a"
+      ],
+      "source_group": "sgpfdaan/dlc",
+      "subjects": [
+        "African Americans--New York (State)--Newspapers",
+        "Rochester (N.Y.)--Newspapers",
+        "Monroe County (N.Y.)--Newspapers",
+        "African Americans",
+        "New York (State)",
+        "New York (State)--Monroe County",
+        "New York (State)--Rochester",
+        "United States--New York--Monroe--Rochester"
+      ],
+      "title": "Frederick Douglass' paper (Rochester, N.Y.), July 9, 1852"
+    },
+    "language": [
+      "english"
+    ],
+    "languages": [
+      {
+        "english": "https://www.loc.gov/search/?fa=language:english&fo=json"
+      }
+    ],
+    "library_of_congress_control_number": "sn84026366",
+    "location": [
+      "new york",
+      "monroe",
+      "united states",
+      "monroe county",
+      "rochester"
+    ],
+    "location_city": [
+      "rochester"
+    ],
+    "location_country": [
+      "united states"
+    ],
+    "location_county": [
+      "monroe"
+    ],
+    "location_state": [
+      "new york"
+    ],
+    "locations": [
+      {
+        "monroe": "https://www.loc.gov/search/?fa=location:monroe&fo=json"
+      },
+      {
+        "monroe county": "https://www.loc.gov/search/?fa=location:monroe+county&fo=json"
+      },
+      {
+        "new york": "https://www.loc.gov/search/?fa=location:new+york&fo=json"
+      },
+      {
+        "rochester": "https://www.loc.gov/search/?fa=location:rochester&fo=json"
+      },
+      {
+        "united states": "https://www.loc.gov/search/?fa=location:united+states&fo=json"
+      }
+    ],
+    "locations_city": [
+      {
+        "rochester": "https://www.loc.gov/search/?fa=location_city:rochester&fo=json"
+      }
+    ],
+    "locations_country": [
+      {
+        "united states": "https://www.loc.gov/search/?fa=location_country:united+states&fo=json"
+      }
+    ],
+    "locations_county": [
+      {
+        "monroe": "https://www.loc.gov/search/?fa=location_county:monroe&fo=json"
+      }
+    ],
+    "locations_state": [
+      {
+        "new york": "https://www.loc.gov/search/?fa=location_state:new+york&fo=json"
+      }
+    ],
+    "medium": "4 pages",
+    "method": "mets_filesec",
+    "mime_type": [
+      "image/jp2",
+      "application/pdf",
+      "text/xml",
+      "image/jpeg"
+    ],
+    "newspaper_title": [
+      "Frederick Douglass' paper."
+    ],
+    "notes": [
+      "Weekly",
+      "Began 1851.",
+      "Also issued on microfilm from the Library of Congress Photoduplication Service.",
+      "Also available in digital format on the Library of Congress website.",
+      "Description based on: Vol. 4, no. 27 (June 26, 1851)."
+    ],
+    "number": [
+      "sn84026366",
+      "1",
+      "0041755726a"
+    ],
+    "number_edition": [
+      "1"
+    ],
+    "number_lccn": [
+      "sn84026366"
+    ],
+    "number_reel": [
+      "0041755726a"
+    ],
+    "numeric_shelf_id": 185207091,
+    "online_format": [
+      "image",
+      "pdf",
+      "online text"
+    ],
+    "original_format": [
+      "newspaper"
+    ],
+    "other_formats": [
+      {
+        "label": "MODSXML Record",
+        "link": "//tile.loc.gov/storage-services/service/sgp/sgpbatches/batch_dlc_coneflower_ver01/data/sn84026366/0041755726A/1852070901/1852070901_1.xml"
+      },
+      {
+        "label": "MARCXML Record",
+        "link": "//lccn.loc.gov/sn84026366/marcxml"
+      }
+    ],
+    "partof": [
+      {
+        "count": 231,
+        "title": "frederick douglass' paper (rochester, n.y.) 1851-18??",
+        "url": "https://www.loc.gov/search/?fa=partof:frederick+douglass%27+paper+%28rochester,+n.y.%29+1851-18%3F%3F&fo=json"
+      },
+      {
+        "count": 587,
+        "title": "frederick douglass newspapers, 1847-1874",
+        "url": "https://www.loc.gov/collections/frederick-douglass-newspapers/?fo=json"
+      },
+      {
+        "count": 3205248,
+        "title": "chronicling america",
+        "url": "https://www.loc.gov/collections/chronicling-america/?fo=json"
+      },
+      {
+        "count": 3226482,
+        "title": "serial and government publications division",
+        "url": "https://www.loc.gov/search/?fa=partof:serial+and+government+publications+division&fo=json"
+      }
+    ],
+    "partof_collection": [
+      "frederick douglass newspapers, 1847-1874",
+      "chronicling america"
+    ],
+    "partof_division": [
+      "serial and government publications division"
+    ],
+    "partof_title": [
+      "frederick douglass' paper (rochester, n.y.) 1851-18??"
+    ],
+    "place_of_publication": "Rochester, N.Y.",
+    "publication_frequency": [
+      "weekly"
+    ],
+    "raw_lccn": "sn 84026366 ",
+    "reel_numbers": [
+      "0041755726a"
+    ],
+    "resources": [
+      {
+        "files": 4,
+        "image": "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_coneflower_ver01:data:sn84026366:0041755726A:1852070901:0001/full/pct:3.125/0/default.jpg",
+        "url": "https://www.loc.gov/resource/sn84026366/1852-07-09/ed-1/",
+        "word_coordinates": "https://tile.loc.gov/text-services/word-coordinates-service"
+      }
+    ],
+    "rights": [
+      "<p>The contents of the Frederick Douglass Newspapers collection are in the public domain and are free to use and reuse.</p>\n<p>Credit Line: Library of Congress, Serial and Government Publications Division.</p>\n<p>More about <a href=\"/legal/\">Copyright and other Restrictions</a>.</p>\n<p>For guidance about compiling full citations consult <a href=\"https://www.loc.gov/teachers/usingprimarysources/citing.html\">Citing Primary Sources</a>.</p>"
+    ],
+    "score": 14.332207,
+    "shard": "07",
+    "shelf_id": "sn84026366, 1852-07-09, Edition 1",
+    "site": [
+      "chroniclingamerica"
+    ],
+    "source_group": "sgpfdaan/dlc",
+    "subject": [
+      "new york",
+      "african americans",
+      "rochester (n.y.)",
+      "monroe",
+      "newspapers",
+      "monroe county (n.y.)",
+      "new york (state)",
+      "united states",
+      "monroe county",
+      "african american",
+      "rochester"
+    ],
+    "subject_ethnicity": [
+      "african american"
+    ],
+    "subject_headings": [
+      "African Americans--New York (State)--Newspapers",
+      "Rochester (N.Y.)--Newspapers",
+      "Monroe County (N.Y.)--Newspapers",
+      "African Americans",
+      "New York (State)",
+      "New York (State)--Monroe County",
+      "New York (State)--Rochester",
+      "United States--New York--Monroe--Rochester"
+    ],
+    "subjects": [
+      {
+        "african american": "https://www.loc.gov/search/?fa=subject:african+american&fo=json"
+      },
+      {
+        "african americans": "https://www.loc.gov/search/?fa=subject:african+americans&fo=json"
+      },
+      {
+        "monroe": "https://www.loc.gov/search/?fa=subject:monroe&fo=json"
+      },
+      {
+        "monroe county": "https://www.loc.gov/search/?fa=subject:monroe+county&fo=json"
+      },
+      {
+        "monroe county (n.y.)": "https://www.loc.gov/search/?fa=subject:monroe+county+%28n.y.%29&fo=json"
+      },
+      {
+        "new york": "https://www.loc.gov/search/?fa=subject:new+york&fo=json"
+      },
+      {
+        "new york (state)": "https://www.loc.gov/search/?fa=subject:new+york+%28state%29&fo=json"
+      },
+      {
+        "newspapers": "https://www.loc.gov/search/?fa=subject:newspapers&fo=json"
+      },
+      {
+        "rochester": "https://www.loc.gov/search/?fa=subject:rochester&fo=json"
+      },
+      {
+        "rochester (n.y.)": "https://www.loc.gov/search/?fa=subject:rochester+%28n.y.%29&fo=json"
+      },
+      {
+        "united states": "https://www.loc.gov/search/?fa=subject:united+states&fo=json"
+      }
+    ],
+    "subjects_ethnicity": [
+      {
+        "african american": "https://www.loc.gov/search/?fa=subject_ethnicity:african+american&fo=json"
+      }
+    ],
+    "timestamp": "2022-11-20T00:30:31.796Z",
+    "title": "Frederick Douglass' paper (Rochester, N.Y.), July 9, 1852",
+    "type": [
+      "issue"
+    ],
+    "url": "https://www.loc.gov/item/sn84026366/1852-07-09/ed-1/"
+  },
+  "locations": null,
+  "method": "mets_filesec",
+  "more_like_this": [
+    {
+      "access_restricted": false,
+      "aka": [
+        "http://www.loc.gov/item/sn84026366/",
+        "http://lccn.loc.gov/sn84026366",
+        "https://search.catalog.loc.gov/instances/c9fbe63b-6723-5457-9f6a-ed92bcedbe90"
+      ],
+      "batch": [
+        "dlc_aster_ver01"
+      ],
+      "campaigns": [],
+      "contributor": [
+        "douglass, frederick"
+      ],
+      "date": "1851",
+      "description": [
+        "Weekly Began 1851. Also issued on microfilm from the Library of Congress Photoduplication Service. Also available in digital format on the Library of Congress website. Description based on: Vol. 4, no. 27 (June 26, 1851)."
+      ],
+      "digitized": true,
+      "extract_timestamp": "2026-06-05T18:24:58.817Z",
+      "group": [
+        "newspaper-titles",
+        "catalog-split-04",
+        "catalog",
+        "ndnp/newspapers",
+        "main-catalog-split-04",
+        "united-states-newspaper-directory"
+      ],
+      "hassegments": false,
+      "id": "http://www.loc.gov/item/sn84026366/",
+      "image_url": [],
+      "index": 1,
+      "language": [
+        "english"
+      ],
+      "latlong": [
+        43.155708,
+        -77.612547
+      ],
+      "location": [
+        "new york",
+        "monroe",
+        "united states",
+        "monroe county",
+        "rochester"
+      ],
+      "location_str": "",
+      "lonlat": [
+        -77.612547,
+        43.155708
+      ],
+      "number": [
+        "sn86053092",
+        "johns hopkins univ",
+        "kansas state hist soc, newsp proj",
+        "http://www.loc.gov/item/sn84026366/1851-06-26/ed-1/",
+        "rochester pub libr",
+        "frostburg state univ",
+        "microfilm service copy",
+        "duke univ libr",
+        "http://www.loc.gov/item/sn84026366/1860-06-08/ed-1/",
+        "original",
+        "wells col, louis jefferson long libr",
+        "morehead state univ",
+        "10426474",
+        "american antiquarian soc, newsp proj",
+        "library of congress",
+        "univ of arkansas, fayetteville",
+        "sn84026365",
+        "herkimer cnty hist soc",
+        "indiana state libr",
+        "yale univ libr",
+        "univ of texas at austin",
+        "saint john fisher col",
+        "univ of chicago",
+        "arkansas hist comn",
+        "state univ of new york, binghamton libr",
+        "new york pub libr res libr",
+        "oswego cnty hist soc",
+        "2026-07-29t10:52:24.100000",
+        "syracuse univ",
+        "new york hist soc, newsp proj",
+        "library of virginia, the",
+        "univ of pittsburgh",
+        "boston pub libr",
+        "univ of rochester",
+        "microfilm master",
+        "univ of georgia",
+        "2026-04-13t21:30:13",
+        "online resource",
+        "hamilton col libr",
+        "lincoln univ, langston hughes mem libr",
+        "morgan state univ",
+        "wisconsin hist soc, newsp proj",
+        "2020-01-17t11:01:27",
+        "sn87070160",
+        "sn84026366",
+        "new york state - ho5",
+        "unspecified",
+        "230",
+        "new york state - sr3",
+        "center for research libraries",
+        "univ of kentucky libr"
+      ],
+      "original_format": [
+        "newspaper"
+      ],
+      "partof": [
+        "frederick douglass' paper (rochester, n.y.) 1851-18??",
+        "serial and government publications division",
+        "directory of u.s. newspapers in american libraries",
+        "chronicling america",
+        "frederick douglass newspapers, 1847-1874",
+        "catalog"
+      ],
+      "publication_frequency": [
+        "weekly"
+      ],
+      "score": 94.70737,
+      "shelf_id": "Newspaper AN",
+      "site": [
+        "chroniclingamerica",
+        "catalog",
+        "usnd"
+      ],
+      "subject": [
+        "new york",
+        "african american newspapers",
+        "african americans",
+        "rochester (n.y.)",
+        "monroe",
+        "newspapers",
+        "monroe county (n.y.)",
+        "new york (state)",
+        "united states",
+        "monroe county",
+        "african american",
+        "rochester"
+      ],
+      "timestamp": "2026-08-19T08:06:59.388Z",
+      "title": "Frederick Douglass' paper.",
+      "type": [
+        "title"
+      ],
+      "url": "https://www.loc.gov/item/sn84026366/"
+    },
+    {
+      "access_restricted": false,
+      "aka": [
+        "http://www.loc.gov/item/sn84026365/",
+        "http://lccn.loc.gov/sn84026365",
+        "https://search.catalog.loc.gov/instances/b0abf2c8-c87a-58cf-9e4c-cd9cccb1540c"
+      ],
+      "batch": [
+        "dlc_aster_ver01"
+      ],
+      "campaigns": [],
+      "contributor": [
+        "delany, martin robison",
+        "dick, john",
+        "douglass, frederick",
+        "nell, william c. (william cooper)",
+        "clough, william b."
+      ],
+      "date": "1847",
+      "description": [
+        "Weekly Vol. 1, no. 1 (Dec. 3, 1847)- Ceased Apr. 1851? Editor: Frederick Douglass. Vol. 1, no. 2 issued Jan. 7, 1848. Also issued on microfilm from the Library of Congress Photoduplication Service. Also available in digital format on the Library of Congress website. Latest issue consulted: Vol. 4, no. 17 (Apr. 17, 1851). Frederick Douglass' paper (DLC)sn 84026366 (OCoLC)10426474"
+      ],
+      "digitized": true,
+      "extract_timestamp": "2026-06-05T18:24:58.817Z",
+      "group": [
+        "newspaper-titles",
+        "catalog-split-03",
+        "catalog",
+        "ndnp/newspapers",
+        "main-catalog-split-03",
+        "united-states-newspaper-directory"
+      ],
+      "hassegments": false,
+      "id": "http://www.loc.gov/item/sn84026365/",
+      "image_url": [],
+      "index": 2,
+      "language": [
+        "english"
+      ],
+      "latlong": [
+        43.155708,
+        -77.612547
+      ],
+      "location": [
+        "new york",
+        "monroe",
+        "united states",
+        "monroe county",
+        "rochester"
+      ],
+      "location_str": "",
+      "lonlat": [
+        -77.612547,
+        43.155708
+      ],
+      "number": [
+        "sn86053092",
+        "kansas state hist soc, newsp proj",
+        "suny at albany",
+        "rochester pub libr",
+        "microfilm service copy",
+        "duke univ libr",
+        "original",
+        "morehead state univ",
+        "suny at new paltz",
+        "2026-07-29t10:51:43",
+        "american antiquarian soc, newsp proj",
+        "http://www.loc.gov/item/sn84026365/1851-04-17/ed-1/",
+        "library of congress",
+        "sn84026365",
+        "univ of texas at austin",
+        "137",
+        "new york state hist asn",
+        "saint john fisher col",
+        "http://www.loc.gov/item/sn84026365/1847-12-03/ed-1/",
+        "univ of chicago",
+        "pennsylvania state univ",
+        "new york pub libr res libr",
+        "10426469",
+        "syracuse univ",
+        "new york hist soc, newsp proj",
+        "boston pub libr",
+        "univ of pittsburgh",
+        "2020-01-19t13:14:25",
+        "microfilm master",
+        "2026-04-13t21:30:13",
+        "online resource",
+        "sn84026366",
+        "center for research libraries"
+      ],
+      "original_format": [
+        "newspaper"
+      ],
+      "partof": [
+        "the north star (rochester, n.y.) 1847-1851",
+        "serial and government publications division",
+        "directory of u.s. newspapers in american libraries",
+        "chronicling america",
+        "frederick douglass newspapers, 1847-1874",
+        "catalog"
+      ],
+      "publication_frequency": [
+        "weekly"
+      ],
+      "score": 85.47092,
+      "shelf_id": "Newspaper E449 .N86",
+      "site": [
+        "chroniclingamerica",
+        "catalog",
+        "usnd"
+      ],
+      "subject": [
+        "antislavery movements",
+        "new york",
+        "african americans",
+        "anti-slavery newspapers",
+        "rochester (n.y.)",
+        "african american newspapers",
+        "monroe",
+        "electronic journals",
+        "newspapers",
+        "monroe county (n.y.)",
+        "new york (state)",
+        "united states",
+        "monroe county",
+        "african american",
+        "rochester"
+      ],
+      "timestamp": "2026-08-19T08:06:59.388Z",
+      "title": "The North star.",
+      "type": [
+        "title"
+      ],
+      "url": "https://www.loc.gov/item/sn84026365/"
+    },
+    {
+      "access_restricted": false,
+      "aka": [
+        "http://www.loc.gov/item/sn84026366/1851-10-09/ed-1/",
+        "http://www.loc.gov/resource/sn84026366/1851-10-09/ed-1/"
+      ],
+      "batch": [
+        "dlc_coneflower_ver01"
+      ],
+      "campaigns": [],
+      "contributor": [
+        "library of congress, washington, dc"
+      ],
+      "date": "1851-10-09",
+      "dates": [
+        "1851-10-09"
+      ],
+      "description": [
+        "Rochester, N.Y."
+      ],
+      "digitized": true,
+      "extract_timestamp": "2020-09-19T00:33:33.031Z",
+      "group": [
+        "sgpfdaan/dlc",
+        "frederick-douglas-newspapers"
+      ],
+      "hassegments": true,
+      "id": "http://www.loc.gov/item/sn84026366/1851-10-09/ed-1/",
+      "image_url": [
+        "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_coneflower_ver01:data:sn84026366:0041755726A:1851100901:0001/full/pct:3.125/0/default.jpg#h=338&w=239",
+        "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_coneflower_ver01:data:sn84026366:0041755726A:1851100901:0001/full/pct:6.25/0/default.jpg#h=676&w=479"
+      ],
+      "index": 3,
+      "language": [
+        "english"
+      ],
+      "location": [
+        "new york",
+        "monroe",
+        "united states",
+        "monroe county",
+        "rochester"
+      ],
+      "mime_type": [
+        "image/jp2",
+        "application/pdf",
+        "text/xml",
+        "image/jpeg"
+      ],
+      "number": [
+        "sn84026366",
+        "1",
+        "0041755726a"
+      ],
+      "numeric_shelf_id": 185110091,
+      "online_format": [
+        "image",
+        "pdf",
+        "online text"
+      ],
+      "original_format": [
+        "newspaper"
+      ],
+      "partof": [
+        "frederick douglass newspapers, 1847-1874",
+        "frederick douglass' paper (rochester, n.y.) 1851-18??",
+        "chronicling america",
+        "serial and government publications division"
+      ],
+      "publication_frequency": [
+        "weekly"
+      ],
+      "score": 71.46377,
+      "shelf_id": "sn84026366, 1851-10-09, Edition 1",
+      "site": [
+        "chroniclingamerica"
+      ],
+      "subject": [
+        "new york",
+        "african americans",
+        "rochester (n.y.)",
+        "monroe",
+        "newspapers",
+        "monroe county (n.y.)",
+        "new york (state)",
+        "united states",
+        "monroe county",
+        "african american",
+        "rochester"
+      ],
+      "timestamp": "2022-11-20T00:27:37.843Z",
+      "title": "Frederick Douglass' paper (Rochester, N.Y.), October 9, 1851",
+      "type": [
+        "issue"
+      ],
+      "url": "https://www.loc.gov/item/sn84026366/1851-10-09/ed-1/"
+    },
+    {
+      "access_restricted": false,
+      "aka": [
+        "http://www.loc.gov/item/sn84026366/1851-06-26/ed-1/",
+        "http://www.loc.gov/resource/sn84026366/1851-06-26/ed-1/"
+      ],
+      "batch": [
+        "dlc_coneflower_ver01"
+      ],
+      "campaigns": [],
+      "contributor": [
+        "library of congress, washington, dc"
+      ],
+      "date": "1851-06-26",
+      "dates": [
+        "1851-06-26"
+      ],
+      "description": [
+        "Rochester, N.Y."
+      ],
+      "digitized": true,
+      "extract_timestamp": "2020-09-19T00:33:33.031Z",
+      "group": [
+        "sgpfdaan/dlc",
+        "frederick-douglas-newspapers"
+      ],
+      "hassegments": true,
+      "id": "http://www.loc.gov/item/sn84026366/1851-06-26/ed-1/",
+      "image_url": [
+        "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_coneflower_ver01:data:sn84026366:0041755726A:1851062601:0003/full/pct:3.125/0/default.jpg#h=330&w=229",
+        "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_coneflower_ver01:data:sn84026366:0041755726A:1851062601:0003/full/pct:6.25/0/default.jpg#h=660&w=459"
+      ],
+      "index": 4,
+      "language": [
+        "english"
+      ],
+      "location": [
+        "new york",
+        "monroe",
+        "united states",
+        "monroe county",
+        "rochester"
+      ],
+      "mime_type": [
+        "image/jp2",
+        "application/pdf",
+        "text/xml",
+        "image/jpeg"
+      ],
+      "number": [
+        "sn84026366",
+        "1",
+        "0041755726a"
+      ],
+      "numeric_shelf_id": 185106261,
+      "online_format": [
+        "image",
+        "pdf",
+        "online text"
+      ],
+      "original_format": [
+        "newspaper"
+      ],
+      "partof": [
+        "frederick douglass newspapers, 1847-1874",
+        "frederick douglass' paper (rochester, n.y.) 1851-18??",
+        "chronicling america",
+        "serial and government publications division"
+      ],
+      "publication_frequency": [
+        "weekly"
+      ],
+      "score": 71.46377,
+      "shelf_id": "sn84026366, 1851-06-26, Edition 1",
+      "site": [
+        "chroniclingamerica"
+      ],
+      "subject": [
+        "new york",
+        "african americans",
+        "rochester (n.y.)",
+        "monroe",
+        "newspapers",
+        "monroe county (n.y.)",
+        "new york (state)",
+        "united states",
+        "monroe county",
+        "african american",
+        "rochester"
+      ],
+      "timestamp": "2022-11-20T00:27:37.843Z",
+      "title": "Frederick Douglass' paper (Rochester, N.Y.), June 26, 1851",
+      "type": [
+        "issue"
+      ],
+      "url": "https://www.loc.gov/item/sn84026366/1851-06-26/ed-1/"
+    },
+    {
+      "access_restricted": false,
+      "aka": [
+        "http://www.loc.gov/item/sn84026366/1851-07-24/ed-1/",
+        "http://www.loc.gov/resource/sn84026366/1851-07-24/ed-1/"
+      ],
+      "batch": [
+        "dlc_coneflower_ver01"
+      ],
+      "campaigns": [],
+      "contributor": [
+        "library of congress, washington, dc"
+      ],
+      "date": "1851-07-24",
+      "dates": [
+        "1851-07-24"
+      ],
+      "description": [
+        "Rochester, N.Y."
+      ],
+      "digitized": true,
+      "extract_timestamp": "2020-09-19T00:33:33.031Z",
+      "group": [
+        "sgpfdaan/dlc",
+        "frederick-douglas-newspapers"
+      ],
+      "hassegments": true,
+      "id": "http://www.loc.gov/item/sn84026366/1851-07-24/ed-1/",
+      "image_url": [
+        "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_coneflower_ver01:data:sn84026366:0041755726A:1851072401:0001/full/pct:3.125/0/default.jpg#h=331&w=224",
+        "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_coneflower_ver01:data:sn84026366:0041755726A:1851072401:0001/full/pct:6.25/0/default.jpg#h=663&w=449"
+      ],
+      "index": 5,
+      "language": [
+        "english"
+      ],
+      "location": [
+        "new york",
+        "monroe",
+        "united states",
+        "monroe county",
+        "rochester"
+      ],
+      "mime_type": [
+        "image/jp2",
+        "application/pdf",
+        "text/xml",
+        "image/jpeg"
+      ],
+      "number": [
+        "sn84026366",
+        "1",
+        "0041755726a"
+      ],
+      "numeric_shelf_id": 185107241,
+      "online_format": [
+        "image",
+        "pdf",
+        "online text"
+      ],
+      "original_format": [
+        "newspaper"
+      ],
+      "partof": [
+        "frederick douglass newspapers, 1847-1874",
+        "frederick douglass' paper (rochester, n.y.) 1851-18??",
+        "chronicling america",
+        "serial and government publications division"
+      ],
+      "publication_frequency": [
+        "weekly"
+      ],
+      "score": 71.46377,
+      "shelf_id": "sn84026366, 1851-07-24, Edition 1",
+      "site": [
+        "chroniclingamerica"
+      ],
+      "subject": [
+        "new york",
+        "african americans",
+        "rochester (n.y.)",
+        "monroe",
+        "newspapers",
+        "monroe county (n.y.)",
+        "new york (state)",
+        "united states",
+        "monroe county",
+        "african american",
+        "rochester"
+      ],
+      "timestamp": "2022-11-20T00:27:37.843Z",
+      "title": "Frederick Douglass' paper (Rochester, N.Y.), July 24, 1851",
+      "type": [
+        "issue"
+      ],
+      "url": "https://www.loc.gov/item/sn84026366/1851-07-24/ed-1/"
+    },
+    {
+      "access_restricted": false,
+      "aka": [
+        "http://www.loc.gov/item/sn84026366/1851-07-31/ed-1/",
+        "http://www.loc.gov/resource/sn84026366/1851-07-31/ed-1/"
+      ],
+      "batch": [
+        "dlc_coneflower_ver01"
+      ],
+      "campaigns": [],
+      "contributor": [
+        "library of congress, washington, dc"
+      ],
+      "date": "1851-07-31",
+      "dates": [
+        "1851-07-31"
+      ],
+      "description": [
+        "Rochester, N.Y."
+      ],
+      "digitized": true,
+      "extract_timestamp": "2020-09-19T00:33:33.031Z",
+      "group": [
+        "sgpfdaan/dlc",
+        "frederick-douglas-newspapers"
+      ],
+      "hassegments": true,
+      "id": "http://www.loc.gov/item/sn84026366/1851-07-31/ed-1/",
+      "image_url": [
+        "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_coneflower_ver01:data:sn84026366:0041755726A:1851073101:0001/full/pct:3.125/0/default.jpg#h=334&w=227",
+        "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_coneflower_ver01:data:sn84026366:0041755726A:1851073101:0001/full/pct:6.25/0/default.jpg#h=669&w=455"
+      ],
+      "index": 6,
+      "language": [
+        "english"
+      ],
+      "location": [
+        "new york",
+        "monroe",
+        "united states",
+        "monroe county",
+        "rochester"
+      ],
+      "mime_type": [
+        "image/jp2",
+        "application/pdf",
+        "text/xml",
+        "image/jpeg"
+      ],
+      "number": [
+        "sn84026366",
+        "1",
+        "0041755726a"
+      ],
+      "numeric_shelf_id": 185107311,
+      "online_format": [
+        "image",
+        "pdf",
+        "online text"
+      ],
+      "original_format": [
+        "newspaper"
+      ],
+      "partof": [
+        "frederick douglass newspapers, 1847-1874",
+        "frederick douglass' paper (rochester, n.y.) 1851-18??",
+        "chronicling america",
+        "serial and government publications division"
+      ],
+      "publication_frequency": [
+        "weekly"
+      ],
+      "score": 71.46377,
+      "shelf_id": "sn84026366, 1851-07-31, Edition 1",
+      "site": [
+        "chroniclingamerica"
+      ],
+      "subject": [
+        "new york",
+        "african americans",
+        "rochester (n.y.)",
+        "monroe",
+        "newspapers",
+        "monroe county (n.y.)",
+        "new york (state)",
+        "united states",
+        "monroe county",
+        "african american",
+        "rochester"
+      ],
+      "timestamp": "2022-11-20T00:27:37.843Z",
+      "title": "Frederick Douglass' paper (Rochester, N.Y.), July 31, 1851",
+      "type": [
+        "issue"
+      ],
+      "url": "https://www.loc.gov/item/sn84026366/1851-07-31/ed-1/"
+    }
+  ],
+  "next_resource": {
+    "label": "Next Issue",
+    "url": "https://www.loc.gov/item/sn84026366/1852-07-16/ed-1/?dl=issue&fo=json"
+  },
+  "options": {
+    "access_group": [
+      ""
+    ],
+    "access_group_raw": "",
+    "all": null,
+    "api_version": "1",
+    "app_context": null,
+    "application_shim": null,
+    "application_version": "$Revision$",
+    "attribute": null,
+    "attribute!": null,
+    "attribute_map": null,
+    "cache_tags": [
+      "sgpfdaan/dlc",
+      "frederick-douglas-newspapers",
+      "newspaper-titles",
+      "catalog-split-04",
+      "catalog",
+      "ndnp/newspapers",
+      "main-catalog-split-04",
+      "united-states-newspaper-directory",
+      "catalog-split-03",
+      "main-catalog-split-03",
+      "gmd.mar",
+      "catalog-split-02",
+      "general-maps",
+      "main-catalog-split-02",
+      "gmd/multimap",
+      "multimaps",
+      "catalog-split-10",
+      "main-catalog-split-10",
+      "catalog-split-11",
+      "main-catalog-split-11"
+    ],
+    "callback": null,
+    "clip": null,
+    "clip_image_width": null,
+    "clip_rotation": null,
+    "content_filter": null,
+    "content_replacement": "",
+    "count": null,
+    "dates": null,
+    "default_count": 25,
+    "delimiter": null,
+    "digital_id": null,
+    "display_level": "issue",
+    "display_options": {
+      "default": "issue",
+      "options": [
+        {
+          "field": "all",
+          "label": "All"
+        },
+        {
+          "field": "title",
+          "label": "Titles",
+          "type": "title"
+        },
+        {
+          "field": "issue",
+          "label": "Issues",
+          "type": "issue"
+        },
+        {
+          "field": "page",
+          "label": "Pages (Full Text)",
+          "type": "segment"
+        }
+      ]
+    },
+    "distance": null,
+    "downloadOption": null,
+    "duration": 0.8986494541168213,
+    "embed": [],
+    "embed!": [],
+    "error_response_status": null,
+    "excludeTerms": null,
+    "facetLimits": "",
+    "facetPrefix": null,
+    "facet_count": null,
+    "facet_style": null,
+    "field": null,
+    "form_facets": [
+      {
+        "field": "location_state",
+        "select": "multiple"
+      },
+      {
+        "field": "location_county",
+        "select": "multiple"
+      },
+      {
+        "field": "location_city",
+        "select": "multiple"
+      },
+      {
+        "field": "partof_title",
+        "select": "multiple"
+      }
+    ],
+    "format": "json",
+    "host": "www.loc.gov",
+    "ical": false,
+    "id": "sn84026366/1852-07-09/ed-1/",
+    "iiif": false,
+    "include_facets": [
+      {
+        "field": "digitized"
+      },
+      {
+        "field": "object-type",
+        "label": "Display Level"
+      },
+      {
+        "field": "original-format"
+      },
+      {
+        "field": "partof_title",
+        "label": "Title"
+      },
+      {
+        "field": "dates"
+      },
+      {
+        "field": "location_country",
+        "label": "Country"
+      },
+      {
+        "field": "location_state",
+        "label": "State/Province"
+      },
+      {
+        "field": "location_county",
+        "label": "County"
+      },
+      {
+        "field": "location_city",
+        "label": "City"
+      },
+      {
+        "field": "subject_ethnicity",
+        "label": "Ethnicity"
+      },
+      {
+        "field": "language",
+        "label": "Language"
+      },
+      {
+        "field": "subject"
+      },
+      {
+        "closed": true,
+        "field": "number_page",
+        "label": "Page"
+      },
+      {
+        "closed": true,
+        "field": "partof_collection",
+        "label": "Collection"
+      },
+      {
+        "closed": true,
+        "field": "online-format"
+      },
+      {
+        "closed": true,
+        "field": "contributor"
+      },
+      {
+        "closed": true,
+        "field": "partof_division",
+        "label": "Division"
+      },
+      {
+        "closed": true,
+        "field": "access-restricted"
+      },
+      {
+        "closed": true,
+        "field": "batch"
+      }
+    ],
+    "index": null,
+    "inputEncoding": "UTF-8",
+    "item": null,
+    "items": null,
+    "keys": null,
+    "language": null,
+    "latlong": null,
+    "method": "GET",
+    "newSearch": null,
+    "new_clip_url": false,
+    "onsite": false,
+    "operator": null,
+    "outputEncoding": "UTF-8",
+    "page_campaigns": [],
+    "path_info": "/item/sn84026366/1852-07-09/ed-1/",
+    "port": "443",
+    "proxypath": null,
+    "query_string": "fo=json",
+    "redirect_proxy": false,
+    "redirect_to_item": null,
+    "referer": "",
+    "region": "",
+    "release_id": 123456789,
+    "request_host": "www.loc.gov",
+    "request_params": {
+      "fo": [
+        "json"
+      ]
+    },
+    "request_url": "https://www.loc.gov/item/sn84026366/1852-07-09/ed-1/?fo=json",
+    "resource": "",
+    "resource_sequence": null,
+    "scheme": "https",
+    "searchIn": null,
+    "searchTerms": "",
+    "segments": null,
+    "shards": [
+      "07"
+    ],
+    "site_date_range": "1847-01-01/1874-12-01",
+    "site_defaults": [],
+    "site_id": null,
+    "site_type": null,
+    "solrQuery": "",
+    "sortBy": null,
+    "sortOrder": null,
+    "startPage": null,
+    "style": null,
+    "suggested": null,
+    "target": null,
+    "template": "layouts/item/layout",
+    "timestamp": 1787159191.4984825,
+    "tz_aware": null,
+    "unionFacets": "",
+    "webcast_permalink": null
+  },
+  "previous_resource": {
+    "label": "Previous Issue",
+    "url": "https://www.loc.gov/item/sn84026366/1852-07-01/ed-1/?dl=issue&fo=json"
+  },
+  "related_items": [
+    {
+      "access_restricted": false,
+      "aka": [
+        "http://lccn.loc.gov/2015585062",
+        "http://www.loc.gov/item/2015585062/",
+        "https://search.catalog.loc.gov/instances/4e04c9c4-cc27-5066-8135-5e2f3304afb1",
+        "https://hdl.loc.gov/loc.gmd/g3803m.la000519",
+        "http://www.loc.gov/resource/g3803m.la000519/"
+      ],
+      "campaigns": [],
+      "contributor": [
+        "gillette, john e.",
+        "stone, c. k.",
+        "smith, robert pearsall",
+        "browne, p. j."
+      ],
+      "date": "1858",
+      "dates": [
+        "1858"
+      ],
+      "description": [
+        "County cadastral map showing towns (townships), numbered town survey divisions, irregular rural property tracts, rural buildings, and rural householders' names. The Rochester and Brockport insets show buildings and city wards; the smaller insets show buildings and householders' names. Hand colored to emphasize town (township) boundaries. \"Entered according to Act of Congress in the year 1858 by Robert Pearsall Smith in the ... the eastern District of Pennsylvania.\" Originally printed on 4 sheets (later conjoined to form 2 sheets [northern/southern] on cloth backing). LC sheets imperfect: Darkened at edges, additionally fold-lined, sectioned to 2 sheets each folding to 3 vertical panels. Includes distance table, local business directories, 35 village/city insets, and illustrations of prominent buildings. LC Land ownership maps, 519 Available also through the Library of Congress Web site as a raster image. 2 copies"
+      ],
+      "digitized": true,
+      "extract_timestamp": "2026-04-29T15:39:13.655Z",
+      "group": [
+        "gmd.mar",
+        "catalog-split-02",
+        "catalog",
+        "general-maps",
+        "main-catalog-split-02"
+      ],
+      "hassegments": false,
+      "id": "http://www.loc.gov/item/2015585062/",
+      "image_url": [
+        "https://tile.loc.gov/storage-services/service/gmd/gmd380/g3803/g3803m/la000519.gif",
+        "https://tile.loc.gov/storage-services/service/gmd/gmd380/g3803/g3803m/la000519.gif#h=151&w=150",
+        "https://tile.loc.gov/image-services/iiif/service:gmd:gmd380:g3803:g3803m:la000519/full/pct:12.5/0/default.jpg#h=2207&w=2191",
+        "https://tile.loc.gov/image-services/iiif/service:gmd:gmd380:g3803:g3803m:la000519/full/pct:25/0/default.jpg#h=4415&w=4383"
+      ],
+      "index": 1,
+      "language": [
+        "english"
+      ],
+      "location": [
+        "new york",
+        "madison county",
+        "brockport",
+        "new york (state)",
+        "united states",
+        "monroe county",
+        "rochester"
+      ],
+      "mime_type": [
+        "image/gif",
+        "image/tiff",
+        "image/jpeg",
+        "image/jp2"
+      ],
+      "number": [
+        "2015585062",
+        "2015-04-13t12:49:31",
+        "2025-06-07t06:29:51.100000",
+        "sheet"
+      ],
+      "online_format": [
+        "image"
+      ],
+      "original_format": [
+        "map"
+      ],
+      "partof": [
+        "cultural landscapes",
+        "geography and map division",
+        "catalog",
+        "county landownership maps"
+      ],
+      "score": 48.08803,
+      "shelf_id": "G3803.M6G46 1858 .B7 G3803.M6G46 1858 .B7",
+      "site": [
+        "catalog"
+      ],
+      "subject": [
+        "cadastral maps",
+        "buildings",
+        "villages",
+        "rochester (n.y.)",
+        "buildings, structures, etc",
+        "madison county",
+        "brockport",
+        "monroe county (n.y.)",
+        "real property",
+        "administrative and political divisions",
+        "brockport (n.y.)",
+        "new york (state)",
+        "united states",
+        "cities and towns",
+        "monroe county",
+        "maps",
+        "rochester",
+        "landowners"
+      ],
+      "timestamp": "2026-04-29T16:08:51.916Z",
+      "title": "Gillette's map of Monroe Co., New York : from actual surveys",
+      "type": [
+        "cartographic"
+      ],
+      "url": "https://www.loc.gov/item/2015585062/"
+    },
+    {
+      "access_restricted": false,
+      "aka": [
+        "http://lccn.loc.gov/2011593643",
+        "http://www.loc.gov/item/2011593643/",
+        "https://search.catalog.loc.gov/instances/60af37f9-14b6-50d2-aa76-b070b0f8c2b2",
+        "https://hdl.loc.gov/loc.gmd/g3804r.wd000503",
+        "http://www.loc.gov/resource/g3804r.wd000503/"
+      ],
+      "campaigns": [],
+      "contributor": [
+        "drew, allis & co"
+      ],
+      "date": "1872",
+      "dates": [
+        "1872"
+      ],
+      "description": [
+        "City street map showing wards and principal buildings. Shows radial distances from city center. Relief shown by hachures. Includes notes, index to points of interest, and inset of Monroe County. LC copy imperfect: Torn at fold lines, probably removed from city directory. Available also through the Library of Congress Web site as a raster image."
+      ],
+      "digitized": true,
+      "extract_timestamp": "2026-04-29T15:39:59.604Z",
+      "group": [
+        "gmd.mar",
+        "catalog-split-02",
+        "catalog",
+        "general-maps",
+        "main-catalog-split-02"
+      ],
+      "hassegments": false,
+      "id": "http://www.loc.gov/item/2011593643/",
+      "image_url": [
+        "https://tile.loc.gov/storage-services/service/gmd/gmd380/g3804/g3804r/wd000503.gif",
+        "https://tile.loc.gov/storage-services/service/gmd/gmd380/g3804/g3804r/wd000503.gif#h=212&w=150",
+        "https://tile.loc.gov/image-services/iiif/service:gmd:gmd380:g3804:g3804r:wd000503/full/pct:12.5/0/default.jpg#h=1096&w=774",
+        "https://tile.loc.gov/image-services/iiif/service:gmd:gmd380:g3804:g3804r:wd000503/full/pct:25/0/default.jpg#h=2193&w=1548"
+      ],
+      "index": 2,
+      "language": [
+        "english"
+      ],
+      "location": [
+        "new york",
+        "new york (state)",
+        "united states",
+        "monroe county",
+        "rochester"
+      ],
+      "mime_type": [
+        "image/gif",
+        "image/tiff",
+        "image/jpeg",
+        "image/jp2"
+      ],
+      "number": [
+        "2025-06-07t04:50:10.400000",
+        "2012-02-10t14:15:01",
+        "2011593643",
+        "sheet"
+      ],
+      "online_format": [
+        "image"
+      ],
+      "original_format": [
+        "map"
+      ],
+      "partof": [
+        "geography and map division",
+        "catalog",
+        "cities and towns"
+      ],
+      "score": 48.08803,
+      "shelf_id": "G3804.R6 1872 .D7",
+      "site": [
+        "catalog"
+      ],
+      "subject": [
+        "rochester (n.y.)",
+        "administrative and political divisions",
+        "monroe county (n.y.)",
+        "new york (state)",
+        "united states",
+        "monroe county",
+        "maps",
+        "rochester"
+      ],
+      "timestamp": "2026-04-29T16:03:39.858Z",
+      "title": "Map of Rochester : from the latest surveys",
+      "type": [
+        "cartographic"
+      ],
+      "url": "https://www.loc.gov/item/2011593643/"
+    },
+    {
+      "access_restricted": false,
+      "aka": [
+        "http://lccn.loc.gov/2022594514",
+        "http://www.loc.gov/item/2022594514/",
+        "https://search.catalog.loc.gov/instances/36edf296-eb8a-58d1-9d6a-06eddb67ca5c",
+        "https://hdl.loc.gov/loc.gmd/gmdtitlecolfold.ny_118",
+        "http://www.loc.gov/resource/gmdtitlecolfold.ny_118/"
+      ],
+      "campaigns": [],
+      "date": "1806",
+      "dates": [
+        "1806"
+      ],
+      "description": [
+        "This record covers single maps covering counties of New York, which are not represented in the LC database by separate catalog records. This collection includes single printed maps and photocopies of printed or manuscript single maps and may also include some multi-sheet single maps, plates from atlases, books or periodicals, and printed facsimiles. These maps may also show various subjects, such as roads, topography, geology, hydrology, and recreation and tourism. To request a specific map or for more information, contact a reference librarian in the Geography & Map Division (202) 707-6277 or through the \"Ask a librarian\" link through the Geography & Map Division website https://ask.loc.gov/map-geography/. Title supplied by cataloger."
+      ],
+      "digitized": true,
+      "extract_timestamp": "2026-04-29T15:17:54.517Z",
+      "group": [
+        "gmd/multimap",
+        "catalog-split-02",
+        "catalog",
+        "multimaps",
+        "main-catalog-split-02"
+      ],
+      "hassegments": true,
+      "id": "http://www.loc.gov/item/2022594514/",
+      "image_url": [
+        "https://tile.loc.gov/image-services/iiif/service:gmd:gmdtitlecolfold:ny:_1:18:ny_118:ny_118_00001/full/pct:12.5/0/default.jpg",
+        "https://tile.loc.gov/image-services/iiif/service:gmd:gmdtitlecolfold:ny:_1:18:ny_118:ny_118_00001/full/pct:12.5/0/default.jpg#h=578&w=378",
+        "https://tile.loc.gov/image-services/iiif/service:gmd:gmdtitlecolfold:ny:_1:18:ny_118:ny_118_00001/full/pct:25/0/default.jpg#h=1156&w=757"
+      ],
+      "index": 3,
+      "language": [
+        "english"
+      ],
+      "location": [
+        "monroe county",
+        "new york",
+        "united states",
+        "madison county"
+      ],
+      "mime_type": [
+        "image/tiff",
+        "image/jpeg",
+        "image/jp2"
+      ],
+      "number": [
+        "sheet",
+        "2024-05-11t21:12:33",
+        "2025-06-07t11:46:08.800000",
+        "2022594514"
+      ],
+      "online_format": [
+        "image"
+      ],
+      "original_format": [
+        "map",
+        "collection"
+      ],
+      "other_title": [
+        "Alternate supplied title: New York title collection--drawer 118",
+        "Alternate supplied title: New York title collection--counties Madison 1940-1970--Monroe to 1929"
+      ],
+      "partof": [
+        "geography and map division",
+        "catalog",
+        "single sheet maps, title collection"
+      ],
+      "score": 32.193707,
+      "shelf_id": "G3803 coll .M3 drawer 118",
+      "site": [
+        "catalog"
+      ],
+      "subject": [
+        "physical maps",
+        "madison county (n.y.)",
+        "new york",
+        "topographic maps",
+        "monroe county (n.y.)",
+        "roads",
+        "new york (state)",
+        "tourist maps",
+        "united states",
+        "monroe county",
+        "maps",
+        "road maps",
+        "madison county"
+      ],
+      "timestamp": "2026-04-29T15:29:36.627Z",
+      "title": "[Maps of New York--counties Madison 1940-1970--Monroe to 1929]",
+      "type": [
+        "cartographic"
+      ],
+      "url": "https://www.loc.gov/item/2022594514/"
+    },
+    {
+      "access_restricted": false,
+      "aka": [
+        "http://lccn.loc.gov/2022594524",
+        "http://www.loc.gov/item/2022594524/",
+        "https://search.catalog.loc.gov/instances/49381924-4011-56f2-8d77-265bfe4f0f80",
+        "https://hdl.loc.gov/loc.gmd/gmdtitlecolfold.ny_119",
+        "http://www.loc.gov/resource/gmdtitlecolfold.ny_119/"
+      ],
+      "campaigns": [],
+      "date": "1930",
+      "dates": [
+        "1930"
+      ],
+      "description": [
+        "This record covers single maps covering counties of New York, which are not represented in the LC database by separate catalog records. This collection includes single printed maps and photocopies of printed or manuscript single maps and may also include some multi-sheet single maps, plates from atlases, books or periodicals, and printed facsimiles. These maps may also show various subjects, such as roads, topography, geology, hydrology, and recreation and tourism. To request a specific map or for more information, contact a reference librarian in the Geography & Map Division (202) 707-6277 or through the \"Ask a librarian\" link through the Geography & Map Division website https://ask.loc.gov/map-geography/. Title supplied by cataloger."
+      ],
+      "digitized": true,
+      "extract_timestamp": "2026-04-29T15:17:56.090Z",
+      "group": [
+        "gmd/multimap",
+        "catalog-split-03",
+        "catalog",
+        "multimaps",
+        "main-catalog-split-03"
+      ],
+      "hassegments": true,
+      "id": "http://www.loc.gov/item/2022594524/",
+      "image_url": [
+        "https://tile.loc.gov/image-services/iiif/service:gmd:gmdtitlecolfold:ny:_1:19:ny_119:ny_119_00001/full/pct:12.5/0/default.jpg",
+        "https://tile.loc.gov/image-services/iiif/service:gmd:gmdtitlecolfold:ny:_1:19:ny_119:ny_119_00001/full/pct:12.5/0/default.jpg#h=578&w=382",
+        "https://tile.loc.gov/image-services/iiif/service:gmd:gmdtitlecolfold:ny:_1:19:ny_119:ny_119_00001/full/pct:25/0/default.jpg#h=1157&w=765"
+      ],
+      "index": 4,
+      "language": [
+        "english"
+      ],
+      "location": [
+        "monroe county",
+        "new york",
+        "united states"
+      ],
+      "mime_type": [
+        "image/tiff",
+        "image/jpeg",
+        "image/jp2"
+      ],
+      "number": [
+        "2022594524",
+        "2024-05-11t21:12:37",
+        "2025-06-07t11:46:10.400000",
+        "sheet"
+      ],
+      "online_format": [
+        "image"
+      ],
+      "original_format": [
+        "map",
+        "collection"
+      ],
+      "other_title": [
+        "Alternate supplied title: New York title collection--drawer 119",
+        "Alternate supplied title: New York title collection--counties Monroe 1930-1970--Mons"
+      ],
+      "partof": [
+        "geography and map division",
+        "catalog",
+        "single sheet maps, title collection"
+      ],
+      "score": 32.193707,
+      "shelf_id": "G3803.M6 coll .M3 drawer 119",
+      "site": [
+        "catalog"
+      ],
+      "subject": [
+        "new york",
+        "topographic maps",
+        "monroe county (n.y.)",
+        "roads",
+        "new york (state)",
+        "tourist maps",
+        "united states",
+        "monroe county",
+        "maps",
+        "road maps",
+        "physical maps"
+      ],
+      "timestamp": "2026-04-29T15:29:36.627Z",
+      "title": "[Maps of New York--counties Monroe 1930-1970--Mons]",
+      "type": [
+        "cartographic"
+      ],
+      "url": "https://www.loc.gov/item/2022594524/"
+    },
+    {
+      "access_restricted": false,
+      "aka": [
+        "http://lccn.loc.gov/2022592974",
+        "http://www.loc.gov/item/2022592974/",
+        "https://search.catalog.loc.gov/instances/dda1c65b-8661-5946-a9ec-38f8a6d49599",
+        "https://hdl.loc.gov/loc.gmd/gmdtitlecolfold.ny_224",
+        "http://www.loc.gov/resource/gmdtitlecolfold.ny_224/"
+      ],
+      "campaigns": [],
+      "date": "1906",
+      "dates": [
+        "1906"
+      ],
+      "description": [
+        "This record covers single maps of New York cities and towns, which are not represented in the LC database by separate catalog records. This collection includes single printed maps and photocopies of printed or manuscript single maps and may also include some multi-sheet single maps, plates from atlases, books or periodicals, and printed facsimiles. These maps may also show various subjects, including landowners and recreation and tourism. To request a specific map or for more information, contact a reference librarian in the Geography & Map Division (202) 707-6277 or through the \"Ask a librarian\" link through the Geography & Map Division website https://ask.loc.gov/map-geography/. Title supplied by cataloger."
+      ],
+      "digitized": true,
+      "extract_timestamp": "2026-04-29T15:17:37.005Z",
+      "group": [
+        "gmd/multimap",
+        "catalog-split-10",
+        "catalog",
+        "multimaps",
+        "main-catalog-split-10"
+      ],
+      "hassegments": true,
+      "id": "http://www.loc.gov/item/2022592974/",
+      "image_url": [
+        "https://tile.loc.gov/image-services/iiif/service:gmd:gmdtitlecolfold:ny:_2:24:ny_224:ny_224_00001/full/pct:12.5/0/default.jpg",
+        "https://tile.loc.gov/image-services/iiif/service:gmd:gmdtitlecolfold:ny:_2:24:ny_224:ny_224_00001/full/pct:12.5/0/default.jpg#h=675&w=473",
+        "https://tile.loc.gov/image-services/iiif/service:gmd:gmdtitlecolfold:ny:_2:24:ny_224:ny_224_00001/full/pct:25/0/default.jpg#h=1351&w=947"
+      ],
+      "index": 5,
+      "language": [
+        "english"
+      ],
+      "location": [
+        "rochester",
+        "new york",
+        "united states"
+      ],
+      "mime_type": [
+        "image/tiff",
+        "image/jpeg",
+        "image/jp2"
+      ],
+      "number": [
+        "2025-06-07t11:45:51.200000",
+        "2024-05-11t21:05:11",
+        "2022592974",
+        "sheet"
+      ],
+      "online_format": [
+        "image"
+      ],
+      "original_format": [
+        "map",
+        "collection"
+      ],
+      "other_title": [
+        "Alternate supplied title: New York title collection--drawer 224",
+        "Alternate supplied title: New York title collection--cities and towns Rochester 1906-1925"
+      ],
+      "partof": [
+        "geography and map division",
+        "catalog",
+        "single sheet maps, title collection"
+      ],
+      "score": 30.969797,
+      "shelf_id": "G3804.R6 coll .M3 drawer 224",
+      "site": [
+        "catalog"
+      ],
+      "subject": [
+        "new york",
+        "rochester (n.y.)",
+        "new york (state)",
+        "united states",
+        "tourist maps",
+        "maps",
+        "rochester",
+        "landowners"
+      ],
+      "timestamp": "2026-04-29T15:29:36.627Z",
+      "title": "[Maps of New York--cities and towns Rochester 1906-1925]",
+      "type": [
+        "cartographic"
+      ],
+      "url": "https://www.loc.gov/item/2022592974/"
+    },
+    {
+      "access_restricted": false,
+      "aka": [
+        "http://lccn.loc.gov/2022592975",
+        "http://www.loc.gov/item/2022592975/",
+        "https://search.catalog.loc.gov/instances/b5e81390-3063-5c07-b0cc-cd598eee30c5",
+        "https://hdl.loc.gov/loc.gmd/gmdtitlecolfold.ny_225",
+        "http://www.loc.gov/resource/gmdtitlecolfold.ny_225/"
+      ],
+      "campaigns": [],
+      "date": "1926",
+      "dates": [
+        "1926"
+      ],
+      "description": [
+        "This record covers single maps of New York cities and towns, which are not represented in the LC database by separate catalog records. This collection includes single printed maps and photocopies of printed or manuscript single maps and may also include some multi-sheet single maps, plates from atlases, books or periodicals, and printed facsimiles. These maps may also show various subjects, including landowners and recreation and tourism. To request a specific map or for more information, contact a reference librarian in the Geography & Map Division (202) 707-6277 or through the \"Ask a librarian\" link through the Geography & Map Division website https://ask.loc.gov/map-geography/. Title supplied by cataloger."
+      ],
+      "digitized": true,
+      "extract_timestamp": "2026-04-29T15:17:38.810Z",
+      "group": [
+        "gmd/multimap",
+        "catalog-split-11",
+        "catalog",
+        "multimaps",
+        "main-catalog-split-11"
+      ],
+      "hassegments": true,
+      "id": "http://www.loc.gov/item/2022592975/",
+      "image_url": [
+        "https://tile.loc.gov/image-services/iiif/service:gmd:gmdtitlecolfold:ny:_2:25:ny_225:ny_225_00001/full/pct:12.5/0/default.jpg",
+        "https://tile.loc.gov/image-services/iiif/service:gmd:gmdtitlecolfold:ny:_2:25:ny_225:ny_225_00001/full/pct:12.5/0/default.jpg#h=673&w=479",
+        "https://tile.loc.gov/image-services/iiif/service:gmd:gmdtitlecolfold:ny:_2:25:ny_225:ny_225_00001/full/pct:25/0/default.jpg#h=1346&w=959"
+      ],
+      "index": 6,
+      "language": [
+        "english"
+      ],
+      "location": [
+        "rochester",
+        "new york",
+        "united states"
+      ],
+      "mime_type": [
+        "image/tiff",
+        "image/jpeg",
+        "image/jp2"
+      ],
+      "number": [
+        "2022592975",
+        "2024-05-11t21:05:16",
+        "2025-06-07t11:45:51.600000",
+        "sheet"
+      ],
+      "online_format": [
+        "image"
+      ],
+      "original_format": [
+        "map",
+        "collection"
+      ],
+      "other_title": [
+        "Alternate supplied title: New York title collection--drawer 225",
+        "Alternate supplied title: New York title collection--cities and towns Rochester 1926-1939"
+      ],
+      "partof": [
+        "geography and map division",
+        "catalog",
+        "single sheet maps, title collection"
+      ],
+      "score": 30.969797,
+      "shelf_id": "G3804.R6 coll .M3 drawer 225",
+      "site": [
+        "catalog"
+      ],
+      "subject": [
+        "new york",
+        "rochester (n.y.)",
+        "new york (state)",
+        "united states",
+        "tourist maps",
+        "maps",
+        "rochester",
+        "landowners"
+      ],
+      "timestamp": "2026-04-29T15:29:36.627Z",
+      "title": "[Maps of New York--cities and towns Rochester 1926-1939]",
+      "type": [
+        "cartographic"
+      ],
+      "url": "https://www.loc.gov/item/2022592975/"
+    }
+  ],
+  "resources": [
+    {
+      "files": [
+        [
+          {
+            "height": 10669,
+            "info": "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_coneflower_ver01:data:sn84026366:0041755726A:1852070901:0001/info.json",
+            "mimetype": "image/jp2",
+            "size": 9991409,
+            "url": "https://tile.loc.gov/storage-services/service/sgp/sgpbatches/batch_dlc_coneflower_ver01/data/sn84026366/0041755726A/1852070901/0001.jp2",
+            "use": "",
+            "width": 7491
+          },
+          {
+            "mimetype": "application/pdf",
+            "url": "https://tile.loc.gov/storage-services/service/sgp/sgpbatches/batch_dlc_coneflower_ver01/data/sn84026366/0041755726A/1852070901/0001.pdf",
+            "use": ""
+          },
+          {
+            "mimetype": "text/xml",
+            "url": "https://tile.loc.gov/storage-services/service/sgp/sgpbatches/batch_dlc_coneflower_ver01/data/sn84026366/0041755726A/1852070901/0001.xml",
+            "use": ""
+          },
+          {
+            "height": 333,
+            "levels": 1,
+            "mimetype": "image/jpeg",
+            "url": "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_coneflower_ver01:data:sn84026366:0041755726A:1852070901:0001/full/pct:3.125/0/default.jpg",
+            "width": 234
+          },
+          {
+            "height": 666,
+            "levels": 1,
+            "mimetype": "image/jpeg",
+            "url": "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_coneflower_ver01:data:sn84026366:0041755726A:1852070901:0001/full/pct:6.25/0/default.jpg",
+            "width": 468
+          },
+          {
+            "height": 10669,
+            "info": "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_coneflower_ver01:data:sn84026366:0041755726A:1852070901:0001/info.json",
+            "language": [
+              "English"
+            ],
+            "mimetype": "application/json",
+            "reel_number": "0041755726A",
+            "section_label": null,
+            "size": 9991409,
+            "title": "Image 1 of Frederick Douglass' paper (Rochester, N.Y.), July 9, 1852",
+            "width": 7491
+          },
+          {
+            "fulltext_service": "https://tile.loc.gov/text-services/word-coordinates-service?segment=/service/sgp/sgpbatches/batch_dlc_coneflower_ver01/data/sn84026366/0041755726A/1852070901/0001.xml&format=alto_xml&full_text=1",
+            "mimetype": "text/plain",
+            "use": "text",
+            "word_coordinates": "https://tile.loc.gov/text-services/word-coordinates-service?segment=/service/sgp/sgpbatches/batch_dlc_coneflower_ver01/data/sn84026366/0041755726A/1852070901/0001.xml&format=alto_xml"
+          }
+        ],
+        [
+          {
+            "height": 10731,
+            "info": "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_coneflower_ver01:data:sn84026366:0041755726A:1852070901:0002/info.json",
+            "mimetype": "image/jp2",
+            "size": 10144701,
+            "url": "https://tile.loc.gov/storage-services/service/sgp/sgpbatches/batch_dlc_coneflower_ver01/data/sn84026366/0041755726A/1852070901/0002.jp2",
+            "use": "",
+            "width": 7562
+          },
+          {
+            "mimetype": "application/pdf",
+            "url": "https://tile.loc.gov/storage-services/service/sgp/sgpbatches/batch_dlc_coneflower_ver01/data/sn84026366/0041755726A/1852070901/0002.pdf",
+            "use": ""
+          },
+          {
+            "mimetype": "text/xml",
+            "url": "https://tile.loc.gov/storage-services/service/sgp/sgpbatches/batch_dlc_coneflower_ver01/data/sn84026366/0041755726A/1852070901/0002.xml",
+            "use": ""
+          },
+          {
+            "height": 335,
+            "levels": 1,
+            "mimetype": "image/jpeg",
+            "url": "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_coneflower_ver01:data:sn84026366:0041755726A:1852070901:0002/full/pct:3.125/0/default.jpg",
+            "width": 236
+          },
+          {
+            "height": 670,
+            "levels": 1,
+            "mimetype": "image/jpeg",
+            "url": "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_coneflower_ver01:data:sn84026366:0041755726A:1852070901:0002/full/pct:6.25/0/default.jpg",
+            "width": 472
+          },
+          {
+            "height": 10731,
+            "info": "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_coneflower_ver01:data:sn84026366:0041755726A:1852070901:0002/info.json",
+            "language": [
+              "English"
+            ],
+            "mimetype": "application/json",
+            "reel_number": "0041755726A",
+            "section_label": null,
+            "size": 10144701,
+            "title": "Image 2 of Frederick Douglass' paper (Rochester, N.Y.), July 9, 1852",
+            "width": 7562
+          },
+          {
+            "fulltext_service": "https://tile.loc.gov/text-services/word-coordinates-service?segment=/service/sgp/sgpbatches/batch_dlc_coneflower_ver01/data/sn84026366/0041755726A/1852070901/0002.xml&format=alto_xml&full_text=1",
+            "mimetype": "text/plain",
+            "use": "text",
+            "word_coordinates": "https://tile.loc.gov/text-services/word-coordinates-service?segment=/service/sgp/sgpbatches/batch_dlc_coneflower_ver01/data/sn84026366/0041755726A/1852070901/0002.xml&format=alto_xml"
+          }
+        ],
+        [
+          {
+            "height": 10628,
+            "info": "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_coneflower_ver01:data:sn84026366:0041755726A:1852070901:0003/info.json",
+            "mimetype": "image/jp2",
+            "size": 9850711,
+            "url": "https://tile.loc.gov/storage-services/service/sgp/sgpbatches/batch_dlc_coneflower_ver01/data/sn84026366/0041755726A/1852070901/0003.jp2",
+            "use": "",
+            "width": 7414
+          },
+          {
+            "mimetype": "application/pdf",
+            "url": "https://tile.loc.gov/storage-services/service/sgp/sgpbatches/batch_dlc_coneflower_ver01/data/sn84026366/0041755726A/1852070901/0003.pdf",
+            "use": ""
+          },
+          {
+            "mimetype": "text/xml",
+            "url": "https://tile.loc.gov/storage-services/service/sgp/sgpbatches/batch_dlc_coneflower_ver01/data/sn84026366/0041755726A/1852070901/0003.xml",
+            "use": ""
+          },
+          {
+            "height": 332,
+            "levels": 1,
+            "mimetype": "image/jpeg",
+            "url": "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_coneflower_ver01:data:sn84026366:0041755726A:1852070901:0003/full/pct:3.125/0/default.jpg",
+            "width": 231
+          },
+          {
+            "height": 664,
+            "levels": 1,
+            "mimetype": "image/jpeg",
+            "url": "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_coneflower_ver01:data:sn84026366:0041755726A:1852070901:0003/full/pct:6.25/0/default.jpg",
+            "width": 463
+          },
+          {
+            "height": 10628,
+            "info": "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_coneflower_ver01:data:sn84026366:0041755726A:1852070901:0003/info.json",
+            "language": [
+              "English"
+            ],
+            "mimetype": "application/json",
+            "reel_number": "0041755726A",
+            "section_label": null,
+            "size": 9850711,
+            "title": "Image 3 of Frederick Douglass' paper (Rochester, N.Y.), July 9, 1852",
+            "width": 7414
+          },
+          {
+            "fulltext_service": "https://tile.loc.gov/text-services/word-coordinates-service?segment=/service/sgp/sgpbatches/batch_dlc_coneflower_ver01/data/sn84026366/0041755726A/1852070901/0003.xml&format=alto_xml&full_text=1",
+            "mimetype": "text/plain",
+            "use": "text",
+            "word_coordinates": "https://tile.loc.gov/text-services/word-coordinates-service?segment=/service/sgp/sgpbatches/batch_dlc_coneflower_ver01/data/sn84026366/0041755726A/1852070901/0003.xml&format=alto_xml"
+          }
+        ],
+        [
+          {
+            "height": 10717,
+            "info": "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_coneflower_ver01:data:sn84026366:0041755726A:1852070901:0004/info.json",
+            "mimetype": "image/jp2",
+            "size": 10068501,
+            "url": "https://tile.loc.gov/storage-services/service/sgp/sgpbatches/batch_dlc_coneflower_ver01/data/sn84026366/0041755726A/1852070901/0004.jp2",
+            "use": "",
+            "width": 7515
+          },
+          {
+            "mimetype": "application/pdf",
+            "url": "https://tile.loc.gov/storage-services/service/sgp/sgpbatches/batch_dlc_coneflower_ver01/data/sn84026366/0041755726A/1852070901/0004.pdf",
+            "use": ""
+          },
+          {
+            "mimetype": "text/xml",
+            "url": "https://tile.loc.gov/storage-services/service/sgp/sgpbatches/batch_dlc_coneflower_ver01/data/sn84026366/0041755726A/1852070901/0004.xml",
+            "use": ""
+          },
+          {
+            "height": 334,
+            "levels": 1,
+            "mimetype": "image/jpeg",
+            "url": "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_coneflower_ver01:data:sn84026366:0041755726A:1852070901:0004/full/pct:3.125/0/default.jpg",
+            "width": 234
+          },
+          {
+            "height": 669,
+            "levels": 1,
+            "mimetype": "image/jpeg",
+            "url": "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_coneflower_ver01:data:sn84026366:0041755726A:1852070901:0004/full/pct:6.25/0/default.jpg",
+            "width": 469
+          },
+          {
+            "height": 10717,
+            "info": "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_coneflower_ver01:data:sn84026366:0041755726A:1852070901:0004/info.json",
+            "language": [
+              "English"
+            ],
+            "mimetype": "application/json",
+            "reel_number": "0041755726A",
+            "section_label": null,
+            "size": 10068501,
+            "title": "Image 4 of Frederick Douglass' paper (Rochester, N.Y.), July 9, 1852",
+            "width": 7515
+          },
+          {
+            "fulltext_service": "https://tile.loc.gov/text-services/word-coordinates-service?segment=/service/sgp/sgpbatches/batch_dlc_coneflower_ver01/data/sn84026366/0041755726A/1852070901/0004.xml&format=alto_xml&full_text=1",
+            "mimetype": "text/plain",
+            "use": "text",
+            "word_coordinates": "https://tile.loc.gov/text-services/word-coordinates-service?segment=/service/sgp/sgpbatches/batch_dlc_coneflower_ver01/data/sn84026366/0041755726A/1852070901/0004.xml&format=alto_xml"
+          }
+        ]
+      ],
+      "image": "https://tile.loc.gov/image-services/iiif/service:sgp:sgpbatches:batch_dlc_coneflower_ver01:data:sn84026366:0041755726A:1852070901:0001/full/pct:3.125/0/default.jpg",
+      "url": "https://www.loc.gov/resource/sn84026366/1852-07-09/ed-1/",
+      "word_coordinates": "https://tile.loc.gov/text-services/word-coordinates-service"
+    }
+  ],
+  "timestamp": 1787159192397,
+  "title_url": "https://www.loc.gov/item/sn84026366"
+}

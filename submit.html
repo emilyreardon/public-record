@@ -467,7 +467,9 @@ function renderForm(doc) {
             <option value="18_24"  ${prevAge==='18_24' ?'selected':''}>18&ndash;24</option>
             <option value="25_34"  ${prevAge==='25_34' ?'selected':''}>25&ndash;34</option>
             <option value="35_49"  ${prevAge==='35_49' ?'selected':''}>35&ndash;49</option>
-            <option value="50_plus" ${prevAge==='50_plus'?'selected':''}>50+</option>
+            <option value="50_64"  ${prevAge==='50_64' ?'selected':''}>50&ndash;64</option>
+            <option value="65_79"  ${prevAge==='65_79' ?'selected':''}>65&ndash;79</option>
+            <option value="80_100" ${prevAge==='80_100'?'selected':''}>80&ndash;100</option>
           </select>
           <div class="coppa-note" id="coppa-note" style="display:${prevAge==='under_13'?'block':'none'}">${t('coppa_note')}</div>
         </div>
@@ -692,6 +694,10 @@ async function toSupabase(payload) {
     },
     body: JSON.stringify(payload),
   });
+  if (!r.ok) {
+    const body = await r.text().catch(() => '(no body)');
+    console.error('[NPS] Supabase error', r.status, r.statusText, body);
+  }
   return r.ok;
 }
 

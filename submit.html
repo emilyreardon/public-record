@@ -418,6 +418,20 @@ function toggleLang() {
 function t(key) { return UI[lang][key] || UI['en'][key] || key; }
 
 // ── INIT ──────────────────────────────────────────────────────────────────────
+// ── HEALTH CHECK ─────────────────────────────────────────────────────────────
+// Ping the AI server once on load; cache result so submit doesn't time out
+CONFIG.aiOnline = false;
+async function checkHealth() {
+  if (!CONFIG.AI_URL) return;
+  try {
+    const r = await fetch(CONFIG.AI_URL + '/health', { signal: AbortSignal.timeout(2000) });
+    CONFIG.aiOnline = r.ok;
+  } catch (_) {
+    CONFIG.aiOnline = false;
+  }
+}
+checkHealth();
+
 document.addEventListener('DOMContentLoaded', () => {
   const id  = parseInt(new URLSearchParams(window.location.search).get('id'), 10);
   const doc = CORPUS.find(d => d.id === id);
@@ -554,6 +568,9 @@ function showResistbot(isUS, zip, response) {
 
 
 async function handleSubmit(doc) {
+  // Re-check AI server health in case it came up after page load
+  await checkHealth();
+
   const response  = document.getElementById('response').value.trim();
   const firstName = (document.getElementById('first_name')?.value || '').trim() || null;
   const visitorZip = (document.getElementById('zip_input')?.value || '').trim().replace(/[^0-9-]/g,'').slice(0,10) || null;
@@ -627,11 +644,10 @@ function updateSuccessLang() {
 }
 
 async function fetchEcho(text, docId) {
-  console.log('[echo] AI_URL:', CONFIG.AI_URL);
   const block = document.getElementById('echo-block');
   const loading = document.getElementById('echo-loading');
-  if (!CONFIG.AI_URL) {
-    block.innerHTML = '<div class="ai-offline" id="echo-offline">' + t('ai_offline') + '</div>';
+  if (!CONFIG.AI_URL || !CONFIG.aiOnline) {
+    if (block) block.innerHTML = '<div class="ai-offline" id="echo-offline">' + t('ai_offline') + '</div>';
     return;
   }
   try {
@@ -653,8 +669,8 @@ async function fetchEcho(text, docId) {
 
 async function fetchClusters() {
   const block = document.getElementById('clusters-block');
-  if (!CONFIG.AI_URL) {
-    block.innerHTML = '<div class="ai-offline">' + t('ai_offline') + '</div>';
+  if (!CONFIG.AI_URL || !CONFIG.aiOnline) {
+    if (block) block.innerHTML = '<div class="ai-offline">' + t('ai_offline') + '</div>';
     return;
   }
   try {

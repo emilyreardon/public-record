@@ -1,0 +1,1098 @@
+[
+  {
+    "id": 1,
+    "type": "Core",
+    "title": "Declaration of Independence",
+    "prompt": "In 1776, 56 people signed their names to a list of grievances. What is yours?",
+    "do": "Write one sentence — a grievance, a right denied, or a demand — and submit it.",
+    "submit_template": "My grievance is ___."
+  },
+  {
+    "id": 2,
+    "type": "Core",
+    "title": "United States Constitution",
+    "prompt": "'We the People' — who does that include today? Who is still left out?",
+    "do": "Talk to the person next to you: who is your 'We the People'? Then write your answer and submit it.",
+    "submit_template": "My We the People includes ___ and should also include ___."
+  },
+  {
+    "id": 3,
+    "type": "Core",
+    "title": "Amendment 1",
+    "prompt": "The 1st Amendment protects speech — but also silence. What have you been afraid to say in public, or to your government?",
+    "do": "Write the thing you want the right to say — or the petition you'd file. Submit it.",
+    "submit_template": "I want the right to say ___.' / 'My petition: ___."
+  },
+  {
+    "id": 4,
+    "type": "Core",
+    "title": "Amendment 2",
+    "prompt": "The 2nd Amendment was written in a world of muskets and militias. What does 'security' mean to you — and who provides it?",
+    "do": "Talk to the person next to you: do you feel secure? Why or why not? Write your answer.",
+    "submit_template": "Security, to me, means ___."
+  },
+  {
+    "id": 5,
+    "type": "Core",
+    "title": "Amendment 3",
+    "prompt": "Your home is inviolable — no soldier can be forced into it without your consent. What should be inviolable in your life today?",
+    "do": "Name one thing the state should never be able to enter, take, or surveil without your consent.",
+    "submit_template": "The state should never be able to enter ___."
+  },
+  {
+    "id": 6,
+    "type": "Core",
+    "title": "Amendment 4",
+    "prompt": "In 1791, 'papers and effects' meant letters and objects. Today your data, your location, your body are all searchable. What should be private?",
+    "do": "Name one thing that should be beyond the reach of government search — ever.",
+    "submit_template": "___ should be private and unreachable without my consent."
+  },
+  {
+    "id": 7,
+    "type": "Core",
+    "title": "Amendment 5",
+    "prompt": "No one can take your life, liberty, or property without due process. But due process looks different depending on who you are. Describe a time when the process wasn't fair.",
+    "do": "Write one sentence about a system that didn't give you — or someone you know — due process.",
+    "submit_template": "The process failed when ___."
+  },
+  {
+    "id": 8,
+    "type": "Core",
+    "title": "Amendment 6",
+    "prompt": "The right to a speedy, public trial. Thousands of people await trial in jail right now because they can't afford bail. What should 'speedy' and 'public' actually guarantee?",
+    "do": "Propose one change to the criminal justice system. One sentence. Submit it.",
+    "submit_template": "A fair trial should guarantee ___."
+  },
+  {
+    "id": 9,
+    "type": "Core",
+    "title": "Amendment 7",
+    "prompt": "Jury duty is one of the few direct acts of democratic governance available to ordinary people. Have you served? Would you? What gets in the way?",
+    "do": "Talk to the person next to you about this. Then write your answer.",
+    "submit_template": "The barrier to civic participation I face is ___."
+  },
+  {
+    "id": 10,
+    "type": "Core",
+    "title": "Amendment 8",
+    "prompt": "'Cruel and unusual' — who decides? Courts have allowed solitary confinement, cash bail, and prison labor under this Amendment. What punishment would you call cruel?",
+    "do": "Name one punishment or condition of incarceration that you believe crosses the line.",
+    "submit_template": "This punishment is cruel and unusual: ___."
+  },
+  {
+    "id": 11,
+    "type": "Core",
+    "title": "Amendment 9",
+    "prompt": "The 9th Amendment says you have rights that aren't even listed. Name one.",
+    "do": "Write a right you hold that isn't in the Constitution — but should be protected. Submit it.",
+    "submit_template": "I retain the right to ___."
+  },
+  {
+    "id": 12,
+    "type": "Core",
+    "title": "Amendment 10",
+    "prompt": "Power not given to the federal government belongs to states or to the people. What power do you want back — from either level of government?",
+    "do": "Name one power you believe the people should hold directly, not government.",
+    "submit_template": "The people should hold the power to ___."
+  },
+  {
+    "id": 13,
+    "type": "Core",
+    "title": "Amendment 11",
+    "prompt": "States can be shielded from lawsuits by sovereign immunity. When should the people be able to hold government accountable in court — and when can't they?",
+    "do": "Describe a harm a government caused that should have a legal remedy.",
+    "submit_template": "Government should be accountable for ___."
+  },
+  {
+    "id": 14,
+    "type": "Core",
+    "title": "Amendment 12",
+    "prompt": "The Electoral College was designed in a world without political parties. Is it still the right way to choose a president?",
+    "do": "Propose one change to how the U.S. elects its president. Submit it.",
+    "submit_template": "I would change presidential elections by ___."
+  },
+  {
+    "id": 15,
+    "type": "Core",
+    "title": "Amendment 13",
+    "prompt": "The 13th Amendment abolished slavery — except as punishment for crime. Prison labor is legal today under that exception. What would a complete abolition amendment say?",
+    "do": "Write your own version of Section 1 with no exceptions. Submit it.",
+    "submit_template": "My Amendment 13 would read: ___."
+  },
+  {
+    "id": 16,
+    "type": "Core",
+    "title": "Amendment 14",
+    "prompt": "'Equal protection of the laws.' Who in your community doesn't receive it?",
+    "do": "Name a group denied equal protection today — then propose one systemic change. Talk to someone next to you first.",
+    "submit_template": "___ is denied equal protection. This is how I would change it: ___."
+  },
+  {
+    "id": 17,
+    "type": "Core",
+    "title": "Amendment 15",
+    "prompt": "The 15th Amendment passed in 1870. It took 95 more years and the Voting Rights Act of 1965 before it was truly enforced. What still stands between citizens and the ballot?",
+    "do": "Name one barrier to voting that exists in your state today.",
+    "submit_template": "The barrier between me and my vote is ___."
+  },
+  {
+    "id": 18,
+    "type": "Core",
+    "title": "Amendment 16",
+    "prompt": "Taxation is how a society decides what to fund together. What should your taxes build?",
+    "do": "Name one public system — one thing — your tax dollars should create or sustain that they don't now.",
+    "submit_template": "My taxes should build ___."
+  },
+  {
+    "id": 19,
+    "type": "Core",
+    "title": "Amendment 17",
+    "prompt": "Before 1913, senators were appointed by state legislatures, not elected by voters. The 17th Amendment changed that. What other appointments should be subject to direct election?",
+    "do": "Name one official who should be elected directly by the people who aren't now.",
+    "submit_template": "___ should be directly elected by the people."
+  },
+  {
+    "id": 20,
+    "type": "Core",
+    "title": "Amendment 18",
+    "prompt": "Prohibition was a constitutional experiment that failed and was repealed 14 years later. What's a current law or policy that you think will look like this in a generation?",
+    "do": "Name a current law you think future generations will repeal or see as a mistake.",
+    "submit_template": "Future generations will repeal ___."
+  },
+  {
+    "id": 21,
+    "type": "Core",
+    "title": "Amendment 19",
+    "prompt": "The 19th Amendment took 72 years of organized effort to pass. What rights are people organizing for today that haven't been won yet?",
+    "do": "Name one right being fought for right now that you believe will be won — eventually.",
+    "submit_template": "The right being won right now is ___."
+  },
+  {
+    "id": 22,
+    "type": "Core",
+    "title": "Amendment 20",
+    "prompt": "A peaceful transfer of power is a fragile thing. What should guarantee it?",
+    "do": "Propose one structural change that would make the transfer of power more secure.",
+    "submit_template": "To protect the transfer of power, I would ___."
+  },
+  {
+    "id": 23,
+    "type": "Core",
+    "title": "Amendment 21",
+    "prompt": "The 21st Amendment is the only amendment to repeal another. It says: we were wrong, we're changing it. What would you repeal — in the Constitution or in law?",
+    "do": "Name one constitutional provision or law you would repeal, and why in one sentence.",
+    "submit_template": "I would repeal ___ because ___."
+  },
+  {
+    "id": 24,
+    "type": "Core",
+    "title": "Amendment 22",
+    "prompt": "Term limits were imposed on the presidency after FDR served four terms. Should term limits apply to Congress, to judges, to the Supreme Court?",
+    "do": "Propose one new term limit — on any office or institution.",
+    "submit_template": "I would impose term limits on ___: ___ years."
+  },
+  {
+    "id": 25,
+    "type": "Core",
+    "title": "Amendment 23",
+    "prompt": "700,000 people in Washington DC have no voting representation in Congress. Puerto Rico has 3.2 million. Who else is excluded from full democratic participation in America?",
+    "do": "Name a group of U.S. residents or citizens who lack full representation — and what you'd do about it.",
+    "submit_template": "___ lacks full representation. I would change this by ___."
+  },
+  {
+    "id": 26,
+    "type": "Core",
+    "title": "Amendment 24",
+    "prompt": "Poll taxes were abolished in 1964. Today: strict voter ID requirements, reduced polling locations, registration deadlines. What does it cost you — in time, money, access — to vote?",
+    "do": "Calculate it out loud with the person next to you. Then write it down.",
+    "submit_template": "It costs me ___ to vote."
+  },
+  {
+    "id": 27,
+    "type": "Core",
+    "title": "Amendment 25",
+    "prompt": "The 25th Amendment answers: what happens when the president can't govern? What other leadership vacuums — in institutions, systems, communities — have no succession plan?",
+    "do": "Name an institution or system in your life with no clear succession plan and what should happen if it fails.",
+    "submit_template": "___ has no succession plan. Here is what should happen: ___."
+  },
+  {
+    "id": 28,
+    "type": "Core",
+    "title": "Amendment 26",
+    "prompt": "18-year-olds won the vote in 1971 because they were being drafted to fight in Vietnam. Should younger people — 16-year-olds? — have the vote? Who is affected by democracy but can't vote?",
+    "do": "Propose who should be enfranchised next.",
+    "submit_template": "The next people to win the vote should be ___."
+  },
+  {
+    "id": 29,
+    "type": "Core",
+    "title": "Amendment 27",
+    "prompt": "The 27th Amendment was originally proposed in 1789 and wasn't ratified until 1992 — 203 years later. What proposed right or structural change do you think will take generations to be recognized?",
+    "do": "Name a change you believe will happen — but not in your lifetime.",
+    "submit_template": "This will be recognized eventually: ___."
+  },
+  {
+    "id": 30,
+    "type": "Core",
+    "title": "Federalist No. 1",
+    "prompt": "Hamilton opens Federalist No. 1 by asking whether people can choose good government 'from reflection and choice' rather than 'accident and force.' Can they? Can we?",
+    "do": "Talk to the person next to you. Then write your answer: yes, no, or something more complicated.",
+    "submit_template": "Self-government by reflection and choice: ___."
+  },
+  {
+    "id": 31,
+    "type": "Core",
+    "title": "Federalist No. 2",
+    "prompt": "Hamilton opens Federalist No. 1 by asking whether people can choose good government 'from reflection and choice' rather than 'accident and force.' Can they? Can we?",
+    "do": "Talk to the person next to you. Then write your answer: yes, no, or something more complicated.",
+    "submit_template": "Self-government by reflection and choice: ___."
+  },
+  {
+    "id": 32,
+    "type": "Core",
+    "title": "Federalist No. 3",
+    "prompt": "These papers argue that union prevents war between states and protects against foreign threats. What threatens your community's security today — and who or what should protect it?",
+    "do": "Name the threat. Name the protector you want.",
+    "submit_template": "My community's security threat is ___. The protection I want is ___."
+  },
+  {
+    "id": 33,
+    "type": "Core",
+    "title": "Federalist No. 4",
+    "prompt": "These papers argue that union prevents war between states and protects against foreign threats. What threatens your community's security today — and who or what should protect it?",
+    "do": "Name the threat. Name the protector you want.",
+    "submit_template": "My community's security threat is ___. The protection I want is ___."
+  },
+  {
+    "id": 34,
+    "type": "Core",
+    "title": "Federalist No. 5",
+    "prompt": "These papers argue that union prevents war between states and protects against foreign threats. What threatens your community's security today — and who or what should protect it?",
+    "do": "Name the threat. Name the protector you want.",
+    "submit_template": "My community's security threat is ___. The protection I want is ___."
+  },
+  {
+    "id": 35,
+    "type": "Core",
+    "title": "Federalist No. 6",
+    "prompt": "These papers argue that union prevents war between states and protects against foreign threats. What threatens your community's security today — and who or what should protect it?",
+    "do": "Name the threat. Name the protector you want.",
+    "submit_template": "My community's security threat is ___. The protection I want is ___."
+  },
+  {
+    "id": 36,
+    "type": "Core",
+    "title": "Federalist No. 7",
+    "prompt": "These papers argue that union prevents war between states and protects against foreign threats. What threatens your community's security today — and who or what should protect it?",
+    "do": "Name the threat. Name the protector you want.",
+    "submit_template": "My community's security threat is ___. The protection I want is ___."
+  },
+  {
+    "id": 37,
+    "type": "Core",
+    "title": "Federalist No. 8",
+    "prompt": "These papers argue that union prevents war between states and protects against foreign threats. What threatens your community's security today — and who or what should protect it?",
+    "do": "Name the threat. Name the protector you want.",
+    "submit_template": "My community's security threat is ___. The protection I want is ___."
+  },
+  {
+    "id": 38,
+    "type": "Core",
+    "title": "Federalist No. 9",
+    "prompt": "These papers argue that union prevents war between states and protects against foreign threats. What threatens your community's security today — and who or what should protect it?",
+    "do": "Name the threat. Name the protector you want.",
+    "submit_template": "My community's security threat is ___. The protection I want is ___."
+  },
+  {
+    "id": 39,
+    "type": "Core",
+    "title": "Federalist No. 10",
+    "prompt": "Federalist No. 10 argues a large republic is better at controlling factions — organized groups that put their interest above the common good. Name a faction doing that today.",
+    "do": "Name the faction. Name the common good it's undermining. Talk to the person next to you — do you agree?",
+    "submit_template": "The faction undermining the common good is ___. The common good it's undermining is ___."
+  },
+  {
+    "id": 40,
+    "type": "Core",
+    "title": "Federalist No. 11",
+    "prompt": "These papers argue that economic union is the foundation of political union. What economic system would you build if you were designing it today?",
+    "do": "Name one public economic system that doesn't exist yet that you think should.",
+    "submit_template": "The public economic system I would build: ___."
+  },
+  {
+    "id": 41,
+    "type": "Core",
+    "title": "Federalist No. 12",
+    "prompt": "These papers argue that economic union is the foundation of political union. What economic system would you build if you were designing it today?",
+    "do": "Name one public economic system that doesn't exist yet that you think should.",
+    "submit_template": "The public economic system I would build: ___."
+  },
+  {
+    "id": 42,
+    "type": "Core",
+    "title": "Federalist No. 13",
+    "prompt": "These papers argue that economic union is the foundation of political union. What economic system would you build if you were designing it today?",
+    "do": "Name one public economic system that doesn't exist yet that you think should.",
+    "submit_template": "The public economic system I would build: ___."
+  },
+  {
+    "id": 43,
+    "type": "Core",
+    "title": "Federalist No. 14",
+    "prompt": "These papers argue that economic union is the foundation of political union. What economic system would you build if you were designing it today?",
+    "do": "Name one public economic system that doesn't exist yet that you think should.",
+    "submit_template": "The public economic system I would build: ___."
+  },
+  {
+    "id": 44,
+    "type": "Core",
+    "title": "Federalist No. 15",
+    "prompt": "These papers argue that economic union is the foundation of political union. What economic system would you build if you were designing it today?",
+    "do": "Name one public economic system that doesn't exist yet that you think should.",
+    "submit_template": "The public economic system I would build: ___."
+  },
+  {
+    "id": 45,
+    "type": "Core",
+    "title": "Federalist No. 16",
+    "prompt": "These papers argue that economic union is the foundation of political union. What economic system would you build if you were designing it today?",
+    "do": "Name one public economic system that doesn't exist yet that you think should.",
+    "submit_template": "The public economic system I would build: ___."
+  },
+  {
+    "id": 46,
+    "type": "Core",
+    "title": "Federalist No. 17",
+    "prompt": "These papers argue that economic union is the foundation of political union. What economic system would you build if you were designing it today?",
+    "do": "Name one public economic system that doesn't exist yet that you think should.",
+    "submit_template": "The public economic system I would build: ___."
+  },
+  {
+    "id": 47,
+    "type": "Core",
+    "title": "Federalist No. 18",
+    "prompt": "These papers argue that economic union is the foundation of political union. What economic system would you build if you were designing it today?",
+    "do": "Name one public economic system that doesn't exist yet that you think should.",
+    "submit_template": "The public economic system I would build: ___."
+  },
+  {
+    "id": 48,
+    "type": "Core",
+    "title": "Federalist No. 19",
+    "prompt": "These papers argue that economic union is the foundation of political union. What economic system would you build if you were designing it today?",
+    "do": "Name one public economic system that doesn't exist yet that you think should.",
+    "submit_template": "The public economic system I would build: ___."
+  },
+  {
+    "id": 49,
+    "type": "Core",
+    "title": "Federalist No. 20",
+    "prompt": "These papers argue that economic union is the foundation of political union. What economic system would you build if you were designing it today?",
+    "do": "Name one public economic system that doesn't exist yet that you think should.",
+    "submit_template": "The public economic system I would build: ___."
+  },
+  {
+    "id": 50,
+    "type": "Core",
+    "title": "Federalist No. 21",
+    "prompt": "These papers argue that economic union is the foundation of political union. What economic system would you build if you were designing it today?",
+    "do": "Name one public economic system that doesn't exist yet that you think should.",
+    "submit_template": "The public economic system I would build: ___."
+  },
+  {
+    "id": 51,
+    "type": "Core",
+    "title": "Federalist No. 22",
+    "prompt": "These papers argue that economic union is the foundation of political union. What economic system would you build if you were designing it today?",
+    "do": "Name one public economic system that doesn't exist yet that you think should.",
+    "submit_template": "The public economic system I would build: ___."
+  },
+  {
+    "id": 52,
+    "type": "Core",
+    "title": "Federalist No. 23",
+    "prompt": "Hamilton argues that the national government needs sufficient power — including the power to tax — to function. What should the national government be able to do that it currently can't?",
+    "do": "Name one power you would give the federal government — or one you would take away.",
+    "submit_template": "I would give the federal government the power to ___.' OR 'I would remove the power to ___."
+  },
+  {
+    "id": 53,
+    "type": "Core",
+    "title": "Federalist No. 24",
+    "prompt": "Hamilton argues that the national government needs sufficient power — including the power to tax — to function. What should the national government be able to do that it currently can't?",
+    "do": "Name one power you would give the federal government — or one you would take away.",
+    "submit_template": "I would give the federal government the power to ___.' OR 'I would remove the power to ___."
+  },
+  {
+    "id": 54,
+    "type": "Core",
+    "title": "Federalist No. 25",
+    "prompt": "Hamilton argues that the national government needs sufficient power — including the power to tax — to function. What should the national government be able to do that it currently can't?",
+    "do": "Name one power you would give the federal government — or one you would take away.",
+    "submit_template": "I would give the federal government the power to ___.' OR 'I would remove the power to ___."
+  },
+  {
+    "id": 55,
+    "type": "Core",
+    "title": "Federalist No. 26",
+    "prompt": "Hamilton argues that the national government needs sufficient power — including the power to tax — to function. What should the national government be able to do that it currently can't?",
+    "do": "Name one power you would give the federal government — or one you would take away.",
+    "submit_template": "I would give the federal government the power to ___.' OR 'I would remove the power to ___."
+  },
+  {
+    "id": 56,
+    "type": "Core",
+    "title": "Federalist No. 27",
+    "prompt": "Hamilton argues that the national government needs sufficient power — including the power to tax — to function. What should the national government be able to do that it currently can't?",
+    "do": "Name one power you would give the federal government — or one you would take away.",
+    "submit_template": "I would give the federal government the power to ___.' OR 'I would remove the power to ___."
+  },
+  {
+    "id": 57,
+    "type": "Core",
+    "title": "Federalist No. 28",
+    "prompt": "Hamilton argues that the national government needs sufficient power — including the power to tax — to function. What should the national government be able to do that it currently can't?",
+    "do": "Name one power you would give the federal government — or one you would take away.",
+    "submit_template": "I would give the federal government the power to ___.' OR 'I would remove the power to ___."
+  },
+  {
+    "id": 58,
+    "type": "Core",
+    "title": "Federalist No. 29",
+    "prompt": "Hamilton argues that the national government needs sufficient power — including the power to tax — to function. What should the national government be able to do that it currently can't?",
+    "do": "Name one power you would give the federal government — or one you would take away.",
+    "submit_template": "I would give the federal government the power to ___.' OR 'I would remove the power to ___."
+  },
+  {
+    "id": 59,
+    "type": "Core",
+    "title": "Federalist No. 30",
+    "prompt": "Hamilton argues that the national government needs sufficient power — including the power to tax — to function. What should the national government be able to do that it currently can't?",
+    "do": "Name one power you would give the federal government — or one you would take away.",
+    "submit_template": "I would give the federal government the power to ___.' OR 'I would remove the power to ___."
+  },
+  {
+    "id": 60,
+    "type": "Core",
+    "title": "Federalist No. 31",
+    "prompt": "Hamilton argues that the national government needs sufficient power — including the power to tax — to function. What should the national government be able to do that it currently can't?",
+    "do": "Name one power you would give the federal government — or one you would take away.",
+    "submit_template": "I would give the federal government the power to ___.' OR 'I would remove the power to ___."
+  },
+  {
+    "id": 61,
+    "type": "Core",
+    "title": "Federalist No. 32",
+    "prompt": "Hamilton argues that the national government needs sufficient power — including the power to tax — to function. What should the national government be able to do that it currently can't?",
+    "do": "Name one power you would give the federal government — or one you would take away.",
+    "submit_template": "I would give the federal government the power to ___.' OR 'I would remove the power to ___."
+  },
+  {
+    "id": 62,
+    "type": "Core",
+    "title": "Federalist No. 33",
+    "prompt": "Hamilton argues that the national government needs sufficient power — including the power to tax — to function. What should the national government be able to do that it currently can't?",
+    "do": "Name one power you would give the federal government — or one you would take away.",
+    "submit_template": "I would give the federal government the power to ___.' OR 'I would remove the power to ___."
+  },
+  {
+    "id": 63,
+    "type": "Core",
+    "title": "Federalist No. 34",
+    "prompt": "Hamilton argues that the national government needs sufficient power — including the power to tax — to function. What should the national government be able to do that it currently can't?",
+    "do": "Name one power you would give the federal government — or one you would take away.",
+    "submit_template": "I would give the federal government the power to ___.' OR 'I would remove the power to ___."
+  },
+  {
+    "id": 64,
+    "type": "Core",
+    "title": "Federalist No. 35",
+    "prompt": "Hamilton argues that the national government needs sufficient power — including the power to tax — to function. What should the national government be able to do that it currently can't?",
+    "do": "Name one power you would give the federal government — or one you would take away.",
+    "submit_template": "I would give the federal government the power to ___.' OR 'I would remove the power to ___."
+  },
+  {
+    "id": 65,
+    "type": "Core",
+    "title": "Federalist No. 36",
+    "prompt": "Hamilton argues that the national government needs sufficient power — including the power to tax — to function. What should the national government be able to do that it currently can't?",
+    "do": "Name one power you would give the federal government — or one you would take away.",
+    "submit_template": "I would give the federal government the power to ___.' OR 'I would remove the power to ___."
+  },
+  {
+    "id": 66,
+    "type": "Core",
+    "title": "Federalist No. 37",
+    "prompt": "Madison called the Convention's work 'a system without precedent.' If you were at a constitutional convention today, what is the first problem you'd try to solve?",
+    "do": "Name it in one sentence. Talk to the person next to you first.",
+    "submit_template": "At a constitutional convention today, I would first address ___."
+  },
+  {
+    "id": 67,
+    "type": "Core",
+    "title": "Federalist No. 38",
+    "prompt": "Madison called the Convention's work 'a system without precedent.' If you were at a constitutional convention today, what is the first problem you'd try to solve?",
+    "do": "Name it in one sentence. Talk to the person next to you first.",
+    "submit_template": "At a constitutional convention today, I would first address ___."
+  },
+  {
+    "id": 68,
+    "type": "Core",
+    "title": "Federalist No. 39",
+    "prompt": "Madison called the Convention's work 'a system without precedent.' If you were at a constitutional convention today, what is the first problem you'd try to solve?",
+    "do": "Name it in one sentence. Talk to the person next to you first.",
+    "submit_template": "At a constitutional convention today, I would first address ___."
+  },
+  {
+    "id": 69,
+    "type": "Core",
+    "title": "Federalist No. 40",
+    "prompt": "Madison called the Convention's work 'a system without precedent.' If you were at a constitutional convention today, what is the first problem you'd try to solve?",
+    "do": "Name it in one sentence. Talk to the person next to you first.",
+    "submit_template": "At a constitutional convention today, I would first address ___."
+  },
+  {
+    "id": 70,
+    "type": "Core",
+    "title": "Federalist No. 41",
+    "prompt": "Madison called the Convention's work 'a system without precedent.' If you were at a constitutional convention today, what is the first problem you'd try to solve?",
+    "do": "Name it in one sentence. Talk to the person next to you first.",
+    "submit_template": "At a constitutional convention today, I would first address ___."
+  },
+  {
+    "id": 71,
+    "type": "Core",
+    "title": "Federalist No. 42",
+    "prompt": "Madison called the Convention's work 'a system without precedent.' If you were at a constitutional convention today, what is the first problem you'd try to solve?",
+    "do": "Name it in one sentence. Talk to the person next to you first.",
+    "submit_template": "At a constitutional convention today, I would first address ___."
+  },
+  {
+    "id": 72,
+    "type": "Core",
+    "title": "Federalist No. 43",
+    "prompt": "Madison called the Convention's work 'a system without precedent.' If you were at a constitutional convention today, what is the first problem you'd try to solve?",
+    "do": "Name it in one sentence. Talk to the person next to you first.",
+    "submit_template": "At a constitutional convention today, I would first address ___."
+  },
+  {
+    "id": 73,
+    "type": "Core",
+    "title": "Federalist No. 44",
+    "prompt": "Madison called the Convention's work 'a system without precedent.' If you were at a constitutional convention today, what is the first problem you'd try to solve?",
+    "do": "Name it in one sentence. Talk to the person next to you first.",
+    "submit_template": "At a constitutional convention today, I would first address ___."
+  },
+  {
+    "id": 74,
+    "type": "Core",
+    "title": "Federalist No. 45",
+    "prompt": "Madison called the Convention's work 'a system without precedent.' If you were at a constitutional convention today, what is the first problem you'd try to solve?",
+    "do": "Name it in one sentence. Talk to the person next to you first.",
+    "submit_template": "At a constitutional convention today, I would first address ___."
+  },
+  {
+    "id": 75,
+    "type": "Core",
+    "title": "Federalist No. 46",
+    "prompt": "Madison called the Convention's work 'a system without precedent.' If you were at a constitutional convention today, what is the first problem you'd try to solve?",
+    "do": "Name it in one sentence. Talk to the person next to you first.",
+    "submit_template": "At a constitutional convention today, I would first address ___."
+  },
+  {
+    "id": 76,
+    "type": "Core",
+    "title": "Federalist No. 47",
+    "prompt": "Federalist No. 51: 'Ambition must be made to counteract ambition.' Which branch of government is currently least checked — and what would check it?",
+    "do": "Name the branch. Name the check you'd add. Propose it.",
+    "submit_template": "The least-checked branch is ___. I would check it by ___."
+  },
+  {
+    "id": 77,
+    "type": "Core",
+    "title": "Federalist No. 48",
+    "prompt": "Federalist No. 51: 'Ambition must be made to counteract ambition.' Which branch of government is currently least checked — and what would check it?",
+    "do": "Name the branch. Name the check you'd add. Propose it.",
+    "submit_template": "The least-checked branch is ___. I would check it by ___."
+  },
+  {
+    "id": 78,
+    "type": "Core",
+    "title": "Federalist No. 49",
+    "prompt": "Federalist No. 51: 'Ambition must be made to counteract ambition.' Which branch of government is currently least checked — and what would check it?",
+    "do": "Name the branch. Name the check you'd add. Propose it.",
+    "submit_template": "The least-checked branch is ___. I would check it by ___."
+  },
+  {
+    "id": 79,
+    "type": "Core",
+    "title": "Federalist No. 50",
+    "prompt": "Federalist No. 51: 'Ambition must be made to counteract ambition.' Which branch of government is currently least checked — and what would check it?",
+    "do": "Name the branch. Name the check you'd add. Propose it.",
+    "submit_template": "The least-checked branch is ___. I would check it by ___."
+  },
+  {
+    "id": 80,
+    "type": "Core",
+    "title": "Federalist No. 51",
+    "prompt": "Federalist No. 51: 'Ambition must be made to counteract ambition.' Which branch of government is currently least checked — and what would check it?",
+    "do": "Name the branch. Name the check you'd add. Propose it.",
+    "submit_template": "The least-checked branch is ___. I would check it by ___."
+  },
+  {
+    "id": 81,
+    "type": "Core",
+    "title": "Federalist No. 52",
+    "prompt": "The House was designed to be the branch closest to the people — elected every two years, representing actual districts. Does yours represent you? What would make it more responsive?",
+    "do": "Propose one change to how the House works or how its members are elected.",
+    "submit_template": "To make the House more representative, I would ___."
+  },
+  {
+    "id": 82,
+    "type": "Core",
+    "title": "Federalist No. 53",
+    "prompt": "The House was designed to be the branch closest to the people — elected every two years, representing actual districts. Does yours represent you? What would make it more responsive?",
+    "do": "Propose one change to how the House works or how its members are elected.",
+    "submit_template": "To make the House more representative, I would ___."
+  },
+  {
+    "id": 83,
+    "type": "Core",
+    "title": "Federalist No. 54",
+    "prompt": "The House was designed to be the branch closest to the people — elected every two years, representing actual districts. Does yours represent you? What would make it more responsive?",
+    "do": "Propose one change to how the House works or how its members are elected.",
+    "submit_template": "To make the House more representative, I would ___."
+  },
+  {
+    "id": 84,
+    "type": "Core",
+    "title": "Federalist No. 55",
+    "prompt": "The House was designed to be the branch closest to the people — elected every two years, representing actual districts. Does yours represent you? What would make it more responsive?",
+    "do": "Propose one change to how the House works or how its members are elected.",
+    "submit_template": "To make the House more representative, I would ___."
+  },
+  {
+    "id": 85,
+    "type": "Core",
+    "title": "Federalist No. 56",
+    "prompt": "The House was designed to be the branch closest to the people — elected every two years, representing actual districts. Does yours represent you? What would make it more responsive?",
+    "do": "Propose one change to how the House works or how its members are elected.",
+    "submit_template": "To make the House more representative, I would ___."
+  },
+  {
+    "id": 86,
+    "type": "Core",
+    "title": "Federalist No. 57",
+    "prompt": "The House was designed to be the branch closest to the people — elected every two years, representing actual districts. Does yours represent you? What would make it more responsive?",
+    "do": "Propose one change to how the House works or how its members are elected.",
+    "submit_template": "To make the House more representative, I would ___."
+  },
+  {
+    "id": 87,
+    "type": "Core",
+    "title": "Federalist No. 58",
+    "prompt": "The House was designed to be the branch closest to the people — elected every two years, representing actual districts. Does yours represent you? What would make it more responsive?",
+    "do": "Propose one change to how the House works or how its members are elected.",
+    "submit_template": "To make the House more representative, I would ___."
+  },
+  {
+    "id": 88,
+    "type": "Core",
+    "title": "Federalist No. 59",
+    "prompt": "The House was designed to be the branch closest to the people — elected every two years, representing actual districts. Does yours represent you? What would make it more responsive?",
+    "do": "Propose one change to how the House works or how its members are elected.",
+    "submit_template": "To make the House more representative, I would ___."
+  },
+  {
+    "id": 89,
+    "type": "Core",
+    "title": "Federalist No. 60",
+    "prompt": "The House was designed to be the branch closest to the people — elected every two years, representing actual districts. Does yours represent you? What would make it more responsive?",
+    "do": "Propose one change to how the House works or how its members are elected.",
+    "submit_template": "To make the House more representative, I would ___."
+  },
+  {
+    "id": 90,
+    "type": "Core",
+    "title": "Federalist No. 61",
+    "prompt": "The House was designed to be the branch closest to the people — elected every two years, representing actual districts. Does yours represent you? What would make it more responsive?",
+    "do": "Propose one change to how the House works or how its members are elected.",
+    "submit_template": "To make the House more representative, I would ___."
+  },
+  {
+    "id": 91,
+    "type": "Core",
+    "title": "Federalist No. 62",
+    "prompt": "The Senate gives equal representation to Wyoming (577,000 people) and California (39 million people). Is this still the right design?",
+    "do": "Propose one change to Senate representation or structure.",
+    "submit_template": "I would change the Senate by ___."
+  },
+  {
+    "id": 92,
+    "type": "Core",
+    "title": "Federalist No. 63",
+    "prompt": "The Senate gives equal representation to Wyoming (577,000 people) and California (39 million people). Is this still the right design?",
+    "do": "Propose one change to Senate representation or structure.",
+    "submit_template": "I would change the Senate by ___."
+  },
+  {
+    "id": 93,
+    "type": "Core",
+    "title": "Federalist No. 64",
+    "prompt": "The Senate gives equal representation to Wyoming (577,000 people) and California (39 million people). Is this still the right design?",
+    "do": "Propose one change to Senate representation or structure.",
+    "submit_template": "I would change the Senate by ___."
+  },
+  {
+    "id": 94,
+    "type": "Core",
+    "title": "Federalist No. 65",
+    "prompt": "The Senate gives equal representation to Wyoming (577,000 people) and California (39 million people). Is this still the right design?",
+    "do": "Propose one change to Senate representation or structure.",
+    "submit_template": "I would change the Senate by ___."
+  },
+  {
+    "id": 95,
+    "type": "Core",
+    "title": "Federalist No. 66",
+    "prompt": "The Senate gives equal representation to Wyoming (577,000 people) and California (39 million people). Is this still the right design?",
+    "do": "Propose one change to Senate representation or structure.",
+    "submit_template": "I would change the Senate by ___."
+  },
+  {
+    "id": 96,
+    "type": "Core",
+    "title": "Federalist No. 67",
+    "prompt": "Hamilton designed the presidency for 'energy' and 'decision.' What limits on executive power do you think are missing?",
+    "do": "Propose one new constitutional limit on the president.",
+    "submit_template": "I would constitutionally limit the president from ___."
+  },
+  {
+    "id": 97,
+    "type": "Core",
+    "title": "Federalist No. 68",
+    "prompt": "Hamilton designed the presidency for 'energy' and 'decision.' What limits on executive power do you think are missing?",
+    "do": "Propose one new constitutional limit on the president.",
+    "submit_template": "I would constitutionally limit the president from ___."
+  },
+  {
+    "id": 98,
+    "type": "Core",
+    "title": "Federalist No. 69",
+    "prompt": "Hamilton designed the presidency for 'energy' and 'decision.' What limits on executive power do you think are missing?",
+    "do": "Propose one new constitutional limit on the president.",
+    "submit_template": "I would constitutionally limit the president from ___."
+  },
+  {
+    "id": 99,
+    "type": "Core",
+    "title": "Federalist No. 70",
+    "prompt": "Hamilton designed the presidency for 'energy' and 'decision.' What limits on executive power do you think are missing?",
+    "do": "Propose one new constitutional limit on the president.",
+    "submit_template": "I would constitutionally limit the president from ___."
+  },
+  {
+    "id": 100,
+    "type": "Core",
+    "title": "Federalist No. 71",
+    "prompt": "Hamilton designed the presidency for 'energy' and 'decision.' What limits on executive power do you think are missing?",
+    "do": "Propose one new constitutional limit on the president.",
+    "submit_template": "I would constitutionally limit the president from ___."
+  },
+  {
+    "id": 101,
+    "type": "Core",
+    "title": "Federalist No. 72",
+    "prompt": "Hamilton designed the presidency for 'energy' and 'decision.' What limits on executive power do you think are missing?",
+    "do": "Propose one new constitutional limit on the president.",
+    "submit_template": "I would constitutionally limit the president from ___."
+  },
+  {
+    "id": 102,
+    "type": "Core",
+    "title": "Federalist No. 73",
+    "prompt": "Hamilton designed the presidency for 'energy' and 'decision.' What limits on executive power do you think are missing?",
+    "do": "Propose one new constitutional limit on the president.",
+    "submit_template": "I would constitutionally limit the president from ___."
+  },
+  {
+    "id": 103,
+    "type": "Core",
+    "title": "Federalist No. 74",
+    "prompt": "Hamilton designed the presidency for 'energy' and 'decision.' What limits on executive power do you think are missing?",
+    "do": "Propose one new constitutional limit on the president.",
+    "submit_template": "I would constitutionally limit the president from ___."
+  },
+  {
+    "id": 104,
+    "type": "Core",
+    "title": "Federalist No. 75",
+    "prompt": "Hamilton designed the presidency for 'energy' and 'decision.' What limits on executive power do you think are missing?",
+    "do": "Propose one new constitutional limit on the president.",
+    "submit_template": "I would constitutionally limit the president from ___."
+  },
+  {
+    "id": 105,
+    "type": "Core",
+    "title": "Federalist No. 76",
+    "prompt": "Hamilton designed the presidency for 'energy' and 'decision.' What limits on executive power do you think are missing?",
+    "do": "Propose one new constitutional limit on the president.",
+    "submit_template": "I would constitutionally limit the president from ___."
+  },
+  {
+    "id": 106,
+    "type": "Core",
+    "title": "Federalist No. 77",
+    "prompt": "Hamilton designed the presidency for 'energy' and 'decision.' What limits on executive power do you think are missing?",
+    "do": "Propose one new constitutional limit on the president.",
+    "submit_template": "I would constitutionally limit the president from ___."
+  },
+  {
+    "id": 107,
+    "type": "Core",
+    "title": "Federalist No. 78",
+    "prompt": "Federalist No. 78 calls the judiciary the 'least dangerous' branch because it holds neither sword nor purse. Does that still hold? What should be subject to democratic review that currently isn't?",
+    "do": "Propose one change to how federal judges are appointed, how long they serve, or what they can decide.",
+    "submit_template": "I would change the federal judiciary by ___."
+  },
+  {
+    "id": 108,
+    "type": "Core",
+    "title": "Federalist No. 79",
+    "prompt": "Federalist No. 78 calls the judiciary the 'least dangerous' branch because it holds neither sword nor purse. Does that still hold? What should be subject to democratic review that currently isn't?",
+    "do": "Propose one change to how federal judges are appointed, how long they serve, or what they can decide.",
+    "submit_template": "I would change the federal judiciary by ___."
+  },
+  {
+    "id": 109,
+    "type": "Core",
+    "title": "Federalist No. 80",
+    "prompt": "Federalist No. 78 calls the judiciary the 'least dangerous' branch because it holds neither sword nor purse. Does that still hold? What should be subject to democratic review that currently isn't?",
+    "do": "Propose one change to how federal judges are appointed, how long they serve, or what they can decide.",
+    "submit_template": "I would change the federal judiciary by ___."
+  },
+  {
+    "id": 110,
+    "type": "Core",
+    "title": "Federalist No. 81",
+    "prompt": "Federalist No. 78 calls the judiciary the 'least dangerous' branch because it holds neither sword nor purse. Does that still hold? What should be subject to democratic review that currently isn't?",
+    "do": "Propose one change to how federal judges are appointed, how long they serve, or what they can decide.",
+    "submit_template": "I would change the federal judiciary by ___."
+  },
+  {
+    "id": 111,
+    "type": "Core",
+    "title": "Federalist No. 82",
+    "prompt": "Federalist No. 78 calls the judiciary the 'least dangerous' branch because it holds neither sword nor purse. Does that still hold? What should be subject to democratic review that currently isn't?",
+    "do": "Propose one change to how federal judges are appointed, how long they serve, or what they can decide.",
+    "submit_template": "I would change the federal judiciary by ___."
+  },
+  {
+    "id": 112,
+    "type": "Core",
+    "title": "Federalist No. 83",
+    "prompt": "Federalist No. 78 calls the judiciary the 'least dangerous' branch because it holds neither sword nor purse. Does that still hold? What should be subject to democratic review that currently isn't?",
+    "do": "Propose one change to how federal judges are appointed, how long they serve, or what they can decide.",
+    "submit_template": "I would change the federal judiciary by ___."
+  },
+  {
+    "id": 113,
+    "type": "Core",
+    "title": "Federalist No. 84",
+    "prompt": "Hamilton argued a Bill of Rights was unnecessary — the Constitution itself protected rights. The Anti-Federalists disagreed and won. What rights are still missing from the document?",
+    "do": "Draft Amendment 28. One sentence.",
+    "submit_template": "Amendment 28: ___."
+  },
+  {
+    "id": 114,
+    "type": "Core",
+    "title": "Federalist No. 85",
+    "prompt": "Hamilton argued a Bill of Rights was unnecessary — the Constitution itself protected rights. The Anti-Federalists disagreed and won. What rights are still missing from the document?",
+    "do": "Draft Amendment 28. One sentence.",
+    "submit_template": "Amendment 28: ___."
+  },
+  {
+    "id": 115,
+    "type": "Expansive",
+    "title": "13th Amendment ratification debate",
+    "prompt": "Thaddeus Stevens waited 40 years to say what he said on January 13, 1865. He said it anyway, knowing it might not pass. What have you been waiting to say?",
+    "do": "Say it — out loud — to the person next to you. Then write it and submit it.",
+    "submit_template": "I have been waiting to say ___."
+  },
+  {
+    "id": 116,
+    "type": "Expansive",
+    "title": "14th Amendment ratification debate",
+    "prompt": "In 1866, Bingham argued the Constitution had a 'want' — a missing guarantee of equal protection. What 'want' does your Constitution have today?",
+    "do": "Name the missing guarantee. Draft it in one sentence.",
+    "submit_template": "The constitutional guarantee we still need: ___."
+  },
+  {
+    "id": 117,
+    "type": "Expansive",
+    "title": "15th Amendment ratification debate",
+    "prompt": "Congress debated three versions of the 15th Amendment. The narrowest won. If the broader version — banning literacy tests, property qualifications, and nativity requirements — had passed, what would be different?",
+    "do": "Talk to the person next to you. Submit one thing that would be different today.",
+    "submit_template": "If the broader 15th Amendment had passed, ___."
+  },
+  {
+    "id": 118,
+    "type": "Expansive",
+    "title": "19th Amendment ratification debate",
+    "prompt": "The 19th Amendment took 72 years of organizing, petitioning, marching, and being jailed to pass. What right being fought for today will take that long — and will you still be here to see it?",
+    "do": "Name the right. Commit, out loud, to doing one thing to advance it.",
+    "submit_template": "The right I am committed to fighting for: ___."
+  },
+  {
+    "id": 119,
+    "type": "Expansive",
+    "title": "24th Amendment ratification debate",
+    "prompt": "Poll taxes were abolished because they priced people out of democracy. What prices people out of democracy today?",
+    "do": "Name the cost — money, time, ID, distance, fear. Submit it.",
+    "submit_template": "What prices me or others out of democracy: ___."
+  },
+  {
+    "id": 120,
+    "type": "Expansive",
+    "title": "26th Amendment ratification debate",
+    "prompt": "18-year-olds won the vote because they were being drafted to fight in a war they couldn't vote on. Old enough to die, too young to decide. Where else does that logic apply today?",
+    "do": "Name who bears the consequences of decisions they have no voice in.",
+    "submit_template": "___ bears the consequences of decisions they cannot influence."
+  },
+  {
+    "id": 121,
+    "type": "Expansive",
+    "title": "Civil Rights Act of 1964, floor debate excerpts",
+    "prompt": "The Civil Rights Act of 1964 passed after years of sit-ins, marches, and legislation being blocked. What law needs to exist that doesn't yet?",
+    "do": "Draft it in one sentence. Give it a name.",
+    "submit_template": "The law I would pass: [name]. It would: ___."
+  },
+  {
+    "id": 122,
+    "type": "Expansive",
+    "title": "Voting Rights Act of 1965, floor debate excerpts",
+    "prompt": "In 2013, the Supreme Court struck down the core of the Voting Rights Act, ruling that discrimination was no longer severe enough to justify federal oversight. What do you think?",
+    "do": "Talk to the person next to you. Then write: do you agree or disagree — and why, in one sentence?",
+    "submit_template": "On the VRA and Shelby County: I [agree/disagree] because ___."
+  },
+  {
+    "id": 123,
+    "type": "Expansive",
+    "title": "Executive Order 9066",
+    "prompt": "With one executive order in 1942, 120,000 Japanese Americans were incarcerated — two-thirds of them U.S. citizens. What group is being targeted by executive power today?",
+    "do": "Name the group. Name the order or policy. Propose what should stop it.",
+    "submit_template": "___ is being targeted by executive power. What should stop it: ___."
+  },
+  {
+    "id": 124,
+    "type": "Expansive",
+    "title": "Executive Order 8802",
+    "prompt": "A. Philip Randolph threatened a march of 100,000 Black workers on Washington, and FDR signed EO 8802 to stop it. Organized pressure produced a presidential executive order. What would it take today?",
+    "do": "Name one protection that should be required by executive order and doesn't exist yet.",
+    "submit_template": "The executive order I would demand: ___."
+  },
+  {
+    "id": 125,
+    "type": "Expansive",
+    "title": "Title IX implementing regulations",
+    "prompt": "Title IX's regulations took three years and enormous organizing to force the government to implement. Who else is still waiting for their law to be enforced?",
+    "do": "Name a law on the books that isn't being enforced — and who it affects.",
+    "submit_template": "___ is a law that isn't being enforced. It affects ___."
+  },
+  {
+    "id": 126,
+    "type": "Expansive",
+    "title": "Treaty or agreement specific to Lenape land (NYC) — source TBD",
+    "prompt": "You are standing on Lenape land. A treaty was signed here — or should have been. What obligations come with being on someone else's land?",
+    "do": "Learn whose land this is. Then write one obligation you will carry.",
+    "submit_template": "I am on ___ land. My obligation is ___."
+  },
+  {
+    "id": 127,
+    "type": "Expansive",
+    "title": "Treaty of Fort Laramie",
+    "prompt": "The Treaty of Fort Laramie promised the Lakota people their land forever. The U.S. violated it within a decade when gold was discovered in the Black Hills. Name a promise your government made and broke.",
+    "do": "Talk to the person next to you. Write the promise.",
+    "submit_template": "A promise that was broken: ___."
+  },
+  {
+    "id": 128,
+    "type": "Expansive",
+    "title": "Treaty of New Echota",
+    "prompt": "The Treaty of New Echota was signed by a small faction of Cherokee leaders without tribal authority. The entire Nation was removed. When is a signature on a document legitimate — and when is it forced?",
+    "do": "Think of a contract, agreement, or policy you signed or accepted under conditions you didn't choose. Write about it.",
+    "submit_template": "I agreed to ___ under conditions I didn't choose."
+  },
+  {
+    "id": 129,
+    "type": "Expansive",
+    "title": "Dred Scott v. Sandford",
+    "prompt": "In Dred Scott, the Supreme Court ruled that Black people 'had no rights which the white man was bound to respect.' The Court was wrong — catastrophically wrong. What ruling today do you think is catastrophically wrong?",
+    "do": "Name it. State why in one sentence.",
+    "submit_template": "The ruling I believe is wrong: ___. Because ___."
+  },
+  {
+    "id": 130,
+    "type": "Expansive",
+    "title": "Plessy v. Ferguson",
+    "prompt": "'Separate but equal' was the law for 58 years. Name a separate-but-unequal structure still operating in your community — in schools, healthcare, housing, infrastructure.",
+    "do": "Name it. Talk to the person next to you: do they see it too?",
+    "submit_template": "The separate-but-unequal structure in my community: ___."
+  },
+  {
+    "id": 131,
+    "type": "Expansive",
+    "title": "Korematsu v. United States",
+    "prompt": "The Supreme Court upheld Japanese American incarceration in 1944. In 2018, it formally repudiated Korematsu — but did not strike down the executive order that enabled it. What would you refuse to accept in the name of national security?",
+    "do": "Name it. Say it out loud to the person next to you.",
+    "submit_template": "I would refuse to accept ___ in the name of national security."
+  },
+  {
+    "id": 132,
+    "type": "Expansive",
+    "title": "Declaration of Sentiments",
+    "prompt": "In 1848, Elizabeth Cady Stanton rewrote the Declaration of Independence as a list of women's grievances. She kept the structure; she changed the subject. Now you do it.",
+    "do": "Write one sentence in the form of the Declaration — 'He/She/They/It has never permitted me to ___.' Submit it.",
+    "submit_template": "___ has never permitted me to ___."
+  },
+  {
+    "id": 133,
+    "type": "Expansive",
+    "title": "Frederick Douglass, 'What to the Slave Is the Fourth of July?'",
+    "prompt": "Douglass asked: what does your national holiday mean to the person it excludes? Ask that question about something you celebrate or take for granted.",
+    "do": "Complete this sentence out loud — then write it: 'What, to ___, is your ___?'",
+    "submit_template": "What, to ___, is your ___?"
+  },
+  {
+    "id": 134,
+    "type": "Expansive",
+    "title": "Sojourner Truth, 'Ain't I a Woman?'",
+    "prompt": "Truth asked a room full of people who doubted her: 'Ain't I a woman?' She named what was being taken from her and demanded they see it. What is being taken from you — and who needs to see it?",
+    "do": "Say it out loud. To the person next to you. Then write it.",
+    "submit_template": "Ain't I a ___?"
+  },
+  {
+    "id": 135,
+    "type": "Expansive",
+    "title": "Chief Joseph, surrender speech",
+    "prompt": "Chief Joseph said: 'I will fight no more forever.' He didn't stop caring — he stopped being able to fight. What have you stopped fighting for — not because you stopped caring, but because you ran out of something?",
+    "do": "Name it. Say it to the person next to you.",
+    "submit_template": "I stopped fighting for ___ when I ran out of ___."
+  },
+  {
+    "id": 136,
+    "type": "Expansive",
+    "title": "Section 504 Sit-in demands",
+    "prompt": "100 people occupied a federal building for 26 days because a law existed but wasn't being enforced. They stayed until it was. What law exists on paper but not in practice in your life?",
+    "do": "Name it. Write your demand.",
+    "submit_template": "The law that isn't being enforced: ___. My demand: ___."
+  },
+  {
+    "id": 137,
+    "type": "Expansive",
+    "title": "Poor People's Campaign demands",
+    "prompt": "In 1968, the SCLC demanded five things: a job, an income, land, capital, and a voice in the programs that govern you. In 2025, which of these do you still not have?",
+    "do": "Name the one you most need. Add it to the demand list.",
+    "submit_template": "I demand ___."
+  }
+]

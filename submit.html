@@ -242,6 +242,60 @@
       cursor: pointer;
     }
     .resistbot-opt-label a { color: #000; }
+    .success-divider {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 16px 0;
+    }
+    .success-section-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 8px;
+    }
+    .echo-block {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .echo-source {
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 6px;
+    }
+    .echo-clause {
+      font-size: 14px;
+      line-height: 1.5;
+      border-left: 2px solid #000;
+      padding-left: 10px;
+    }
+    .clusters-block {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .cluster-pill {
+      font-size: 12px;
+      line-height: 1.3;
+    }
+    .cluster-count {
+      font-size: 18px;
+      font-weight: bold;
+      display: block;
+    }
+    .cluster-theme {
+      display: block;
+      color: #555;
+      text-transform: lowercase;
+    }
+    .ai-loading {
+      font-size: 12px;
+      color: #999;
+    }
+    .ai-offline {
+      font-size: 12px;
+      color: #999;
+    }
     /* Success screen */
     .success-view {
       display: none;
@@ -312,21 +366,36 @@
   <div class="container">
     <div class="success-title" id="success-title">Added to the living corpus</div>
     <div class="success-response" id="success-text"></div>
-    <div class="success-note" id="success-note">Your response is now part of the New Public Systems living corpus.</div>
-    <div class="take-further">
-      <div class="resistbot-block">
-        <div class="resistbot-label" id="resistbot-label">Your grievance is now in the corpus. Send it to your reps too:</div>
-        <a class="resistbot-sms-btn" id="resistbot-sms-btn" href="sms:50409?body=RESIST">
-          <span id="resistbot-instruction">Text RESIST to 50409 &rarr;</span>
-        </a>
-        <div class="resistbot-note" id="resistbot-note">Tap to open a text to Resistbot. Just hit Send — it delivers your grievance to your senators and House representative. No account needed.</div>
-      </div>
-      <div class="find-rep">
-        <span id="find-rep-label">Or find your representative: </span>
-        <a href="https://www.house.gov/representatives/find-your-representative" target="_blank" rel="noopener">house.gov</a>
-        &nbsp;&middot;&nbsp;
-        <a href="https://www.senate.gov/senators/senators-contact.htm" target="_blank" rel="noopener">senate.gov</a>
-      </div>
+
+    <hr class="success-divider">
+
+    <div class="success-section-label" id="echo-label">Your echo</div>
+    <div class="echo-block" id="echo-block">
+      <div class="ai-loading" id="echo-loading">&#8230;</div>
+    </div>
+
+    <hr class="success-divider">
+
+    <div class="success-section-label" id="clusters-label">Today at this installation</div>
+    <div class="clusters-block" id="clusters-block">
+      <div class="ai-loading" id="clusters-loading">&#8230;</div>
+    </div>
+
+    <hr class="success-divider">
+
+    <div class="resistbot-block">
+      <div class="resistbot-label" id="resistbot-label">Send it to your reps too:</div>
+      <a class="resistbot-sms-btn" id="resistbot-sms-btn" href="sms:50409?body=RESIST">
+        <span id="resistbot-instruction">Text RESIST to 50409 &rarr;</span>
+      </a>
+      <div class="resistbot-note" id="resistbot-note">Tap to open a text to Resistbot. Just hit Send.</div>
+    </div>
+
+    <div class="find-rep">
+      <span id="find-rep-label">Or find your rep: </span>
+      <a href="https://www.house.gov/representatives/find-your-representative" target="_blank" rel="noopener">house.gov</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://www.senate.gov/senators/senators-contact.htm" target="_blank" rel="noopener">senate.gov</a>
     </div>
   </div>
 </div>
@@ -334,6 +403,7 @@
 <script>
 const CONFIG = {
   // https://supabase.com → New Project → Settings → API
+  AI_URL:            '',  // local server during installations e.g. 'http://192.168.4.1:8000'
   SUPABASE_URL:      'https://lrrxytidqzulcqeytnkd.supabase.co',
   SUPABASE_ANON_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxycnh5dGlkcXp1bGNxZXl0bmtkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODcxNzk5NTksImV4cCI6MjEwMjc1NTk1OX0.-IbnCjHsGODDltav1uohm9xb4WTt0UJ8t-iuARFMtoc',
 
@@ -351,10 +421,10 @@ const CORPUS = [{"id": 1, "type": "Core", "title": "Declaration of Independence"
 const UI = {"en": {"header": "New Public Systems &mdash; Living Corpus", "your_response": "Your response", "age": "Age", "select": "Select...", "under13": "Under 13", "name": "Name", "optional": "(optional)", "name_placeholder": "First name or nickname", "location": "Location", "city_placeholder": "City, State", "use_location": "use my current location", "locating": "Locating...", "location_set": "Location set.", "location_denied": "Location access denied — type your city above.", "consent": "I agree to share this response publicly as part of the New Public Systems living corpus.", "privacy": "We collect your response, age range, optional name, and optional location. We do not collect your IP address. Date and time are recorded automatically. Under-13 responses are anonymous.", "submit_btn": "Submit to the living corpus", "submitting": "Submitting...", "success_mark": "&#10022;", "success_title": "Added to the living corpus", "success_note": "Your response is now part of the New Public Systems living corpus.", "take_further": "Take it further", "resistbot_label": "Text your rep right now — no account needed:", "resistbot_instruction": "Text RESIST to 50409 &rarr;", "resistbot_note": "Resistbot finds your representatives and delivers your message.", "find_rep": "Or find your representative:", "find_rep_link_house": "house.gov", "find_rep_link_senate": "senate.gov",
     "rb_head": "Take it further",
     "rb_cmd": "Tap here to text what you wrote to your representatives — no account, no login: <a href=\"sms:50409?body=RESIST\" style=\"color:#000;font-weight:bold;\">Text RESIST to 50409</a>",
-    "rb_body": "Resistbot delivers your message to your senators and House representative in Congress. It's the same as writing a letter to your elected officials, but by text. You can do this for any grievance you have. You can also call your rep (find the number at <a href='https://www.house.gov/representatives/find-your-representative' target='_blank'>house.gov</a> or <a href='https://www.senate.gov/senators/senators-contact.htm' target='_blank'>senate.gov</a>), or show up at a town hall.", "rb_opt_label": "Also text what I wrote to Resistbot — no account needed. Resistbot delivers your message to your senators and House representative in Congress. It's the same as writing a letter to your elected officials, but by text. You can do this for any grievance you have. You can also call your rep (find the number at <a href='https://www.house.gov/representatives/find-your-representative' target='_blank'>house.gov</a> or <a href='https://www.senate.gov/senators/senators-contact.htm' target='_blank'>senate.gov</a>), or show up at a town hall.", "coppa_note": "Under 13: your response will be submitted without your name. Ask a grown-up if you have questions.", "not_found": "Document not found. Please check the QR code.", "loading": "Loading&hellip;", "error_response": "Please write your response before submitting.", "error_age": "Please select your age range.", "error_consent": "Please check the consent box to continue.", "error_generic": "Something went wrong. Please try again."}, "es": {"header": "Nuevos Sistemas P&uacute;blicos &mdash; Corpus Vivo", "your_response": "Tu respuesta", "age": "Edad", "select": "Seleccionar...", "under13": "Menor de 13", "name": "Nombre", "optional": "(opcional)", "name_placeholder": "Primer nombre o apodo", "location": "Ubicaci&oacute;n", "city_placeholder": "Ciudad, Estado", "use_location": "usar mi ubicaci&oacute;n actual", "locating": "Localizando...", "location_set": "Ubicación establecida.", "location_denied": "Acceso a ubicación denegado — escribe tu ciudad arriba.", "consent": "Acepto compartir esta respuesta públicamente como parte del Corpus Vivo de Nuevos Sistemas Públicos.", "privacy": "Recopilamos tu respuesta, rango de edad, nombre opcional y ubicación opcional. No recopilamos tu dirección IP. La fecha y hora se registran automáticamente. Las respuestas de menores de 13 años son anónimas.", "submit_btn": "Enviar al corpus vivo", "submitting": "Enviando...", "success_mark": "&#10022;", "success_title": "Añadido al corpus vivo", "success_note": "Tu respuesta es ahora parte del Corpus Vivo de Nuevos Sistemas Públicos.", "take_further": "Llévalo más lejos", "resistbot_label": "Envía un mensaje a tu representante ahora — no se necesita cuenta:", "resistbot_instruction": "Envía <strong>RESISTIR</strong> al <strong>50409</strong>", "resistbot_note": "Resistbot encuentra a tus representantes y entrega tu mensaje.", "find_rep": "O encuentra a tu representante:", "find_rep_link_house": "house.gov", "find_rep_link_senate": "senate.gov",
+    "rb_body": "Resistbot delivers your message to your senators and House representative in Congress. It's the same as writing a letter to your elected officials, but by text. You can do this for any grievance you have. You can also call your rep (find the number at <a href='https://www.house.gov/representatives/find-your-representative' target='_blank'>house.gov</a> or <a href='https://www.senate.gov/senators/senators-contact.htm' target='_blank'>senate.gov</a>), or show up at a town hall.", "rb_opt_label": "Also text what I wrote to Resistbot — no account needed. Resistbot delivers your message to your senators and House representative in Congress. It's the same as writing a letter to your elected officials, but by text. You can do this for any grievance you have. You can also call your rep (find the number at <a href='https://www.house.gov/representatives/find-your-representative' target='_blank'>house.gov</a> or <a href='https://www.senate.gov/senators/senators-contact.htm' target='_blank'>senate.gov</a>), or show up at a town hall.", "ai_offline": "Connect to the installation network to see your echo and today's themes.", "no_submissions_yet": "No submissions yet today.", "echo_label": "Your echo", "clusters_label": "Today at this installation", "coppa_note": "Under 13: your response will be submitted without your name. Ask a grown-up if you have questions.", "not_found": "Document not found. Please check the QR code.", "loading": "Loading&hellip;", "error_response": "Please write your response before submitting.", "error_age": "Please select your age range.", "error_consent": "Please check the consent box to continue.", "error_generic": "Something went wrong. Please try again."}, "es": {"header": "Nuevos Sistemas P&uacute;blicos &mdash; Corpus Vivo", "your_response": "Tu respuesta", "age": "Edad", "select": "Seleccionar...", "under13": "Menor de 13", "name": "Nombre", "optional": "(opcional)", "name_placeholder": "Primer nombre o apodo", "location": "Ubicaci&oacute;n", "city_placeholder": "Ciudad, Estado", "use_location": "usar mi ubicaci&oacute;n actual", "locating": "Localizando...", "location_set": "Ubicación establecida.", "location_denied": "Acceso a ubicación denegado — escribe tu ciudad arriba.", "consent": "Acepto compartir esta respuesta públicamente como parte del Corpus Vivo de Nuevos Sistemas Públicos.", "privacy": "Recopilamos tu respuesta, rango de edad, nombre opcional y ubicación opcional. No recopilamos tu dirección IP. La fecha y hora se registran automáticamente. Las respuestas de menores de 13 años son anónimas.", "submit_btn": "Enviar al corpus vivo", "submitting": "Enviando...", "success_mark": "&#10022;", "success_title": "Añadido al corpus vivo", "success_note": "Tu respuesta es ahora parte del Corpus Vivo de Nuevos Sistemas Públicos.", "take_further": "Llévalo más lejos", "resistbot_label": "Envía un mensaje a tu representante ahora — no se necesita cuenta:", "resistbot_instruction": "Envía <strong>RESISTIR</strong> al <strong>50409</strong>", "resistbot_note": "Resistbot encuentra a tus representantes y entrega tu mensaje.", "find_rep": "O encuentra a tu representante:", "find_rep_link_house": "house.gov", "find_rep_link_senate": "senate.gov",
     "rb_head": "Para ir m\u00e1s lejos",
     "rb_cmd": "Toca aquí para enviar lo que escribiste a tus representantes — sin cuenta, sin contraseña: <a href=\"sms:50409?body=RESISTIR\" style=\"color:#000;font-weight:bold;\">Envía RESISTIR al 50409</a>",
-    "rb_body": "Resistbot entrega tu mensaje a tus senadores y representante en el Congreso. Es como escribir una carta a tus representantes electos, pero por mensaje de texto. Puedes hacerlo por cualquier queja que tengas. También puedes llamar a tu representante (busca el número en <a href='https://www.house.gov/representatives/find-your-representative' target='_blank'>house.gov</a> o <a href='https://www.senate.gov/senators/senators-contact.htm' target='_blank'>senate.gov</a>), o asistir a un ayuntamiento.", "rb_opt_label": "También enviar lo que escribí a Resistbot — sin cuenta. Resistbot entrega tu mensaje a tus senadores y representante en el Congreso. Es como escribir una carta a tus representantes electos, pero por mensaje de texto. Puedes hacerlo por cualquier queja que tengas. También puedes llamar a tu representante (busca el número en <a href='https://www.house.gov/representatives/find-your-representative' target='_blank'>house.gov</a> o <a href='https://www.senate.gov/senators/senators-contact.htm' target='_blank'>senate.gov</a>), o asistir a un ayuntamiento.", "coppa_note": "Menor de 13: tu respuesta será enviada sin tu nombre. Pregunta a un adulto si tienes preguntas.", "not_found": "Documento no encontrado. Por favor verifica el código QR.", "loading": "Cargando&hellip;", "error_response": "Por favor escribe tu respuesta antes de enviar.", "error_age": "Por favor selecciona tu rango de edad.", "error_consent": "Por favor marca la casilla de consentimiento para continuar.", "error_generic": "Algo salió mal. Por favor intenta de nuevo."}};
+    "rb_body": "Resistbot entrega tu mensaje a tus senadores y representante en el Congreso. Es como escribir una carta a tus representantes electos, pero por mensaje de texto. Puedes hacerlo por cualquier queja que tengas. También puedes llamar a tu representante (busca el número en <a href='https://www.house.gov/representatives/find-your-representative' target='_blank'>house.gov</a> o <a href='https://www.senate.gov/senators/senators-contact.htm' target='_blank'>senate.gov</a>), o asistir a un ayuntamiento.", "rb_opt_label": "También enviar lo que escribí a Resistbot — sin cuenta. Resistbot entrega tu mensaje a tus senadores y representante en el Congreso. Es como escribir una carta a tus representantes electos, pero por mensaje de texto. Puedes hacerlo por cualquier queja que tengas. También puedes llamar a tu representante (busca el número en <a href='https://www.house.gov/representatives/find-your-representative' target='_blank'>house.gov</a> o <a href='https://www.senate.gov/senators/senators-contact.htm' target='_blank'>senate.gov</a>), o asistir a un ayuntamiento.", "ai_offline": "Conéctate a la red de la instalación para ver tu eco y los temas de hoy.", "no_submissions_yet": "Todavía no hay respuestas hoy.", "echo_label": "Tu eco", "clusters_label": "Hoy en esta instalación", "coppa_note": "Menor de 13: tu respuesta será enviada sin tu nombre. Pregunta a un adulto si tienes preguntas.", "not_found": "Documento no encontrado. Por favor verifica el código QR.", "loading": "Cargando&hellip;", "error_response": "Por favor escribe tu respuesta antes de enviar.", "error_age": "Por favor selecciona tu rango de edad.", "error_consent": "Por favor marca la casilla de consentimiento para continuar.", "error_generic": "Algo salió mal. Por favor intenta de nuevo."}};
 
 // ── LANGUAGE ──────────────────────────────────────────────────────────────────
 let lang = 'en';
@@ -571,6 +641,8 @@ async function handleSubmit(doc) {
       }
       updateSuccessLang();
       window.scrollTo({ top: 0, behavior: 'smooth' });
+      fetchEcho(response, doc.id);
+      fetchClusters();
     } else { throw new Error('failed'); }
   } catch (e) {
     btn.disabled = false;
@@ -585,13 +657,66 @@ function updateSuccessLang() {
   if (!sv || sv.style.display === 'none') return;
   document.getElementById('success-title').textContent     = t('success_title');
   document.getElementById('success-note').textContent      = t('success_note');
-  document.getElementById('take-further-title').textContent = t('take_further');
+  if (document.getElementById('echo-label')) document.getElementById('echo-label').textContent = t('echo_label');
+  if (document.getElementById('clusters-label')) document.getElementById('clusters-label').textContent = t('clusters_label');
   document.getElementById('resistbot-label').innerHTML     = t('resistbot_label');
   // resistbot-instruction is inside the sms button link — text set by UI string
   document.getElementById('resistbot-instruction').innerHTML = t('resistbot_instruction');
   document.getElementById('resistbot-note').textContent    = t('resistbot_note');
   document.getElementById('find-rep-label').textContent    = t('find_rep') + ' ';
 }
+
+async function fetchEcho(text, docId) {
+  const block = document.getElementById('echo-block');
+  const loading = document.getElementById('echo-loading');
+  if (!CONFIG.AI_URL) {
+    block.innerHTML = '<div class="ai-offline" id="echo-offline">' + t('ai_offline') + '</div>';
+    return;
+  }
+  try {
+    const r = await fetch(CONFIG.AI_URL + '/echo', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text, doc_id: docId }),
+      signal: AbortSignal.timeout(8000)
+    });
+    if (!r.ok) throw new Error('echo failed');
+    const d = await r.json();
+    block.innerHTML =
+      '<div class="echo-source">' + esc(d.match_title) + '</div>' +
+      '<div class="echo-clause">' + esc(d.match_clause) + '</div>';
+  } catch (e) {
+    block.innerHTML = '<div class="ai-offline">' + t('ai_offline') + '</div>';
+  }
+}
+
+async function fetchClusters() {
+  const block = document.getElementById('clusters-block');
+  if (!CONFIG.AI_URL) {
+    block.innerHTML = '<div class="ai-offline">' + t('ai_offline') + '</div>';
+    return;
+  }
+  try {
+    const r = await fetch(CONFIG.AI_URL + '/clusters', {
+      signal: AbortSignal.timeout(5000)
+    });
+    if (!r.ok) throw new Error('clusters failed');
+    const d = await r.json();
+    if (!d.clusters || !d.clusters.length) {
+      block.innerHTML = '<div class="ai-offline">' + t('no_submissions_yet') + '</div>';
+      return;
+    }
+    block.innerHTML = d.clusters.map(c =>
+      '<div class="cluster-pill">' +
+        '<span class="cluster-count">' + c.count + '</span>' +
+        '<span class="cluster-theme">' + esc(c.theme) + '</span>' +
+      '</div>'
+    ).join('');
+  } catch (e) {
+    block.innerHTML = '<div class="ai-offline">' + t('ai_offline') + '</div>';
+  }
+}
+
 
 async function toSupabase(payload) {
   const r = await fetch(`${CONFIG.SUPABASE_URL}/rest/v1/submissions`, {

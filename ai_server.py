@@ -22,6 +22,7 @@ import argparse
 import json
 import os
 import re
+import sqlite3
 import time
 from collections import Counter
 from datetime import datetime, timezone
@@ -37,15 +38,39 @@ from pydantic import BaseModel
 # ── Config ────────────────────────────────────────────────────────────────────
 
 DB_DIR          = Path(__file__).parent / "chroma_db"
+SQLITE_PATH     = Path(__file__).parent / "submissions.db"
 COLLECTION_NAME = "corpus"
 OLLAMA_URL      = os.getenv("OLLAMA_URL", "http://localhost:11434")
 EMBED_MODEL     = os.getenv("EMBED_MODEL", "nomic-embed-text")
 LLM_MODEL       = os.getenv("LLM_MODEL",  "olmo3-instruct")       # ollama pull olmo3-instruct
-SUPABASE_URL    = os.getenv("SUPABASE_URL", "")
-SUPABASE_KEY    = os.getenv("SUPABASE_KEY", "")             # anon key
 
 # Cluster cache: recompute at most every N seconds
 CLUSTER_TTL     = 120
+
+
+# ── SQLite setup ──────────────────────────────────────────────────────────────
+
+def init_db():
+    con = sqlite3.connect(SQLITE_PATH)
+    con.execute("""
+        CREATE TABLE IF NOT EXISTS submissions (
+            id                INTEGER PRIMARY KEY AUTOINCREMENT,
+            created_at        TEXT    DEFAULT (datetime('now')),
+            doc_id            INTEGER,
+            doc_title         TEXT,
+            response_text     TEXT,
+            submit_template   TEXT,
+            first_name        TEXT,
+            installation_name TEXT,
+            visitor_zip       TEXT,
+            consented         INTEGER DEFAULT 1,
+            ui_language       TEXT
+        )
+    """)
+    con.commit()
+    con.close()
+
+init_db()
 
 # ── App setup ─────────────────────────────────────────────────────────────────
 
@@ -111,27 +136,19 @@ def llm_complete(prompt: str, max_tokens: int = 200) -> str:
 _cluster_cache: dict = {"ts": 0, "clusters": []}
 
 
-def _supabase_today() -> list[str]:
-    """Fetch today's responses from Supabase. Returns list of response strings."""
-    if not SUPABASE_URL or not SUPABASE_KEY:
-        return []
-
+def _submissions_today() -> list[str]:
+    """Fetch today's responses from local SQLite. Returns list of response strings."""
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    url   = f"{SUPABASE_URL}/rest/v1/submissions"
-    params = {
-        "select":     "response",
-        "created_at": f"gte.{today}T00:00:00Z",
-    }
-    headers = {
-        "apikey":        SUPABASE_KEY,
-        "Authorization": f"Bearer {SUPABASE_KEY}",
-    }
     try:
-        r = requests.get(url, params=params, headers=headers, timeout=10)
-        r.raise_for_status()
-        return [row["response"] for row in r.json() if row.get("response")]
+        con = sqlite3.connect(SQLITE_PATH)
+        rows = con.execute(
+            "SELECT response_text FROM submissions WHERE created_at >= ? AND response_text IS NOT NULL",
+            (today + "T00:00:00",)
+        ).fetchall()
+        con.close()
+        return [r[0] for r in rows if r[0]]
     except Exception as e:
-        print(f"[clusters] Supabase fetch error: {e}")
+        print(f"[clusters] SQLite fetch error: {e}")
         return []
 
 
@@ -201,7 +218,7 @@ def get_clusters(force: bool = False) -> list[dict]:
     if not force and (now - _cluster_cache["ts"]) < CLUSTER_TTL:
         return _cluster_cache["clusters"]
 
-    responses = _supabase_today()
+    responses = _submissions_today()
     if not responses:
         _cluster_cache = {"ts": now, "clusters": []}
         return []
@@ -226,7 +243,47 @@ def health():
         count = col.count()
     except Exception as e:
         return {"status": "degraded", "error": str(e), "docs": 0}
-    return {"status": "ok", "docs": count, "model": EMBED_MODEL}
+    try:
+        con = sqlite3.connect(SQLITE_PATH)
+        submissions = con.execute("SELECT COUNT(*) FROM submissions").fetchone()[0]
+        con.close()
+    except Exception:
+        submissions = -1
+    return {"status": "ok", "docs": count, "submissions": submissions, "model": EMBED_MODEL}
+
+
+class SubmitRequest(BaseModel):
+    doc_id:            Optional[int]  = None
+    doc_title:         Optional[str]  = None
+    response_text:     str
+    submit_template:   Optional[str]  = None
+    first_name:        Optional[str]  = None
+    installation_name: Optional[str]  = None
+    visitor_zip:       Optional[str]  = None
+    consented:         bool           = True
+    ui_language:       Optional[str]  = "en"
+
+
+@app.post("/submit")
+def submit(req: SubmitRequest):
+    if not req.response_text.strip():
+        raise HTTPException(400, "response_text is required")
+    try:
+        con = sqlite3.connect(SQLITE_PATH)
+        con.execute(
+            """INSERT INTO submissions
+               (doc_id, doc_title, response_text, submit_template,
+                first_name, installation_name, visitor_zip, consented, ui_language)
+               VALUES (?,?,?,?,?,?,?,?,?)""",
+            (req.doc_id, req.doc_title, req.response_text, req.submit_template,
+             req.first_name, req.installation_name, req.visitor_zip,
+             1 if req.consented else 0, req.ui_language)
+        )
+        con.commit()
+        con.close()
+        return {"status": "ok"}
+    except Exception as e:
+        raise HTTPException(500, f"Database error: {e}")
 
 
 class EchoRequest(BaseModel):

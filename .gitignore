@@ -2,3 +2,7 @@ _raw_core/
 _raw_expansive/
 _fetch_log.txt
 .DS_Store
+__pycache__/
+*.pyc
+chroma_db/
+submissions.db

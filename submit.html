@@ -669,8 +669,12 @@ async function fetchEcho(text, docId) {
     });
     if (!r.ok) throw new Error('echo failed');
     const d = await r.json();
+    // Use AI-generated echo if available, fall back to hardcoded
+    const echoText = d.generated_echo
+      ? esc(d.generated_echo)
+      : 'Your idea is connected to <strong>' + esc(d.match_title) + '</strong>, already hanging in this installation. People who believed the same thing kept sending it to their representatives until it changed the law. Find it, scan its QR code, and see what question it is still trying to answer.';
     block.innerHTML =
-      '<div class="echo-intro">Your idea is connected to <strong>' + esc(d.match_title) + '</strong>, already hanging in this installation. People who believed the same thing kept sending it to their representatives until it changed the law. Find it, scan its QR code, and see what question it is still trying to answer.</div>' +
+      '<div class="echo-intro">' + echoText + '</div>' +
       '<div class="echo-clause">' + esc(d.match_clause) + '</div>';
   } catch (e) {
     block.innerHTML = '<div class="ai-offline">' + t('ai_offline') + '</div>';

@@ -40,7 +40,7 @@ DB_DIR          = Path(__file__).parent / "chroma_db"
 COLLECTION_NAME = "corpus"
 OLLAMA_URL      = os.getenv("OLLAMA_URL", "http://localhost:11434")
 EMBED_MODEL     = os.getenv("EMBED_MODEL", "nomic-embed-text")
-LLM_MODEL       = os.getenv("LLM_MODEL",  "olmo3")          # ollama pull olmo3
+LLM_MODEL       = os.getenv("LLM_MODEL",  "llama3.2")       # ollama pull llama3.2
 SUPABASE_URL    = os.getenv("SUPABASE_URL", "")
 SUPABASE_KEY    = os.getenv("SUPABASE_KEY", "")             # anon key
 
@@ -60,8 +60,8 @@ app.add_middleware(
 
 # ── ChromaDB ──────────────────────────────────────────────────────────────────
 
-_client:     chromadb.PersistentClient | None = None
-_collection: chromadb.Collection       | None = None
+_client:     Optional[chromadb.PersistentClient] = None
+_collection: Optional[chromadb.Collection]       = None
 
 
 def get_collection() -> chromadb.Collection:
@@ -274,11 +274,33 @@ def echo(req: EchoRequest):
     sentences = re.split(r"(?<=[.!?])\s+", doc_text)
     clause    = next((s for s in sentences if 20 < len(s) < 200), sentences[0][:160])
 
+    # Ask the LLM to generate a soulful, document-anchored echo.
+    # We deliberately do NOT give the LLM the visitor's exact words —
+    # only the matched document — so garbage input can't corrupt the output.
+    generated_echo = None
+    try:
+        echo_prompt = (
+            "You are writing 2 sentences for a visitor at a civic art installation about American democracy.\n\n"
+            f"Their response connected to this document: {meta.get('title', '')}\n"
+            f"A key passage: \"{clause}\"\n\n"
+            "Write exactly 2 sentences:\n"
+            "1. What this document achieved and how ordinary people made it happen. Be specific and human.\n"
+            "2. Tell the visitor this document is hanging in the installation. Invite them to find it, scan its QR code, and discover what question it still has not answered.\n\n"
+            "Rules: No em dashes. Plain language. Short sentences. Do not use the word 'civic'. "
+            "Do not quote the passage. Make it feel personal and alive, not academic."
+        )
+        generated_echo = llm_complete(echo_prompt, max_tokens=150)
+        # Strip any leading/trailing quotes the model might add
+        generated_echo = generated_echo.strip('"').strip()
+    except Exception as e:
+        print(f"[echo] LLM generation failed: {e}")
+
     return {
-        "match_id":    meta.get("corpus_id", -1),
-        "match_title": meta.get("title", ""),
-        "match_clause": clause,
-        "distance":    round(distance, 4),
+        "match_id":       meta.get("corpus_id", -1),
+        "match_title":    meta.get("title", ""),
+        "match_clause":   clause,
+        "generated_echo": generated_echo,
+        "distance":       round(distance, 4),
     }
 
 

@@ -330,9 +330,9 @@
       margin-bottom: 6px;
     }
     .teach-body {
-      font-size: 13px;
-      line-height: 1.6;
-      color: #444;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #000;
     }
     .resistbot-block {
       margin-bottom: 12px;
@@ -368,9 +368,11 @@
     <div class="success-title" id="success-title">Your response is now part of this installation's record.</div>
     <div class="success-response" id="success-text"></div>
 
+    <hr class="success-divider">
+
     <div class="resistbot-block" id="resistbot-block"></div>
 
-    <div class="public-record-teach" id="public-record-teach" style="margin-top:14px;">
+    <div class="public-record-teach" id="public-record-teach" style="margin-top:16px;padding-top:16px;border-top:1px solid #e0e0e0;">
       <div class="teach-title" id="teach-title">What is the U.S. Public Record?</div>
       <div class="teach-body" id="teach-body"></div>
     </div>
@@ -558,16 +560,18 @@ function showResistbot(isUS, zip, response) {
 
   if (isUS) {
     block.innerHTML = `
-      <a class="resistbot-sms-btn" href="sms:50409?body=${smsBody}" style="text-transform:none;font-size:16px;letter-spacing:0;border-radius:4px;">
-        Share to the U.S. Public Record via your representatives
-        <span class="resistbot-cta-sub" style="text-transform:none;font-size:12px;letter-spacing:0;">Tap to open, type your message, send</span>
+      <p style="font-size:14px;line-height:1.5;color:#000;margin:0 0 12px;">
+        You can take this one step further: send your response directly to the representatives who vote on your behalf.
+      </p>
+      <a href="sms:50409?body=${smsBody}" style="display:block;width:100%;box-sizing:border-box;background:#000;color:#fff;text-decoration:none;padding:13px;font-size:16px;font-family:Helvetica,Arial,sans-serif;letter-spacing:0;text-align:center;border-radius:4px;cursor:pointer;">
+        Submit to the U.S. Public Record
       </a>
-      <p style="font-size:12px;color:#555;margin:8px 0 0;">
+      <p style="font-size:14px;line-height:1.5;color:#000;margin:10px 0 0;">
         <strong>Resistbot</strong> is a free, nonpartisan tool built by a nonprofit. It routes your message to your two senators and your House representative by zip code. Republicans, Democrats, independents — your representatives track constituent contact. Not affiliated with this installation.
       </p>`;
   } else {
     block.innerHTML = `
-      <p style="font-size:13px;line-height:1.6;margin:0;">
+      <p style="font-size:14px;line-height:1.5;color:#000;margin:0;">
         Outside the US? Most democracies have a similar process.
         <a href="https://www.mysociety.org/projects/" target="_blank" rel="noopener" style="color:#000;">mySociety.org</a>
         builds free civic contact tools for 30+ countries.

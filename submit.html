@@ -178,19 +178,22 @@
 
     .resistbot-sms-btn {
       display: block;
+      width: 100%;
       background: #000;
       color: #fff;
       text-decoration: none;
-      padding: 16px 20px;
-      font-size: 18px;
-      font-weight: bold;
-      letter-spacing: 0.5px;
+      padding: 13px;
+      font-size: 16px;
+      font-weight: normal;
+      font-family: Helvetica, Arial, sans-serif;
+      letter-spacing: 0;
       margin: 0 0 10px 0;
       text-align: center;
       border-radius: 4px;
       cursor: pointer;
+      box-sizing: border-box;
     }
-    .resistbot-sms-btn:hover { background: #222; }
+    .resistbot-sms-btn:hover { background: #333; }
     .resistbot-cta-sub {
       display: block;
       font-size: 11px;
@@ -249,8 +252,6 @@
     .echo-clause {
       font-size: 14px;
       line-height: 1.6;
-      border-left: 2px solid #000;
-      padding-left: 10px;
       margin-bottom: 6px;
     }
     .echo-source {
@@ -299,7 +300,6 @@
     }
     .success-response {
       font-size: 14px;
-      border-left: 2px solid #000;
       padding: 10px 12px;
       margin: 10px 0;
       line-height: 1.5;
@@ -365,21 +365,21 @@
     <div class="success-title" id="success-title">Your response is now part of this installation's record.</div>
     <div class="success-response" id="success-text"></div>
 
-    <div class="success-section-label" id="echo-label">Your echo</div>
+    <div class="resistbot-block" id="resistbot-block"></div>
+
+    <hr class="success-divider">
+
     <div class="echo-block" id="echo-block">
       <div class="ai-loading" id="echo-loading">&#8230;</div>
     </div>
 
+    <!--
     <hr class="success-divider">
-
     <div class="success-section-label" id="clusters-label">Today at this installation</div>
     <div class="clusters-block" id="clusters-block">
       <div class="ai-loading" id="clusters-loading">&#8230;</div>
     </div>
-
-    <hr class="success-divider">
-
-    <div class="resistbot-block" id="resistbot-block"></div>
+    -->
 
     <hr class="success-divider">
 
@@ -501,6 +501,7 @@ function renderForm(doc) {
 
       <div class="error-msg" id="err"></div>
       <button type="submit" class="submit-btn" id="submit-btn">${t('submit_btn')}</button>
+      <div style="font-size:11px;color:#999;margin-top:8px;line-height:1.5;">This installation's record is unofficial. It belongs to no government.</div>
     </form>
   `;
 
@@ -629,7 +630,7 @@ async function handleSubmit(doc) {
       updateSuccessLang();
       window.scrollTo({ top: 0, behavior: 'smooth' });
       fetchEcho(response, doc.id);
-      fetchClusters();
+      // fetchClusters(); // saved for thermal printout / future use
     } else { throw new Error('failed'); }
   } catch (e) {
     btn.disabled = false;
@@ -644,8 +645,6 @@ function updateSuccessLang() {
   if (!sv || sv.style.display === 'none') return;
   const set = (id, prop, val) => { const el = document.getElementById(id); if (el) el[prop] = val; };
   set('success-title',   'textContent', t('success_title'));
-  set('echo-label',      'textContent', t('echo_label'));
-  set('clusters-label',  'textContent', t('clusters_label'));
   set('teach-title',     'textContent', t('teach_title'));
   set('teach-body',      'innerHTML',   t('teach_body'));
 }
@@ -667,9 +666,8 @@ async function fetchEcho(text, docId) {
     if (!r.ok) throw new Error('echo failed');
     const d = await r.json();
     block.innerHTML =
-      '<div class="echo-intro">Your response connects to a document already in this installation. Can you find it?</div>' +
-      '<div class="echo-clause">' + esc(d.match_clause) + '</div>' +
-      '<div class="echo-source">' + esc(d.match_title) + '</div>';
+      '<div class="echo-intro">Your response is reverberating. A document already hanging in this installation carries the same signal — evidence this idea has been in motion for a long time. Sending it to your representatives keeps it moving.</div>' +
+      '<div class="echo-clause">' + esc(d.match_clause) + '</div>';
   } catch (e) {
     block.innerHTML = '<div class="ai-offline">' + t('ai_offline') + '</div>';
   }

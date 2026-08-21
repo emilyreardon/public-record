@@ -40,7 +40,7 @@ DB_DIR          = Path(__file__).parent / "chroma_db"
 COLLECTION_NAME = "corpus"
 OLLAMA_URL      = os.getenv("OLLAMA_URL", "http://localhost:11434")
 EMBED_MODEL     = os.getenv("EMBED_MODEL", "nomic-embed-text")
-LLM_MODEL       = os.getenv("LLM_MODEL",  "llama3.2")       # ollama pull llama3.2
+LLM_MODEL       = os.getenv("LLM_MODEL",  "olmo3-instruct")       # ollama pull olmo3-instruct
 SUPABASE_URL    = os.getenv("SUPABASE_URL", "")
 SUPABASE_KEY    = os.getenv("SUPABASE_KEY", "")             # anon key
 

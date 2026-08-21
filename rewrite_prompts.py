@@ -24,7 +24,7 @@ from pathlib import Path
 import requests
 
 OLLAMA_URL = "http://localhost:11434"
-LLM_MODEL  = "llama3.2"
+LLM_MODEL  = "olmo3-instruct"
 HTML_PATH  = Path(__file__).parent / "submit.html"
 
 # Documents we've already carefully hand-crafted — skip unless --force

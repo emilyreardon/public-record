@@ -1,0 +1,90 @@
+============================================================
+declaration_of_sentiments_extracted.txt  total_len=9081
+============================================================
+  FOUND at 992 (count=1): 'When, in the course of human events'
+    context: ... | Contact Us |  | Declaration of Sentiments |  | When, in the course of human events, it becomes necessary for one portion of the family of man ...
+  NOT FOUND: 'When in the course of human events'
+  FOUND at 8587 (count=1): 'Park footer'
+    context: ...hooley |  | Last updated: February 7, 2023 |  | Park footer |  | Contact Info |  | Mailing Address: |  | 136 Fall Street |  | Seneca Fa...
+  FOUND at 8555 (count=1): 'Last updated'
+    context: ... Shear |  | Henry Hatley |  | Azaliah Schooley |  | Last updated: February 7, 2023 |  | Park footer |  | Contact Info |  | Mailing Addre...
+
+============================================================
+douglass_fourth_of_july_extracted.txt  total_len=23648
+============================================================
+  NOT FOUND: 'Fellow-citizens, pardon me'
+  FOUND at 23069 (count=2): 'Statement of Principles'
+    context: ... | Bookstore |  | Blog |  | Digital Atlas |  | About |  | Statement of Principles |  | Faculty & Staff |  | Privacy Policy |  | Sign In |  | About |  | Statement...
+
+============================================================
+sojourner_truth_extracted.txt  total_len=4547
+============================================================
+  FOUND at 925 (count=1): 'I want to say a few words'
+    context: ...May 1851 |  | Share |  | Cite |  | Print |  | Document |  | I want to say a few words about this matter. I am a woman’s rights. I have as much mu...
+  FOUND at 3968 (count=2): 'Statement of Principles'
+    context: ... | Bookstore |  | Blog |  | Digital Atlas |  | About |  | Statement of Principles |  | Faculty & Staff |  | Privacy Policy |  | Sign In |  | About |  | Statement...
+
+============================================================
+chief_joseph_surrender_extracted.txt  total_len=5631
+============================================================
+  FOUND at 2217 (count=1): 'Tell General Howard'
+    context: ... Reservation in Washington.  |  | Document |  | Tell General Howard I know his heart. What he told me before, I have in my hear...
+  FOUND at 5052 (count=2): 'Statement of Principles'
+    context: ... | Bookstore |  | Blog |  | Digital Atlas |  | About |  | Statement of Principles |  | Faculty & Staff |  | Privacy Policy |  | Sign In |  | About |  | Statement...
+
+============================================================
+fort_laramie_treaty_1868_extracted.txt  total_len=29383
+============================================================
+  FOUND at 488 (count=1): 'ARTICLES OF'
+    context: ...Art 13 |  | Art 14 |  | Art 15 |  | Art 16 |  | Art 17 |  | ARTICLES OF A TREATY MADE AND CONCLUDED BY AND BETWEEN |  | Lieutenant Gene...
+  FOUND at 29162 (count=1): '© 2008 Lillian Goldman'
+    context: ...  | 1900 - 1999 |  | 21 | st |  Century  | 2000 -  |  | © 2008 Lillian Goldman Law Library |  | 127 Wall Street, New Haven, CT 06511. |  | Avalon ...
+
+============================================================
+dred_scott_extracted.txt  total_len=647148
+============================================================
+  FOUND at 1261 (count=1): 'December Term, 1856'
+    context: ...TIFF IN ERROR, | v. | JOHN F. A. SANDFORD. |  | December Term, 1856 |  | [Syllabus from pages 393-395 intentionally omitted] |  | THIS ...
+  FOUND at 1335 (count=1): 'THIS case was brought up'
+    context: ...m pages 393-395 intentionally omitted] |  | THIS case was brought up, by writ of error, from the Circuit Court of the United Sta...
+  FOUND at 646875 (count=1): 'CC∅'
+    context: ...itings of Washington, vol. 9, p. 174.) |  | CC∅ |  | Transformed by  | Public.Resource.Org |  | The following state...
+
+============================================================
+plessy_v_ferguson_extracted.txt  total_len=60088
+============================================================
+  FOUND at 5738 (count=1): 'delivered the opinion of the court'
+    context: ...ng the facts in the foregoing language, delivered the opinion of the court. |  | 1 |  | This case turns upon the constitutionality of an act o...
+  NOT FOUND: 'October Term'
+  FOUND at 59815 (count=1): 'CC∅'
+    context: ... opinion and judgment of the majority. |  | CC∅ |  | Transformed by  | Public.Resource.Org |  | The following state...
+
+============================================================
+korematsu_extracted.txt  total_len=68103
+============================================================
+  FOUND at 1521 (count=1): 'delivered the opinion of the Court'
+    context: ....C., for respondent. |  | Mr. Justice BLACK delivered the opinion of the Court. |  | 1 |  | The petitioner, an American citizen of Japanese descen...
+  NOT FOUND: 'October Term'
+  FOUND at 67830 (count=1): 'CC∅'
+    context: ...Nature of the Judicial Process, p. 51. |  | CC∅ |  | Transformed by  | Public.Resource.Org |  | The following state...
+
+============================================================
+eo_9066_extracted.txt  total_len=11742
+============================================================
+  FOUND at 599 (count=1): 'Citation:'
+    context: ...eration (1942) |  | Enlarge |  | Download Link |  | Citation: Executive Order 9066, February 19, 1942; General Records of...
+  FOUND at 6817 (count=1): 'Whereas the successful prosecution'
+    context: ...ary of War to Prescribe Military Areas |  | Whereas the successful prosecution of the war requires every possible protection against espio...
+  FOUND at 11616 (count=1): 'The U.S. National Archives and Records Administration'
+    context: ...mation Act |  ·  | No FEAR Act |  ·  | USA.gov |  | The U.S. National Archives and Records Administration |  | 1-86-NARA-NARA or 1-866-272-6272 |  | Top |  | Modal Title |  --> |  | ×...
+
+============================================================
+eo_8802_extracted.txt  total_len=8190
+============================================================
+  FOUND at 626 (count=1): 'Citation:'
+    context: ...ndustry (1941) |  | Enlarge |  | Download Link |  | Citation: Executive Order 8802 dated June 25, 1941, in which Presiden...
+  FOUND at 4424 (count=1): 'NOW, THEREFORE'
+    context: ...workers' morale and of national unity: |  | NOW, THEREFORE, by virtue of the authority vested in me by the Constitutio...
+  FOUND at 8064 (count=1): 'The U.S. National Archives and Records Administration'
+    context: ...mation Act |  ·  | No FEAR Act |  ·  | USA.gov |  | The U.S. National Archives and Records Administration |  | 1-86-NARA-NARA or 1-866-272-6272 |  | Top |  | Modal Title |  --> |  | ×...
+

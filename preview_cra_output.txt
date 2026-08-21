@@ -1,0 +1,64 @@
+============================================================
+civil_rights_act_1964_extracted.txt  total_len=103409
+============================================================
+  TITLE I: 4074
+  Title I: NOT FOUND
+  Section 1: 31632
+  SEC. 1: 4099
+  SEC. 2: 10202
+  Be it enacted: 3899
+  AN ACT: NOT FOUND
+
+--- chars 1500-3500 (past nav, where real content usually starts) ---
+nated in the Civil Rights Act of 1964. President Lyndon Johnson signed it into law just a few hours after it was passed by Congress on July 2, 1964.
+
+The act outlawed segregation in businesses such as theaters, restaurants, and hotels. It banned discriminatory practices in employment and ended segregation in public places such as swimming pools, libraries, and public schools.
+
+Passage of the act was not easy, however. Opposition in the House of Representatives bottled up the bill in the House Rules Committee. In the Senate, Southern Democratic opponents attempted to talk the bill to death in a filibuster. In early 1964, House supporters overcame the Rules Committee obstacle by threatening to send the bill to the floor without committee approval. The Senate filibuster was overcome through the floor leadership of Senator Hubert Humphrey of Minnesota, the considerable support of President Lyndon Johnson, and the efforts of Senate Minority Leader Everett Dirksen of Illinois, who convinced enough Republicans to support the bill over Democratic opposition. When the compromise bill was finally put to a vote in the Senate, it passed 73 to 27. It was noted in the Congressional Record that applause broke out in the Senate galleries.
+
+Title VII
+ of the act created the Equal Employment Opportunity Commission (EEOC) to implement the law. The EEOC enforces laws that prohibit discrimination based on race, color, religion, sex, national origin, disability, or age in hiring, promoting, firing, setting wages, testing, training, apprenticeship, and all other terms and conditions of employment.
+
+Teach with this document.
+
+This document is available on DocsTeach,
+ the online tool for teaching with documents from the National Archives. Find teaching activities that incorporate this document, or 
+create your own online activity
+.
+
+Previous Document
+
+Next Document
+
+Transcript
+
+An Act
+
+To enforce the constitutional right to vote, to confer jurisdiction upon the district courts of the United
+
+============================================================
+voting_rights_act_1965_extracted.txt  total_len=39136
+============================================================
+  TITLE I: NOT FOUND
+  Title I: NOT FOUND
+  Section 1: NOT FOUND
+  SEC. 1: 23976
+  SEC. 2: 4942
+  Be it enacted: 4764
+  AN ACT: 4654
+
+--- chars 1500-3500 (past nav, where real content usually starts) ---
+egistration was limited, along with political power.
+
+In 1964, numerous peaceful demonstrations were organized by Civil Rights leaders, and the considerable violence they were met with brought renewed attention to the issue of voting rights. The murder of voting-rights activists in Mississippi and the attack by white state troopers on peaceful marchers in Selma, Alabama, gained national attention and persuaded President Johnson and Congress to initiate meaningful and effective national voting rights legislation. The combination of public revulsion to the violence and Johnson's political skills stimulated Congress to pass the voting rights bill on August 5, 1965.
+
+The legislation, which President Johnson signed into law the next day, outlawed literacy tests and provided for the appointment of federal examiners (with the power to register qualified citizens to vote) in those jurisdictions that were "covered" according to a formula provided in the statute. In addition, Section 5 of the act required covered jurisdictions to obtain "preclearance" from either the District Court for the District of Columbia or the U.S. Attorney General for any new voting practices and procedures. Section 2, which closely followed the language of the 15th amendment, applied a nationwide prohibition of the denial or abridgment of the right to vote on account of race or color. The use of poll taxes in national elections had been abolished by the 24th amendment (1964) to the Constitution; the Voting Rights Act directed the Attorney General to challenge the use of poll taxes in state and local elections. In 
+Harper 
+v. 
+Virginia State Board of Elections
+, 383 U.S. 663 (1966), the Supreme Court held Virginia's poll tax to be unconstitutional under the 
+14th amendment
+.
+
+The Voting Rights Act of 1965 was the most significant statutory change in the relationship between the federal and state governments in the area of voting since the Reconstruction period following the Civil War; and it was immed
+

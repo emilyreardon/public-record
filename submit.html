@@ -294,12 +294,15 @@
       padding: 24px 16px;
     }
     .success-title {
-      font-size: 16px;
-      font-weight: bold;
+      font-size: 15px;
+      font-weight: normal;
       margin-bottom: 10px;
+      line-height: 1.5;
+      color: #000;
     }
     .success-response {
       font-size: 14px;
+      font-weight: bold;
       padding: 10px 12px;
       margin: 10px 0;
       line-height: 1.5;
@@ -365,17 +368,12 @@
 
 <div class="success-view" id="success-view">
   <div class="container">
-    <div class="success-title" id="success-title">Your response is now part of this installation's record.</div>
+    <div class="success-title" id="success-title">Your response is now part of this installation's record. This installation's record is unofficial. It belongs to no government.</div>
     <div class="success-response" id="success-text"></div>
 
     <hr class="success-divider">
 
     <div class="resistbot-block" id="resistbot-block"></div>
-
-    <div class="public-record-teach" id="public-record-teach" style="margin-top:16px;padding-top:16px;border-top:1px solid #e0e0e0;">
-      <div class="teach-title" id="teach-title">What is the U.S. Public Record?</div>
-      <div class="teach-body" id="teach-body"></div>
-    </div>
 
     <hr class="success-divider">
 
@@ -504,7 +502,6 @@ function renderForm(doc) {
 
       <div class="error-msg" id="err"></div>
       <button type="submit" class="submit-btn" id="submit-btn">${t('submit_btn')}</button>
-      <div style="font-size:11px;color:#999;margin-top:8px;line-height:1.5;">This installation's record is unofficial. It belongs to no government.</div>
     </form>
   `;
 
@@ -558,20 +555,24 @@ function showResistbot(isUS, zip, response) {
   const smsWord = lang === 'es' ? 'RESISTIR' : 'RESIST';
   const smsBody = encodeURIComponent(smsWord + '\n\n' + response);
 
+  const copy = 'font-size:14px;line-height:1.5;color:#000;margin:0;font-family:Helvetica,Arial,sans-serif;';
   if (isUS) {
     block.innerHTML = `
-      <p style="font-size:14px;line-height:1.5;color:#000;margin:0 0 12px;">
+      <p style="${copy} margin-bottom:12px;">
         You can take this one step further: send your response directly to the representatives who vote on your behalf.
       </p>
       <a href="sms:50409?body=${smsBody}" style="display:block;width:100%;box-sizing:border-box;background:#000;color:#fff;text-decoration:none;padding:13px;font-size:16px;font-family:Helvetica,Arial,sans-serif;letter-spacing:0;text-align:center;border-radius:4px;cursor:pointer;">
         Submit to the U.S. Public Record
       </a>
-      <p style="font-size:14px;line-height:1.5;color:#000;margin:10px 0 0;">
+      <p style="${copy} margin-top:10px;">
         <strong>Resistbot</strong> is a free, nonpartisan tool built by a nonprofit. It routes your message to your two senators and your House representative by zip code. Republicans, Democrats, independents — your representatives track constituent contact. Not affiliated with this installation.
+      </p>
+      <p style="${copy} margin-top:10px;">
+        The U.S. Public Record is the official archive of American democracy: the <strong>Congressional Record</strong> (every word spoken in Congress since 1873), the <strong>Federal Register</strong> (every proposed federal rule), and <strong>public comment periods</strong> open to anyone at <a href="https://regulations.gov" target="_blank" rel="noopener" style="color:#000;">regulations.gov</a>. Agencies must read every comment.
       </p>`;
   } else {
     block.innerHTML = `
-      <p style="font-size:14px;line-height:1.5;color:#000;margin:0;">
+      <p style="${copy}">
         Outside the US? Most democracies have a similar process.
         <a href="https://www.mysociety.org/projects/" target="_blank" rel="noopener" style="color:#000;">mySociety.org</a>
         builds free civic contact tools for 30+ countries.
@@ -650,8 +651,6 @@ function updateSuccessLang() {
   if (!sv || sv.style.display === 'none') return;
   const set = (id, prop, val) => { const el = document.getElementById(id); if (el) el[prop] = val; };
   set('success-title',   'textContent', t('success_title'));
-  set('teach-title',     'textContent', t('teach_title'));
-  set('teach-body',      'innerHTML',   t('teach_body'));
 }
 
 async function fetchEcho(text, docId) {
@@ -671,7 +670,7 @@ async function fetchEcho(text, docId) {
     if (!r.ok) throw new Error('echo failed');
     const d = await r.json();
     block.innerHTML =
-      '<div class="echo-intro">Your response is reverberating. A document already hanging in this installation carries the same signal — evidence this idea has been in motion for a long time. Sending it to your representatives keeps it moving.</div>' +
+      '<div class="echo-intro">Your argument already worked once. Find <strong>' + esc(d.match_title) + '</strong> in this installation — the same pressure that created it came from people saying exactly what you just said, in public, to their representatives. This is how it moves:</div>' +
       '<div class="echo-clause">' + esc(d.match_clause) + '</div>';
   } catch (e) {
     block.innerHTML = '<div class="ai-offline">' + t('ai_offline') + '</div>';

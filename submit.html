@@ -29,11 +29,33 @@
       --stagger-step: 2.5s;
     }
     .project-label {
-      font-size: 10px;
-      letter-spacing: 2px;
-      color: #555;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      color: #000;
       margin-bottom: 4px;
+      line-height: 1.3;
     }
+    .project-label .letter {
+      display: inline-block;
+      animation: name-font-cycle var(--cycle-duration) steps(1) infinite;
+      animation-delay: calc(var(--i) * var(--stagger-step) * -1);
+    }
+    .period-dot {
+      display: inline-block;
+      border-radius: 50%;
+      background-color: currentColor;
+      vertical-align: baseline;
+      line-height: 0;
+      margin: 0 0.04em;
+      opacity: 0;
+      transition: opacity 0.6s ease;
+      pointer-events: none;
+    }
+    .period-dot.sz-sm { width: 0.13em; height: 0.13em; }
+    .period-dot.sz-md { width: 0.18em; height: 0.18em; }
+    .period-dot.sz-lg { width: 0.24em; height: 0.24em; }
+    .period-dot.visible { opacity: 1; }
     .project-label .letter {
       display: inline-block;
       animation: name-font-cycle var(--cycle-duration) steps(1) infinite;
@@ -382,11 +404,33 @@
       --stagger-step: 2.5s;
     }
     .project-label {
-      font-size: 10px;
-      letter-spacing: 2px;
-      color: #555;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      color: #000;
       margin-bottom: 4px;
+      line-height: 1.3;
     }
+    .project-label .letter {
+      display: inline-block;
+      animation: name-font-cycle var(--cycle-duration) steps(1) infinite;
+      animation-delay: calc(var(--i) * var(--stagger-step) * -1);
+    }
+    .period-dot {
+      display: inline-block;
+      border-radius: 50%;
+      background-color: currentColor;
+      vertical-align: baseline;
+      line-height: 0;
+      margin: 0 0.04em;
+      opacity: 0;
+      transition: opacity 0.6s ease;
+      pointer-events: none;
+    }
+    .period-dot.sz-sm { width: 0.13em; height: 0.13em; }
+    .period-dot.sz-md { width: 0.18em; height: 0.18em; }
+    .period-dot.sz-lg { width: 0.24em; height: 0.24em; }
+    .period-dot.visible { opacity: 1; }
     .project-label .letter {
       display: inline-block;
       animation: name-font-cycle var(--cycle-duration) steps(1) infinite;
@@ -404,7 +448,7 @@
     }
   </style>
 <script src="https://cdn.jsdelivr.net/npm/bad-words@3.0.4/dist/bad-words.umd.js"></script>
-<script>history.scrollRestoration="manual";window.scrollTo(0,0);</script>
+<script>history.scrollRestoration="manual";</script>
 </head>
 <body>
 
@@ -522,7 +566,17 @@ function renderForm(doc) {
   const prevZip      = document.getElementById('zip_input')?.value || '';
 
   document.getElementById('form-content').innerHTML = `
-    ` + (function(){return '<div class="project-label">' + "Public Record".split('').map(function(ch,i){return ch===' '?'&nbsp;':'<span class="letter" style="--i:'+i+'">'+ch+'</span>';}).join('') + '</div>';})() + `<h2 class="doc-title">${esc(doc.title)}</h2>
+    ` + (function(){return (function(){
+  var chars = "Public Record".split('');
+  var slot = 0;
+  var html = '<div class="project-label">';
+  chars.forEach(function(ch) {
+    if (ch === ' ') { html += '<span class="space">&nbsp;</span>'; }
+    else { html += '<span class="letter" style="--i:' + slot + '" data-pr-slot="' + slot + '">' + ch + '</span>'; slot++; }
+  });
+  html += '</div>';
+  return html;
+})();})() + `<h2 class="doc-title">${esc(doc.title)}</h2>
     ${desc ? '<div class="doc-desc">' + esc(desc) + '</div>' : ''}
     ${prompt ? '<div class="prompt-text">' + esc(prompt) + '</div>' : ''}
     ${doTxt  ? '<div class="do-text">'     + esc(doTxt)  + '</div>' : ''}
@@ -826,5 +880,99 @@ function esc(s) {
 }
 </script>
 
+<script>
+// Scroll to top after content renders
+window.addEventListener('load', function() { window.scrollTo(0, 0); });
+
+// Period dot animation for "Public Record" (12 letter slots, space excluded)
+(function() {
+  var MAX_DOTS = 7, NUM_SLOTS = 12;
+  var liveSlots = new Map(), frontier = 0;
+  var SIZES = ['sz-sm', 'sz-md', 'sz-lg'];
+
+  function buildPool() {
+    var pool = [];
+    for (var i = 0; i < NUM_SLOTS; i++) {
+      var w = i <= 5 ? 10 : 3;
+      for (var k = 0; k < w; k++) pool.push(i);
+    }
+    return pool;
+  }
+  var SLOT_POOL = buildPool();
+
+  function randomSlot() { return SLOT_POOL[Math.floor(Math.random() * SLOT_POOL.length)]; }
+  function getSpan(s) { return document.querySelector('[data-pr-slot="' + s + '"]'); }
+  function totalDots() { var n = 0; liveSlots.forEach(function(a) { n += a.length; }); return n; }
+
+  function createDot(span) {
+    var dot = document.createElement('span');
+    dot.className = 'period-dot ' + SIZES[Math.floor(Math.random() * SIZES.length)];
+    span.parentNode.insertBefore(dot, span.nextSibling);
+    requestAnimationFrame(function() { requestAnimationFrame(function() { dot.classList.add('visible'); }); });
+    return dot;
+  }
+
+  function removeDot(dot) {
+    dot.classList.remove('visible');
+    dot.addEventListener('transitionend', function() { dot.remove(); }, { once: true });
+  }
+
+  function doAdd() {
+    var t = Math.random() < 0.22 ? randomSlot() : (frontier + Math.floor(Math.random() * 4)) % NUM_SLOTS;
+    if (t > 5 && Math.random() < 0.70) t = Math.floor(Math.random() * 6);
+    var ex = liveSlots.get(t) || [];
+    if (ex.length >= 2) t = (t + 1) % NUM_SLOTS;
+    var span = getSpan(t);
+    if (!span) return;
+    var dot = createDot(span);
+    if (!liveSlots.has(t)) liveSlots.set(t, []);
+    liveSlots.get(t).push(dot);
+    frontier = t;
+  }
+
+  function doRemove() {
+    if (liveSlots.size === 0) return;
+    var slots = Array.from(liveSlots.keys()).sort(function(a,b){return a-b;});
+    var t = Math.random() < 0.65 ? slots[0] : slots[Math.floor(Math.random() * slots.length)];
+    var arr = liveSlots.get(t);
+    if (!arr || !arr.length) return;
+    removeDot(arr.shift());
+    if (arr.length === 0) liveSlots.delete(t);
+  }
+
+  function step() {
+    var total = totalDots(), r = Math.random();
+    var action = (!total) ? 'add' : (total >= MAX_DOTS) ? (r < 0.5 ? 'remove' : 'shift') :
+      (r < 0.45 ? 'add' : r < 0.72 ? 'shift' : 'remove');
+    if (action === 'add') doAdd();
+    else if (action === 'remove') doRemove();
+    else { doRemove(); doAdd(); }
+  }
+
+  function scheduleNext() {
+    var r = Math.random();
+    var delay = r < 0.12 ? 3000 + Math.random()*2000 : r < 0.30 ? 800 + Math.random()*400 : 1200 + Math.random()*800;
+    setTimeout(function() { step(); scheduleNext(); }, delay);
+  }
+
+  // Wait for form content to render before seeding
+  function tryInit() {
+    var seed = [1, 3, 4];
+    var found = seed.some(function(s) { return !!getSpan(s); });
+    if (!found) { setTimeout(tryInit, 200); return; }
+    seed.forEach(function(s) {
+      var span = getSpan(s);
+      if (!span) return;
+      var dot = createDot(span);
+      if (!liveSlots.has(s)) liveSlots.set(s, []);
+      liveSlots.get(s).push(dot);
+    });
+    frontier = 4;
+    scheduleNext();
+  }
+
+  window.addEventListener('load', tryInit);
+})();
+</script>
 </body>
 </html>

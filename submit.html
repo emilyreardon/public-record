@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,700&family=Josefin+Sans:wght@300&family=Poiret+One&family=Metamorphous&display=swap" rel="stylesheet">
   <title>Public Record</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -21,12 +23,29 @@
       max-width: 580px;
       margin: 0 auto;
     }
+    
+    :root {
+      --cycle-duration: 32s;
+      --stagger-step: 2.5s;
+    }
     .project-label {
       font-size: 10px;
       letter-spacing: 2px;
       text-transform: uppercase;
       color: #555;
       margin-bottom: 4px;
+    }
+    .project-label .letter {
+      display: inline-block;
+      animation: name-font-cycle var(--cycle-duration) steps(1) infinite;
+      animation-delay: calc(var(--i) * var(--stagger-step) * -1);
+    }
+    @keyframes name-font-cycle {
+      0%   { font-family: "Fraunces", serif; }
+      25%  { font-family: "Josefin Sans", sans-serif; }
+      50%  { font-family: "Poiret One", cursive; }
+      75%  { font-family: "Metamorphous", serif; }
+      100% { font-family: "Fraunces", serif; }
     }
     .doc-title {
       font-size: 16px;
@@ -358,12 +377,29 @@
 
     @media (min-width: 480px) {
       .container { padding: 18px 24px 32px; }
-      .project-label {
+      
+    :root {
+      --cycle-duration: 32s;
+      --stagger-step: 2.5s;
+    }
+    .project-label {
       font-size: 10px;
       letter-spacing: 2px;
       text-transform: uppercase;
       color: #555;
       margin-bottom: 4px;
+    }
+    .project-label .letter {
+      display: inline-block;
+      animation: name-font-cycle var(--cycle-duration) steps(1) infinite;
+      animation-delay: calc(var(--i) * var(--stagger-step) * -1);
+    }
+    @keyframes name-font-cycle {
+      0%   { font-family: "Fraunces", serif; }
+      25%  { font-family: "Josefin Sans", sans-serif; }
+      50%  { font-family: "Poiret One", cursive; }
+      75%  { font-family: "Metamorphous", serif; }
+      100% { font-family: "Fraunces", serif; }
     }
     .doc-title { font-size: 18px; }
       textarea { height: 88px; }
@@ -488,7 +524,7 @@ function renderForm(doc) {
   const prevZip      = document.getElementById('zip_input')?.value || '';
 
   document.getElementById('form-content').innerHTML = `
-    <div class="project-label">Public Record</div><h2 class="doc-title">${esc(doc.title)}</h2>
+    <div class="project-label" id="pr-label"></div><h2 class="doc-title">${esc(doc.title)}</h2>
     ${desc ? '<div class="doc-desc">' + esc(desc) + '</div>' : ''}
     ${prompt ? '<div class="prompt-text">' + esc(prompt) + '</div>' : ''}
     ${doTxt  ? '<div class="do-text">'     + esc(doTxt)  + '</div>' : ''}
@@ -790,6 +826,16 @@ function esc(s) {
           .replace(/"/g,'&quot;').replace(/'/g,'&#39;')
           .replace(/\n/g,' ');
 }
+</script>
+<script>
+(function() {
+  var text = "Public Record";
+  var el = document.getElementById('pr-label');
+  if (!el) return;
+  el.innerHTML = text.split('').map(function(ch, i) {
+    return ch === ' ' ? '&nbsp;' : '<span class="letter" style="--i:' + i + '">' + ch + '</span>';
+  }).join('');
+})();
 </script>
 </body>
 </html>

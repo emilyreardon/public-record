@@ -13,19 +13,20 @@
       font-size: 15px;
       line-height: 1.45;
     }
-    .site-header {
-      border-bottom: 2px solid #000;
-      padding: 10px 16px;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
+    
     
     
     .container {
       padding: 6px 16px 28px;
       max-width: 580px;
       margin: 0 auto;
+    }
+    .project-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 4px;
     }
     .doc-title {
       font-size: 16px;
@@ -357,11 +358,19 @@
 
     @media (min-width: 480px) {
       .container { padding: 18px 24px 32px; }
-      .doc-title { font-size: 18px; }
+      .project-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 4px;
+    }
+    .doc-title { font-size: 18px; }
       textarea { height: 88px; }
     }
   </style>
 <script src="https://cdn.jsdelivr.net/npm/bad-words@3.0.4/dist/bad-words.umd.js"></script>
+<script>history.scrollRestoration="manual";window.scrollTo(0,0);</script>
 </head>
 <body>
 
@@ -479,7 +488,7 @@ function renderForm(doc) {
   const prevZip      = document.getElementById('zip_input')?.value || '';
 
   document.getElementById('form-content').innerHTML = `
-    <h2 class="doc-title">${esc(doc.title)}</h2>
+    <div class="project-label">Public Record</div><h2 class="doc-title">${esc(doc.title)}</h2>
     ${desc ? '<div class="doc-desc">' + esc(desc) + '</div>' : ''}
     ${prompt ? '<div class="prompt-text">' + esc(prompt) + '</div>' : ''}
     ${doTxt  ? '<div class="do-text">'     + esc(doTxt)  + '</div>' : ''}

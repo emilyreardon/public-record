@@ -31,7 +31,6 @@
     .project-label {
       font-size: 10px;
       letter-spacing: 2px;
-      text-transform: uppercase;
       color: #555;
       margin-bottom: 4px;
     }
@@ -385,7 +384,6 @@
     .project-label {
       font-size: 10px;
       letter-spacing: 2px;
-      text-transform: uppercase;
       color: #555;
       margin-bottom: 4px;
     }
@@ -524,7 +522,7 @@ function renderForm(doc) {
   const prevZip      = document.getElementById('zip_input')?.value || '';
 
   document.getElementById('form-content').innerHTML = `
-    <div class="project-label" id="pr-label"></div><h2 class="doc-title">${esc(doc.title)}</h2>
+    ` + (function(){return '<div class="project-label">' + "Public Record".split('').map(function(ch,i){return ch===' '?'&nbsp;':'<span class="letter" style="--i:'+i+'">'+ch+'</span>';}).join('') + '</div>';})() + `<h2 class="doc-title">${esc(doc.title)}</h2>
     ${desc ? '<div class="doc-desc">' + esc(desc) + '</div>' : ''}
     ${prompt ? '<div class="prompt-text">' + esc(prompt) + '</div>' : ''}
     ${doTxt  ? '<div class="do-text">'     + esc(doTxt)  + '</div>' : ''}
@@ -827,15 +825,6 @@ function esc(s) {
           .replace(/\n/g,' ');
 }
 </script>
-<script>
-(function() {
-  var text = "Public Record";
-  var el = document.getElementById('pr-label');
-  if (!el) return;
-  el.innerHTML = text.split('').map(function(ch, i) {
-    return ch === ' ' ? '&nbsp;' : '<span class="letter" style="--i:' + i + '">' + ch + '</span>';
-  }).join('');
-})();
-</script>
+
 </body>
 </html>

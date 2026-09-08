@@ -399,7 +399,7 @@
     #form-content {
       padding-top: 12px;
     }
-    .page-header .project-label { color: #fff; margin-bottom: 4px; }
+    .page-header .project-label { color: #fff; margin-bottom: 4px; font-size: 22px; padding-right: 0; background: none; }
     .tagline {
       font-size: 11px;
       color: rgba(255,255,255,0.7);
@@ -851,28 +851,23 @@ function esc(s) {
 
 <script>
 // Scroll to top after content renders
-window.addEventListener('load', function() { window.scrollTo(0, 0); });
+function scrollToTop() {
+  window.scrollTo(0, 0);
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+window.addEventListener('load', scrollToTop);
 
 // Re-scroll to top every time renderForm injects content (corpus loads async)
 var _origRenderForm = renderForm;
 renderForm = function(doc) {
   _origRenderForm(doc);
-  // Immediate
-  window.scrollTo(0, 0);
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-  // After paint
-  requestAnimationFrame(function() {
-    window.scrollTo(0, 0);
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  });
-  // After layout settles (iOS Safari)
-  setTimeout(function() {
-    window.scrollTo(0, 0);
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }, 300);
+  scrollToTop();
+  requestAnimationFrame(function() { scrollToTop(); });
+  setTimeout(function() { scrollToTop(); }, 100);
+  setTimeout(function() { scrollToTop(); }, 300);
+  setTimeout(function() { scrollToTop(); }, 600);
+  setTimeout(function() { scrollToTop(); }, 1000);
 };
 
 </script>

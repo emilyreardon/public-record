@@ -475,13 +475,13 @@
 
 <script>
 const CONFIG = {
-  // https://supabase.com → New Project → Settings → API
-  AI_URL:            (['localhost','127.0.0.1'].includes(window.location.hostname) || window.location.protocol==='file:') ? 'http://localhost:8000' : '',  // set to laptop IP during installation e.g. 'http://192.168.4.1:8000'
-  SUPABASE_URL:      'https://lrrxytidqzulcqeytnkd.supabase.co',
-  SUPABASE_ANON_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxycnh5dGlkcXp1bGNxZXl0bmtkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODcxNzk5NTksImV4cCI6MjEwMjc1NTk1OX0.-IbnCjHsGODDltav1uohm9xb4WTt0UJ8t-iuARFMtoc',
+  // Local AI server — set to laptop IP during physical installation, e.g. 'http://192.168.4.1:8000'
+  AI_URL:            (['localhost','127.0.0.1'].includes(window.location.hostname) || window.location.protocol==='file:') ? 'http://localhost:8000' : '',
+  SUPABASE_URL:      '',
+  SUPABASE_ANON_KEY: '',
 
-  // Formspree fallback: set SUPABASE_URL to '' and add your Formspree form ID
-  FORMSPREE_ID: '__FORMSPREE_ID__',            // e.g. xpznkqvw
+  // Formspree fallback (optional cloud recording)
+  FORMSPREE_ID: '__FORMSPREE_ID__',
 
   // Fixed installation location - do NOT use device GPS
   INSTALLATION_NAME: 'New York, NY',
@@ -707,26 +707,26 @@ async function handleSubmit(doc) {
       console.log('[PR] No backend. Payload:', payload);
       ok = true;
     }
-    if (ok) {
-      document.getElementById('main-view').style.display = 'none';
-      document.getElementById('success-view').style.display = 'block';
-      document.getElementById('success-text').textContent = '\u201c' + response + '\u201d';
-      const isUS = /^\d{5}$/.test(visitorZip || '');
-      showResistbot(isUS, visitorZip, response);
-      // Pre-fill Resistbot SMS link with their response - passive, user taps when ready
-      const smsWord = lang === 'es' ? 'RESISTIR' : 'RESIST';
-      const smsBtn = document.getElementById('resistbot-sms-btn');
-      if (smsBtn) smsBtn.href = 'sms:50409?body=' + encodeURIComponent(smsWord + '\n\n' + response);
-      updateSuccessLang();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      fetchEcho(response, doc.id);
-      // fetchClusters(); // saved for thermal printout / future use
-    } else { throw new Error('failed'); }
+    // Proceed to success regardless — recording to backend is best-effort;
+    // the civic action (ResistBot send) should never be blocked by a server error.
+    if (!ok) console.warn('[PR] Backend record failed; proceeding to success screen anyway.');
+    document.getElementById('main-view').style.display = 'none';
+    document.getElementById('success-view').style.display = 'block';
+    document.getElementById('success-text').textContent = '\u201c' + response + '\u201d';
+    const isUS = /^\d{5}$/.test(visitorZip || '');
+    showResistbot(isUS, visitorZip, response);
+    const smsWord = lang === 'es' ? 'RESISTIR' : 'RESIST';
+    const smsBtn = document.getElementById('resistbot-sms-btn');
+    if (smsBtn) smsBtn.href = 'sms:50409?body=' + encodeURIComponent(smsWord + '\n\n' + response);
+    updateSuccessLang();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    fetchEcho(response, doc.id);
   } catch (e) {
+    // Only show error if we couldn't even attempt submission (network totally down, etc.)
     btn.disabled = false;
     btn.textContent = t('submit_btn');
-    showErr(t('error_generic'));
-    console.error(e);
+    showErr('Unable to reach the server. Check your connection and try again.');
+    console.error('[PR] Submit exception:', e);
   }
 }
 

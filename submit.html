@@ -407,6 +407,16 @@
       margin-bottom: 0;
       line-height: 1.4;
     }
+    .view-record-link {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #000;
+      text-decoration: none;
+      margin-top: 8px;
+    }
+    .view-record-link:hover { opacity: 0.6; }
     .bottom-nav {
       background: #000;
       margin-top: 0;
@@ -443,8 +453,9 @@
 
 <div class="success-view" id="success-view">
   <div class="container">
-    <div class="success-title" id="success-title">What you just wrote is civic action. It is now part of this installation’s record. This record is unofficial. It belongs to no government.</div>
+    <div class="success-title" id="success-title">Your response is now part of this installation’s record.</div>
     <div class="success-response" id="success-text"></div>
+    <a href="https://emilyreardon.github.io/public-record/record" class="view-record-link" target="_blank" rel="noopener">View the full record &rarr;</a>
 
     <hr class="success-divider">
 
@@ -452,9 +463,7 @@
 
     <hr class="success-divider">
 
-    <div class="echo-block" id="echo-block">
-      <div class="ai-loading" id="echo-loading">&#8230;</div>
-    </div>
+    <div class="echo-block" id="echo-block"></div>
 
     <!--
     <hr class="success-divider">
@@ -585,11 +594,24 @@ function renderForm(doc) {
 
       <div class="error-msg" id="err"></div>
       <button type="submit" class="submit-btn" id="submit-btn">${t('submit_btn')}</button>
+      <div class="resistbot-opt-row" id="resistbot-opt-row" style="display:none;margin-top:12px;text-align:center;">
+        <label style="font-size:12px;color:#555;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;">
+          <input type="checkbox" id="resistbot-opt-in" checked style="accent-color:#000;width:15px;height:15px;">
+          Also send to my representatives in Congress via Resistbot
+        </label>
+      </div>
     </form>
   `;
 
 
 
+
+  const zipField = document.getElementById('zip_input');
+  const rbRow = document.getElementById('resistbot-opt-row');
+  function updateRbRow() {
+    if (rbRow) rbRow.style.display = /^\d{5}$/.test((zipField?.value||'').trim()) ? 'block' : 'none';
+  }
+  if (zipField) { zipField.addEventListener('input', updateRbRow); updateRbRow(); }
 
   document.getElementById('civic-form').addEventListener('submit', async e => {
     e.preventDefault();
@@ -726,6 +748,13 @@ async function handleSubmit(doc) {
       if (firstName) localStorage.setItem('pr_name', firstName);
       if (visitorZip) localStorage.setItem('pr_zip', visitorZip);
     } catch(e) {}
+    const rbOptIn = document.getElementById('resistbot-opt-in');
+    if (rbOptIn && rbOptIn.checked && isUS) {
+      const rbWord = lang === 'es' ? 'RESISTIR' : 'RESIST';
+      setTimeout(function() {
+        window.location.href = 'sms:50409?body=' + encodeURIComponent(rbWord + '\n\n' + response);
+      }, 600);
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
     fetchEcho(response, doc.id);
   } catch (e) {
@@ -748,7 +777,7 @@ async function fetchEcho(text, docId) {
   const block = document.getElementById('echo-block');
   const loading = document.getElementById('echo-loading');
   if (!CONFIG.AI_URL || !CONFIG.aiOnline) {
-    if (block) block.innerHTML = '<div class="ai-offline" id="echo-offline">' + t('ai_offline') + '</div>';
+    if (block) block.style.display = 'none';
     return;
   }
   try {

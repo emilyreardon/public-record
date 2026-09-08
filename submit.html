@@ -426,6 +426,7 @@
 
 <div id="main-view">
   <div class="container">
+    <div class="page-header"><div class="project-label">Public Record</div><p class="tagline">A civic practice, built in public from democracy's primary sources</p></div>
     <div id="form-content"><div class="not-found" id="loading-msg">Loading&hellip;</div></div>
   </div>
 </div>
@@ -535,19 +536,7 @@ function renderForm(doc) {
   const prevName     = document.getElementById('first_name')?.value || '';
   const prevZip      = document.getElementById('zip_input')?.value || '';
 
-  document.getElementById('form-content').innerHTML = `
-    ` + (function(){return (function(){
-  var chars = "Public Record".split('');
-  var slot = 0;
-  var html = '<div class="page-header"><div class="project-label">';
-  chars.forEach(function(ch) {
-    if (ch === ' ') { html += '<span class="space">&nbsp;</span>'; }
-    else { html += '<span class="letter" style="--i:' + slot + '" data-pr-slot="' + slot + '">' + ch + '</span>'; slot++; }
-  });
-  html += '</div>';
-  html += '<p class="tagline">A civic practice, built in public from democracy’s primary sources</p></div>';
-  return html;
-})();})() + `<hr class="divider"><h2 class="doc-title">${esc(doc.title)}</h2>
+  document.getElementById('form-content').innerHTML = `<hr class="divider"><h2 class="doc-title">${esc(doc.title)}</h2>
     ${desc ? '<div class="doc-desc">' + esc(desc) + '</div>' : ''}
     ${prompt ? '<div class="prompt-text">' + esc(prompt) + '</div>' : ''}
     ${doTxt  ? '<div class="do-text">'     + esc(doTxt)  + '</div>' : ''}
@@ -854,8 +843,6 @@ function esc(s) {
 <script>
 // Scroll to top after content renders
 window.addEventListener('load', function() { window.scrollTo(0, 0); });
-var _origRenderForm = renderForm;
-renderForm = function(doc) { _origRenderForm(doc); setTimeout(function(){ window.scrollTo(0,0); document.body.scrollTop=0; document.documentElement.scrollTop=0; }, 300); };
 
 </script>
 <nav class="bottom-nav" style="max-width:580px;margin-left:auto;margin-right:auto;padding-left:16px;padding-right:16px;">

@@ -164,9 +164,9 @@
       display: block;
       width: 100%;
       padding: 13px;
-      background: #fff;
-      color: #000;
-      border: 2px solid #000;
+      background: #000;
+      color: #fff;
+      border: none;
       font-size: 16px;
       letter-spacing: 0;
       cursor: pointer;
@@ -174,8 +174,8 @@
       font-family: Helvetica, Arial, sans-serif;
       border-radius: 50px;
     }
-    .submit-btn:hover:not(:disabled) { background: #f0f0f0; }
-    .submit-btn:disabled { background: #fff; color: #999; border-color: #999; cursor: not-allowed; }
+    .submit-btn:hover:not(:disabled) { background: #333; }
+    .submit-btn:disabled { background: #999; color: #fff; border: none; cursor: not-allowed; }
 
     .resistbot-sms-btn {
       display: block;
@@ -392,7 +392,7 @@
     }
     .page-header .project-label { color: #fff; margin-bottom: 4px; }
     .tagline {
-      font-size: 10px;
+      font-size: 11px;
       color: rgba(255,255,255,0.7);
       margin-bottom: 0;
       line-height: 1.4;
@@ -855,7 +855,7 @@ function esc(s) {
 // Scroll to top after content renders
 window.addEventListener('load', function() { window.scrollTo(0, 0); });
 var _origRenderForm = renderForm;
-renderForm = function(doc) { _origRenderForm(doc); setTimeout(function(){ window.scrollTo(0, 0); }, 80); };
+renderForm = function(doc) { _origRenderForm(doc); setTimeout(function(){ window.scrollTo(0,0); document.body.scrollTop=0; document.documentElement.scrollTop=0; }, 300); };
 
 </script>
 <nav class="bottom-nav" style="max-width:580px;margin-left:auto;margin-right:auto;padding-left:16px;padding-right:16px;">

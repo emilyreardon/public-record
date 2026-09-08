@@ -663,17 +663,17 @@ function showResistbot(isUS, zip, response) {
   const copy = 'font-size:14px;line-height:1.5;color:#000;margin:0;font-family:Helvetica,Arial,sans-serif;';
   if (isUS) {
     block.innerHTML = `
-      <p style="${copy} margin-bottom:12px;">
-        Civic action works when it reaches the people who make the laws. You can send what you wrote directly to your representatives in Congress.
+      <p style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 10px;font-family:Helvetica,Arial,sans-serif;">
+        Take it further
       </p>
-      <a href="sms:50409?body=${smsBody}" style="display:block;width:100%;box-sizing:border-box;background:#000;color:#fff;text-decoration:none;padding:13px;font-size:16px;font-family:Helvetica,Arial,sans-serif;letter-spacing:0;text-align:center;border-radius:4px;cursor:pointer;">
-        Submit my response to the U.S. Public Record via Resistbot
+      <p style="${copy} margin-bottom:14px;">
+        What you just wrote can also go directly to your two U.S. senators and your House representative — by text, for free, in about 10 seconds.
+      </p>
+      <a href="sms:50409?body=${smsBody}" style="display:table;margin:0 auto;background:#000;color:#fff;text-decoration:none;padding:13px 32px;font-size:16px;font-family:Helvetica,Arial,sans-serif;text-align:center;border-radius:50px;cursor:pointer;">
+        Text my response to Congress &rarr;
       </a>
-      <p style="${copy} margin-top:10px;">
-        <strong>Resistbot</strong> is a free, nonpartisan tool built by a nonprofit. It routes your message to your two senators and your House representative by zip code. Republicans, Democrats, and independents all use it. Your representatives track constituent contact. Not affiliated with this installation.
-      </p>
-      <p style="${copy} margin-top:10px;">
-        The U.S. Public Record is how democracy keeps its receipts: the <strong>Congressional Record</strong> (every word spoken in Congress since 1873), the <strong>Federal Register</strong> (every proposed rule), and <strong>public comment periods</strong> anyone can join at <a href="https://regulations.gov" target="_blank" rel="noopener" style="color:#000;">regulations.gov</a>. Agencies must read every comment.
+      <p style="${copy} margin-top:12px;color:#777;font-size:12px;line-height:1.5;">
+        Tapping opens your Messages app with your response already written. Just hit send to <strong>50409</strong>. Resistbot is a free, nonpartisan nonprofit — not affiliated with this installation.
       </p>`;
   } else {
     block.innerHTML = `
@@ -748,13 +748,7 @@ async function handleSubmit(doc) {
       if (firstName) localStorage.setItem('pr_name', firstName);
       if (visitorZip) localStorage.setItem('pr_zip', visitorZip);
     } catch(e) {}
-    const rbOptIn = document.getElementById('resistbot-opt-in');
-    if (rbOptIn && rbOptIn.checked && isUS) {
-      const rbWord = lang === 'es' ? 'RESISTIR' : 'RESIST';
-      setTimeout(function() {
-        window.location.href = 'sms:50409?body=' + encodeURIComponent(rbWord + '\n\n' + response);
-      }, 600);
-    }
+
     window.scrollTo({ top: 0, behavior: 'smooth' });
     fetchEcho(response, doc.id);
   } catch (e) {

@@ -3,8 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,700&family=Josefin+Sans:wght@300&family=Poiret+One&family=Metamorphous&display=swap" rel="stylesheet">
   <title>Public Record</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -23,11 +21,6 @@
       max-width: 580px;
       margin: 0 auto;
     }
-    
-    :root {
-      --cycle-duration: 32s;
-      --stagger-step: 2.5s;
-    }
     .project-label {
       font-size: 16px;
       font-weight: bold;
@@ -35,11 +28,10 @@
       color: #000;
       margin-bottom: 4px;
       line-height: 1.3;
+      font-family: Helvetica, Arial, sans-serif;
     }
     .project-label .letter {
       display: inline-block;
-      animation: name-font-cycle var(--cycle-duration) steps(1) infinite;
-      animation-delay: calc(var(--i) * var(--stagger-step) * -1);
     }
     .period-dot {
       display: inline-block;
@@ -58,11 +50,7 @@
     .period-dot.visible { opacity: 1; }
     .project-label .letter {
       display: inline-block;
-      animation: name-font-cycle var(--cycle-duration) steps(1) infinite;
-      animation-delay: calc(var(--i) * var(--stagger-step) * -1);
     }
-    @keyframes name-font-cycle {
-      0%   { font-family: "Fraunces", serif; }
       25%  { font-family: "Josefin Sans", sans-serif; }
       50%  { font-family: "Poiret One", cursive; }
       75%  { font-family: "Metamorphous", serif; }
@@ -398,11 +386,6 @@
 
     @media (min-width: 480px) {
       .container { padding: 18px 24px 32px; }
-      
-    :root {
-      --cycle-duration: 32s;
-      --stagger-step: 2.5s;
-    }
     .project-label {
       font-size: 16px;
       font-weight: bold;
@@ -413,8 +396,6 @@
     }
     .project-label .letter {
       display: inline-block;
-      animation: name-font-cycle var(--cycle-duration) steps(1) infinite;
-      animation-delay: calc(var(--i) * var(--stagger-step) * -1);
     }
     .period-dot {
       display: inline-block;
@@ -433,11 +414,7 @@
     .period-dot.visible { opacity: 1; }
     .project-label .letter {
       display: inline-block;
-      animation: name-font-cycle var(--cycle-duration) steps(1) infinite;
-      animation-delay: calc(var(--i) * var(--stagger-step) * -1);
     }
-    @keyframes name-font-cycle {
-      0%   { font-family: "Fraunces", serif; }
       25%  { font-family: "Josefin Sans", sans-serif; }
       50%  { font-family: "Poiret One", cursive; }
       75%  { font-family: "Metamorphous", serif; }
@@ -446,6 +423,32 @@
     .doc-title { font-size: 18px; }
       textarea { height: 88px; }
     }
+
+    .tagline {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+    .bottom-nav {
+      border-top: 1px solid #000;
+      margin-top: 24px;
+      padding-top: 12px;
+      padding-bottom: 24px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .bottom-nav a {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #000;
+      text-decoration: none;
+    }
+    .bottom-nav a:hover { text-decoration: underline; }
   </style>
 <script src="https://cdn.jsdelivr.net/npm/bad-words@3.0.4/dist/bad-words.umd.js"></script>
 <script>history.scrollRestoration="manual";</script>
@@ -575,8 +578,9 @@ function renderForm(doc) {
     else { html += '<span class="letter" style="--i:' + slot + '" data-pr-slot="' + slot + '">' + ch + '</span>'; slot++; }
   });
   html += '</div>';
+  html += '<p class="tagline">A civic practice, built in public from democracy’s primary sources.</p>';
   return html;
-})();})() + `<h2 class="doc-title">${esc(doc.title)}</h2>
+})();})() + `<hr class="divider"><h2 class="doc-title">${esc(doc.title)}</h2>
     ${desc ? '<div class="doc-desc">' + esc(desc) + '</div>' : ''}
     ${prompt ? '<div class="prompt-text">' + esc(prompt) + '</div>' : ''}
     ${doTxt  ? '<div class="do-text">'     + esc(doTxt)  + '</div>' : ''}
@@ -883,6 +887,8 @@ function esc(s) {
 <script>
 // Scroll to top after content renders
 window.addEventListener('load', function() { window.scrollTo(0, 0); });
+var _origRenderForm = renderForm;
+renderForm = function(doc) { _origRenderForm(doc); window.scrollTo(0, 0); };
 
 // Period dot animation for "Public Record" (12 letter slots, space excluded)
 (function() {
@@ -974,5 +980,9 @@ window.addEventListener('load', function() { window.scrollTo(0, 0); });
   window.addEventListener('load', tryInit);
 })();
 </script>
+<nav class="bottom-nav" style="max-width:580px;margin-left:auto;margin-right:auto;padding-left:16px;padding-right:16px;">
+  <a href="https://docs.google.com/document/d/1m5hm90y40M-hqfDjAK0utWck-Farf3d_kqSVt-_vx7c/edit?tab=t.0" target="_blank" rel="noopener">Model Card</a>
+  <a href="https://emilyreardon.github.io/public-record/" target="_blank" rel="noopener">About</a>
+</nav>
 </body>
 </html>

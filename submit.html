@@ -388,7 +388,14 @@
       background: #000;
       color: #fff;
       padding: 10px 16px 12px;
-      margin: -6px -16px 12px;
+      margin: -6px -16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    /* Space below the sticky header so content doesn't hide under it */
+    #form-content {
+      padding-top: 12px;
     }
     .page-header .project-label { color: #fff; margin-bottom: 4px; }
     .tagline {

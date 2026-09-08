@@ -164,18 +164,18 @@
       display: block;
       width: 100%;
       padding: 13px;
-      background: #000;
-      color: #fff;
-      border: none;
+      background: #fff;
+      color: #000;
+      border: 2px solid #000;
       font-size: 16px;
       letter-spacing: 0;
       cursor: pointer;
       margin-top: 12px;
       font-family: Helvetica, Arial, sans-serif;
-      border-radius: 4px;
+      border-radius: 50px;
     }
-    .submit-btn:hover:not(:disabled) { background: #333; }
-    .submit-btn:disabled { background: #999; cursor: not-allowed; }
+    .submit-btn:hover:not(:disabled) { background: #f0f0f0; }
+    .submit-btn:disabled { background: #fff; color: #999; border-color: #999; cursor: not-allowed; }
 
     .resistbot-sms-btn {
       display: block;
@@ -545,7 +545,7 @@ function renderForm(doc) {
     else { html += '<span class="letter" style="--i:' + slot + '" data-pr-slot="' + slot + '">' + ch + '</span>'; slot++; }
   });
   html += '</div>';
-  html += '<p class="tagline">A civic practice, built in public from democracy’s primary sources.</p></div>';
+  html += '<p class="tagline">A civic practice, built in public from democracy’s primary sources</p></div>';
   return html;
 })();})() + `<hr class="divider"><h2 class="doc-title">${esc(doc.title)}</h2>
     ${desc ? '<div class="doc-desc">' + esc(desc) + '</div>' : ''}
@@ -855,7 +855,7 @@ function esc(s) {
 // Scroll to top after content renders
 window.addEventListener('load', function() { window.scrollTo(0, 0); });
 var _origRenderForm = renderForm;
-renderForm = function(doc) { _origRenderForm(doc); window.scrollTo(0, 0); };
+renderForm = function(doc) { _origRenderForm(doc); setTimeout(function(){ window.scrollTo(0, 0); }, 80); };
 
 </script>
 <nav class="bottom-nav" style="max-width:580px;margin-left:auto;margin-right:auto;padding-left:16px;padding-right:16px;">

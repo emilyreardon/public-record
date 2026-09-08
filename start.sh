@@ -1,29 +1,54 @@
-#!/bin/bash
-# Public Record — start both servers with auto-restart
-cd "$(dirname "$0")"
+#!/usr/bin/env bash
+set -e
+REPO_DIR="$(cd "$(dirname "$0")" && pwd)"
+CLOUDFLARED=/opt/homebrew/bin/cloudflared
 
-echo "Stopping any existing servers..."
-pkill -f "ai_server.py" 2>/dev/null
-pkill -f "http.server 3000" 2>/dev/null
-sleep 1
+echo "==> Starting local AI server..."
+cd "$REPO_DIR"
+# Start AI server in background (adjust path as needed)
+if [ -f server.py ]; then
+  python3 server.py &
+  AI_PID=$!
+  echo "    AI server PID: $AI_PID"
+  sleep 2
+else
+  echo "    (no server.py found — assuming AI server already running on :8000)"
+fi
 
-echo "Starting AI server (localhost:8000)..."
-(while true; do
-  python3 ai_server.py >> /tmp/ai.log 2>&1
-  echo "[$(date)] AI server stopped — restarting in 3s..." >> /tmp/ai.log
-  sleep 3
-done) &
+echo "==> Starting Cloudflare Quick Tunnel..."
+TUNNEL_LOG=$(mktemp)
+$CLOUDFLARED tunnel --url http://localhost:8000 2>"$TUNNEL_LOG" &
+CF_PID=$!
+echo "    cloudflared PID: $CF_PID"
 
-echo "Starting web server (localhost:3000)..."
-(while true; do
-  python3 -m http.server 3000 >> /tmp/http.log 2>&1
-  echo "[$(date)] HTTP server stopped — restarting in 3s..." >> /tmp/http.log
-  sleep 3
-done) &
+echo "    Waiting for tunnel URL..."
+TUNNEL_URL=""
+for i in $(seq 1 20); do
+  TUNNEL_URL=$(grep -oE 'https://[a-zA-Z0-9-]+\.trycloudflare\.com' "$TUNNEL_LOG" | head -1)
+  if [ -n "$TUNNEL_URL" ]; then break; fi
+  sleep 1
+done
+
+if [ -z "$TUNNEL_URL" ]; then
+  echo "ERROR: Could not find tunnel URL in log. Check $TUNNEL_LOG"
+  exit 1
+fi
+
+echo "==> Tunnel live at: $TUNNEL_URL"
+
+# Write to config.json and push
+echo "{\"ai_url\": \"$TUNNEL_URL\"}" > "$REPO_DIR/config.json"
+cd "$REPO_DIR"
+git add config.json
+git commit -m "chore: set tunnel URL for installation"
+git push
 
 echo ""
-echo "Both servers running."
-echo "  Web:  http://localhost:3000/submit.html?id=30"
-echo "  AI:   http://localhost:8000/health"
-echo ""
-echo "To stop everything: pkill -f ai_server.py && pkill -f 'http.server 3000'"
+echo "==> Installation ready!"
+echo "    Tunnel URL: $TUNNEL_URL"
+echo "    Phones will pick it up within ~1 min (GitHub CDN cache)."
+echo "    Run ./stop.sh when done."
+
+# Save PIDs for stop.sh
+echo "$CF_PID" > "$REPO_DIR/.cf_pid"
+[ -n "${AI_PID:-}" ] && echo "$AI_PID" > "$REPO_DIR/.ai_pid"

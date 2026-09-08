@@ -532,6 +532,13 @@ function t(key) { return UI[lang][key] || UI['en'][key] || key; }
 // ── HEALTH CHECK ─────────────────────────────────────────────────────────────
 // Ping the AI server once on load; cache result so submit doesn't time out
 CONFIG.aiOnline = false;
+CONFIG._loadPromise = (function() {
+  if (['localhost','127.0.0.1'].includes(window.location.hostname) || window.location.protocol==='file:') return Promise.resolve();
+  return fetch('https://raw.githubusercontent.com/emilyreardon/public-record/main/config.json?cb=' + Date.now())
+    .then(function(r){ return r.json(); })
+    .then(function(d){ if (d && d.ai_url) { CONFIG.AI_URL = d.ai_url; CONFIG.aiOnline = false; } })
+    .catch(function(){});
+})();
 async function checkHealth() {
   if (!CONFIG.AI_URL) return;
   try {
@@ -699,6 +706,8 @@ function showResistbot(isUS, zip, response) {
 
 
 async function handleSubmit(doc) {
+  // Wait for remote config to load (tunnel URL)
+  if (CONFIG._loadPromise) await CONFIG._loadPromise;
   // Re-check AI server health in case it came up after page load
   await checkHealth();
 

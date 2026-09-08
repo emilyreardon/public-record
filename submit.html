@@ -844,6 +844,28 @@ function esc(s) {
 // Scroll to top after content renders
 window.addEventListener('load', function() { window.scrollTo(0, 0); });
 
+// Re-scroll to top every time renderForm injects content (corpus loads async)
+var _origRenderForm = renderForm;
+renderForm = function(doc) {
+  _origRenderForm(doc);
+  // Immediate
+  window.scrollTo(0, 0);
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+  // After paint
+  requestAnimationFrame(function() {
+    window.scrollTo(0, 0);
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  });
+  // After layout settles (iOS Safari)
+  setTimeout(function() {
+    window.scrollTo(0, 0);
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }, 300);
+};
+
 </script>
 <nav class="bottom-nav" style="max-width:580px;margin-left:auto;margin-right:auto;padding-left:16px;padding-right:16px;">
   <a href="https://docs.google.com/document/d/1m5hm90y40M-hqfDjAK0utWck-Farf3d_kqSVt-_vx7c/edit?tab=t.0" target="_blank" rel="noopener">About</a>

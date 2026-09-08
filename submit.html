@@ -436,6 +436,23 @@
       text-decoration: none;
     }
     .bottom-nav a:hover { opacity: 0.7; }
+
+  /* ── Success screen phases ─────────────── */
+  .success-phase { transition: opacity 0.8s ease; }
+  .archive-header { padding-top: 4px; margin-bottom: 10px; }
+  .archive-subhead { font-size: 11px; letter-spacing: 1.2px; text-transform: uppercase; color: #888; margin-top: 4px; font-family: Helvetica, Arial, sans-serif; }
+  .archive-ticker-wrap { height: 220px; overflow: hidden; position: relative; border-top: 1px solid #000; border-bottom: 1px solid #000; margin: 0 -16px 16px; }
+  .archive-ticker-wrap::before, .archive-ticker-wrap::after { content: ''; position: absolute; left: 0; right: 0; height: 44px; z-index: 2; pointer-events: none; }
+  .archive-ticker-wrap::before { top: 0; background: linear-gradient(to bottom, #fff 0%, transparent 100%); }
+  .archive-ticker-wrap::after  { bottom: 0; background: linear-gradient(to top,   #fff 0%, transparent 100%); }
+  .ticker-scroll { animation: tickerScroll 44s linear infinite; }
+  @keyframes tickerScroll { 0% { transform: translateY(0); } 100% { transform: translateY(-50%); } }
+  .ticker-item { padding: 10px 16px; border-bottom: 1px solid #eee; }
+  .ticker-mine { background: #fafafa; }
+  .ticker-meta { font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: #bbb; margin-bottom: 3px; font-family: Helvetica, Arial, sans-serif; }
+  .ticker-mine .ticker-meta { color: #000; font-weight: bold; }
+  .ticker-text { font-size: 14px; line-height: 1.45; color: #000; font-family: Helvetica, Arial, sans-serif; }
+  .ticker-mine .ticker-text { font-weight: bold; }
   </style>
 <script src="https://cdn.jsdelivr.net/npm/bad-words@3.0.4/dist/bad-words.umd.js"></script>
 <script>history.scrollRestoration="manual";</script>
@@ -451,37 +468,32 @@
   </div>
 </div>
 
-<div class="success-view" id="success-view">
-  <div class="container">
-    <div class="success-title" id="success-title">Your response is now part of this installation’s record.</div>
-    <div class="success-response" id="success-text"></div>
-    <a href="https://emilyreardon.github.io/public-record/" class="view-record-link" target="_blank" rel="noopener">View the full record &rarr;</a>
+<div class="success-view" id="success-view" style="display:none;">
 
-    <hr class="success-divider">
-
-    <div class="echo-block" id="echo-block"></div>
-
-    <hr class="success-divider">
-
-    <div class="resistbot-block" id="resistbot-block"></div>
-
-    <!--
-    <hr class="success-divider">
-    <div class="success-section-label" id="clusters-label">Today at this installation</div>
-    <div class="clusters-block" id="clusters-block">
-      <div class="ai-loading" id="clusters-loading">&#8230;</div>
+  <!-- Phase 1: Echo (shown first, then dissolves into ticker) -->
+  <div id="phase-echo" class="success-phase">
+    <div class="container">
+      <div class="success-title" id="success-title">Your response is now part of this installation’s record.</div>
+      <div class="success-response" id="success-text"></div>
+      <div class="echo-block" id="echo-block"></div>
     </div>
-    -->
-
-    <hr class="success-divider">
-    <div class="next-step-block">
-      <p class="next-step-text">Find another document in the installation and scan its QR code to keep going.</p>
-      <a href="#" class="start-over-link" onclick="location.reload(); return false;">Or respond to this document again &rarr;</a>
-    </div>
-
   </div>
-</div>
 
+  <!-- Phase 2: Archive ticker + Resistbot (fades in after echo) -->
+  <div id="phase-archive" class="success-phase" style="display:none;opacity:0;">
+    <div class="container">
+      <div class="archive-header">
+        <div class="success-title">Your response is now part of this installation’s record.</div>
+        <div class="archive-subhead">You’re joining a growing public record:</div>
+      </div>
+      <div class="archive-ticker-wrap">
+        <div class="archive-ticker" id="archive-ticker"></div>
+      </div>
+      <div class="resistbot-block" id="resistbot-block"></div>
+    </div>
+  </div>
+
+</div>
 <script>
 const CONFIG = {
   // Local AI server — set to laptop IP during physical installation, e.g. 'http://192.168.4.1:8000'
@@ -739,6 +751,7 @@ async function handleSubmit(doc) {
     document.getElementById('success-text').textContent = '\u201c' + response + '\u201d';
     const isUS = /^\d{5}$/.test(visitorZip || '');
     showResistbot(isUS, visitorZip, response);
+    populateTicker(response, firstName, visitorZip);
     const smsWord = lang === 'es' ? 'RESISTIR' : 'RESIST';
     const smsBtn = document.getElementById('resistbot-sms-btn');
     if (smsBtn) smsBtn.href = 'sms:50409?body=' + encodeURIComponent(smsWord + '\n\n' + response);
@@ -767,11 +780,56 @@ function updateSuccessLang() {
   set('success-title',   'textContent', t('success_title'));
 }
 
+function startPhaseTransition() {
+  var pe = document.getElementById('phase-echo');
+  var pa = document.getElementById('phase-archive');
+  if (!pe || !pa) return;
+  pe.style.transition = 'opacity 0.8s';
+  pe.style.opacity = '0';
+  setTimeout(function() {
+    pe.style.display = 'none';
+    pa.style.display = 'block';
+    window.scrollTo(0, 0);
+    requestAnimationFrame(function() {
+      pa.style.transition = 'opacity 0.8s';
+      pa.style.opacity = '1';
+    });
+  }, 800);
+}
+
+function populateTicker(userResponse, userName, userZip) {
+  var ticker = document.getElementById('archive-ticker');
+  if (!ticker) return;
+  // Prototype sample responses — swap for real API fetch when backend is ready
+  var samples = [
+    {name:'Priya', zip:'10025', text:'If democracy means anything, it means everyone’s voice goes in the record — not just the loudest ones.'},
+    {name:'Maria', zip:'10452', text:'I came here from Honduras. I never thought I could speak to Congress. I’m doing it now.'},
+    {name:'James', zip:'10003', text:'The Congressional Record has been running since 1873. My words are in there now too.'},
+    {name:'Denise', zip:'10031', text:'My grandmother couldn’t vote. I’m voting and testifying and showing up. That’s for her.'},
+    {name:'Anonymous', zip:'', text:'What I want my representative to know: we are watching.'},
+    {name:'Tyler', zip:'10009', text:'This feels like what civics class should have been.'},
+    {name:'Robert', zip:'10457', text:'I don’t trust the government. I still showed up. That’s what democracy asks of you.'},
+    {name:'Sam', zip:'10036', text:'Make housing a human right. That’s all I wrote. I hope someone reads it.'},
+    {name:'Lisa', zip:'10128', text:'My kids are going to ask me what I did during this time. I want to have an answer.'},
+    {name:'Marcus', zip:'10037', text:'The record keeps going whether we participate or not. I’d rather be in it.'},
+  ];
+  function makeItem(name, zip, text, isMe) {
+    return '<div class="ticker-item' + (isMe ? ' ticker-mine' : '') + '">' +
+      '<div class="ticker-meta">' + esc(name) + (zip ? ', ' + esc(zip) : '') + '</div>' +
+      '<div class="ticker-text">' + esc(text) + '</div></div>';
+  }
+  var myItem = makeItem(userName || 'You', userZip || '', userResponse, true);
+  var rest = samples.map(function(s){ return makeItem(s.name, s.zip, s.text, false); }).join('');
+  // Duplicate for seamless infinite loop
+  ticker.innerHTML = '<div class="ticker-scroll">' + myItem + rest + myItem + rest + '</div>';
+}
+
 async function fetchEcho(text, docId) {
   const block = document.getElementById('echo-block');
   const loading = document.getElementById('echo-loading');
   if (!CONFIG.AI_URL || !CONFIG.aiOnline) {
     if (block) block.style.display = 'none';
+    setTimeout(startPhaseTransition, 1500);
     return;
   }
   try {
@@ -790,8 +848,10 @@ async function fetchEcho(text, docId) {
     block.innerHTML =
       '<div class="echo-intro">' + echoText + '</div>' +
       '<div class="echo-clause">' + esc(d.match_clause) + '</div>';
+    setTimeout(startPhaseTransition, 5000);
   } catch (e) {
-    block.innerHTML = '<div class="ai-offline">' + t('ai_offline') + '</div>';
+    if (block) block.style.display = 'none';
+    setTimeout(startPhaseTransition, 1500);
   }
 }
 

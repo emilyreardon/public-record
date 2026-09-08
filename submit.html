@@ -543,8 +543,10 @@ function renderForm(doc) {
     ? doc.submit_template_es : (doc.submit_template || '');
 
   const prevResponse = document.getElementById('response')?.value || '';
-  const prevName     = document.getElementById('first_name')?.value || '';
-  const prevZip      = document.getElementById('zip_input')?.value || '';
+  const savedName = (() => { try { return localStorage.getItem('pr_name') || ''; } catch(e) { return ''; } })();
+  const savedZip  = (() => { try { return localStorage.getItem('pr_zip')  || ''; } catch(e) { return ''; } })();
+  const prevName  = document.getElementById('first_name')?.value || savedName;
+  const prevZip   = document.getElementById('zip_input')?.value  || savedZip;
 
   document.getElementById('form-content').innerHTML = `<hr class="divider"><h2 class="doc-title">${esc(doc.title)}</h2>
     ${desc ? '<div class="doc-desc">' + esc(desc) + '</div>' : ''}
@@ -719,6 +721,11 @@ async function handleSubmit(doc) {
     const smsBtn = document.getElementById('resistbot-sms-btn');
     if (smsBtn) smsBtn.href = 'sms:50409?body=' + encodeURIComponent(smsWord + '\n\n' + response);
     updateSuccessLang();
+    // Remember name and zip for next visit
+    try {
+      if (firstName) localStorage.setItem('pr_name', firstName);
+      if (visitorZip) localStorage.setItem('pr_zip', visitorZip);
+    } catch(e) {}
     window.scrollTo({ top: 0, behavior: 'smooth' });
     fetchEcho(response, doc.id);
   } catch (e) {

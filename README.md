@@ -12,12 +12,11 @@ Project page and AI model card: https://emilyreardon.org/public-record.html
 | `monitor.html` | The shared screen in the room showing the growing record |
 | `ai_server.py` | Local AI server: finds the related clause and writes the echo |
 | `chunk_and_embed.py` | Splits the corpus into passages and indexes them for retrieval |
-| `public-record-corpus/` | The 137 source documents as text (US public domain) |
+| `public-record-corpus/` | The 134 source documents as text (US public domain) |
 | `corpus-data.json` | Excerpts and prompts shown for each document |
 | `print/` | Print templates for the NFC labels on the mobile |
 | `tools/` | Scripts used to gather and clean the corpus, kept for transparency |
 | `start.sh`, `stop.sh`, `setup_autostart.sh` | Start and stop the installation |
-| `supabase_setup.sql` | Database table for submissions |
 
 ## How it runs
 

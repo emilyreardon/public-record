@@ -716,8 +716,6 @@
 const CONFIG = {
   // Local AI server — set to laptop IP during physical installation, e.g. 'http://192.168.4.1:8000'
   AI_URL:            (['localhost','127.0.0.1'].includes(window.location.hostname) || window.location.protocol==='file:') ? 'http://localhost:8000' : '',
-  SUPABASE_URL:      '',
-  SUPABASE_ANON_KEY: '',
 
   // Formspree fallback (optional cloud recording)
   FORMSPREE_ID: '__FORMSPREE_ID__',
@@ -962,9 +960,6 @@ async function handleSubmit(doc) {
     let ok = false;
     if (CONFIG.aiOnline && CONFIG.AI_URL) {
       ok = await toLocalServer(payload);
-    } else if (CONFIG.SUPABASE_URL && !CONFIG.SUPABASE_URL.startsWith('__')) {
-      // Fallback: Supabase (cloud) when local AI server is offline
-      ok = await toSupabase(payload);
     } else if (CONFIG.FORMSPREE_ID && !CONFIG.FORMSPREE_ID.startsWith('__')) {
       ok = await toFormspree(payload);
     } else {
@@ -1197,26 +1192,6 @@ async function toLocalServer(payload) {
   return true;
 }
 
-// Supabase kept as fallback — uncomment SUPABASE_URL in CONFIG to enable
-async function toSupabase(payload) {
-  if (!CONFIG.SUPABASE_URL || CONFIG.SUPABASE_URL.startsWith('__')) return false;
-  const r = await fetch(`${CONFIG.SUPABASE_URL}/rest/v1/submissions`, {
-    method: 'POST',
-    headers: {
-      'Content-Type':  'application/json',
-      'apikey':        CONFIG.SUPABASE_ANON_KEY,
-      'Authorization': `Bearer ${CONFIG.SUPABASE_ANON_KEY}`,
-      'Prefer':        'return=minimal',
-    },
-    body: JSON.stringify(payload),
-  });
-  if (!r.ok) {
-    const body = await r.text().catch(() => '(no body)');
-    console.error('[PR] Supabase error', r.status, r.statusText, body);
-  }
-  return r.ok;
-}
-
 async function toFormspree(payload) {
   const r = await fetch(`https://formspree.io/f/${CONFIG.FORMSPREE_ID}`, {
     method: 'POST',
@@ -1267,40 +1242,7 @@ renderForm = function(doc) {
 
 </script>
 <nav class="bottom-nav" style="max-width:580px;margin-left:auto;margin-right:auto;padding-left:16px;padding-right:16px;">
-  <a href="https://docs.google.com/document/d/1m5hm90y40M-hqfDjAK0utWck-Farf3d_kqSVt-_vx7c/edit?tab=t.0" target="_blank" rel="noopener">About</a>
+  <a href="https://emilyreardon.org/model-card-public-record.html" target="_blank" rel="noopener">About</a>
 </nav>
 </body>
-</html>%                                                                                                                (base) emilyreardon@MacBook-Pro-9 ~ % cat ~/Documents/github/public-record/ai_server.py
-#!/usr/bin/env python3
-"""
-ai_server.py
-============
-Local FastAPI server for the Public Record installation.
-
-Endpoints:
-  GET  /health      → {"status": "ok", "docs": N}
-  POST /echo        → nearest corpus doc to visitor's response
-  GET  /clusters    → today's submission themes (via Ollama + Supabase)
-
-Set AI_URL in submit.html to 'http://<this-machine-ip>:8000' to activate.
-
-Usage:
-    python3 ai_server.py [--port 8000] [--host 0.0.0.0]
-
-Requirements: see requirements_ai.txt
-Run setup first: python3 chunk_and_embed.py
-"""
-
-import argparse
-import json
-import os
-import re
-import sqlite3
-import time
-from collections import Counter
-from datetime import datetime, timezone
-from pathlib import Path
-from typing import Optional
-
-import chromadb
-import requests
+</html>

@@ -31,23 +31,9 @@ cd ~/public-record-project
 pip3 install -r requirements_ai.txt
 ```
 
-### 3. Set your Supabase credentials
+### 3. Submissions database
 
-The `/clusters` endpoint reads today's submissions from Supabase. Export these before starting the server:
-
-```bash
-export SUPABASE_URL="https://your-project.supabase.co"
-export SUPABASE_KEY="your-anon-key"
-```
-
-Or add them to a `.env` file (don't commit it):
-
-```
-SUPABASE_URL=https://your-project.supabase.co
-SUPABASE_KEY=your-anon-key
-```
-
-Then load it: `export $(cat .env | xargs)`
+Visitor submissions are saved to `submissions.db`, a SQLite file on this laptop. The server creates it the first time it runs, so there's nothing to set up. It's listed in `.gitignore` and never goes to GitHub.
 
 ### 4. Ingest the corpus into ChromaDB
 
@@ -55,7 +41,7 @@ Then load it: `export $(cat .env | xargs)`
 python3 chunk_and_embed.py
 ```
 
-This reads all 137 markdown files, embeds them with `nomic-embed-text`, and saves to `./chroma_db/`. Takes ~2 minutes. Only needs to run once unless the corpus changes.
+This reads all 134 markdown files, embeds them with `nomic-embed-text`, and saves to `./chroma_db/`. Takes ~2 minutes. Only needs to run once unless the corpus changes.
 
 ---
 
@@ -103,7 +89,7 @@ Open a browser on your phone (on the same Wi-Fi) and visit:
 http://192.168.4.12:8000/health
 ```
 
-You should see: `{"status":"ok","docs":137,...}`
+You should see: `{"status":"ok","docs":134,...}`
 
 ---
 
@@ -111,9 +97,8 @@ You should see: `{"status":"ok","docs":137,...}`
 
 The server logs requests to the terminal. If the `/clusters` section shows offline text, check:
 
-1. Supabase credentials are set
-2. The laptop is on the same network as the phones
-3. `ollama serve` is running (it usually starts automatically; check with `curl localhost:11434/api/tags`)
+1. The laptop is on the same network as the phones
+2. `ollama serve` is running (it usually starts automatically; check with `curl localhost:11434/api/tags`)
 
 The cluster cache refreshes every 2 minutes automatically.
 

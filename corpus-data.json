@@ -1008,22 +1008,6 @@
     "submit_template": "I am on ___ land. My obligation is ___."
   },
   {
-    "id": 127,
-    "type": "Expansive",
-    "title": "Treaty of Fort Laramie",
-    "prompt": "The Treaty of Fort Laramie promised the Lakota people their land forever. The U.S. violated it within a decade when gold was discovered in the Black Hills. Name a promise your government made and broke.",
-    "do": "Talk to the person next to you. Write the promise.",
-    "submit_template": "A promise that was broken: ___."
-  },
-  {
-    "id": 128,
-    "type": "Expansive",
-    "title": "Treaty of New Echota",
-    "prompt": "The Treaty of New Echota was signed by a small faction of Cherokee leaders without tribal authority. The entire Nation was removed. When is a signature on a document legitimate — and when is it forced?",
-    "do": "Think of a contract, agreement, or policy you signed or accepted under conditions you didn't choose. Write about it.",
-    "submit_template": "I agreed to ___ under conditions I didn't choose."
-  },
-  {
     "id": 129,
     "type": "Expansive",
     "title": "Dred Scott v. Sandford",
@@ -1070,14 +1054,6 @@
     "prompt": "Truth asked a room full of people who doubted her: 'Ain't I a woman?' She named what was being taken from her and demanded they see it. What is being taken from you — and who needs to see it?",
     "do": "Say it out loud. To the person next to you. Then write it.",
     "submit_template": "Ain't I a ___?"
-  },
-  {
-    "id": 135,
-    "type": "Expansive",
-    "title": "Chief Joseph, surrender speech",
-    "prompt": "Chief Joseph said: 'I will fight no more forever.' He didn't stop caring — he stopped being able to fight. What have you stopped fighting for — not because you stopped caring, but because you ran out of something?",
-    "do": "Name it. Say it to the person next to you.",
-    "submit_template": "I stopped fighting for ___ when I ran out of ___."
   },
   {
     "id": 136,

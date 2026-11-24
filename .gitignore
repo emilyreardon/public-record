@@ -6,3 +6,6 @@ __pycache__/
 *.pyc
 chroma_db/
 submissions.db
+
+# Working files kept on this computer, not in the public repository
+_working/

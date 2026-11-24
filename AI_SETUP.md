@@ -19,10 +19,10 @@ Then pull the two models:
 
 ```bash
 ollama pull nomic-embed-text
-ollama pull llama3.2
+ollama pull olmo3-instruct
 ```
 
-`nomic-embed-text` is ~270 MB. `llama3.2` is ~2 GB. Pull both over good Wi-Fi before the show.
+`nomic-embed-text` is ~270 MB. `olmo3-instruct` is several GB. Pull both over good Wi-Fi before the show.
 
 ### 2. Install Python dependencies
 
@@ -130,7 +130,7 @@ If `AI_URL` is empty or the server is unreachable, the form still works complete
 | Model | Purpose | Size |
 |---|---|---|
 | `nomic-embed-text` | Embed visitor responses + corpus docs for similarity search | ~270 MB |
-| `llama3.2` | Theme clustering (groups today's responses into 3-5 labels) | ~2 GB |
+| `olmo3-instruct` | Echoes and theme clustering (groups today's responses into 3-5 labels) | ~2 GB |
 
 To swap the LLM for a smaller model (e.g. on a slower laptop), set:
 

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NFC Labels — Federalist No. 1 &amp; 2</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: #fff; }
+
+  @page { size: 8.5in 11in; margin: 0.4in; }
+
+  @media print {
+    body { margin: 0; }
+    .no-print { display: none; }
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 5in;
+    margin: 0 auto;
+  }
+
+  .cell {
+    width: 2.5in;
+    height: 2.5in;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .cluster {
+    position: relative;
+    width: 1.55in;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.05in;
+  }
+
+  .i-title {
+    font-size: 10pt;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-wrap: balance;
+  }
+
+  .i-rule {
+    width: 0.45in;
+    height: 0.4pt;
+    background: #000;
+    flex-shrink: 0;
+  }
+
+  .i-topic {
+    font-size: 7pt;
+    color: #000;
+    line-height: 1.45;
+    text-wrap: balance;
+  }
+
+  .i-quote {
+    font-size: 7pt;
+    font-style: italic;
+    line-height: 1.5;
+    color: #000;
+    text-wrap: balance;
+  }
+
+  .i-year {
+    font-size: 7pt;
+    letter-spacing: 0.12em;
+    color: #000;
+    text-transform: uppercase;
+    padding-top: 0.02in;
+  }
+</style>
+</head>
+<body>
+
+<div class="no-print" style="padding:0.2in; font-family:sans-serif; font-size:11pt; color:#555;">
+  Federalist No. 1 &amp; 2 — 2 of each &nbsp;|&nbsp;
+  <button onclick="window.print()">Print</button>
+</div>
+
+<div class="grid">
+
+  <!-- Federalist No. 1 × 2 -->
+  <div class="cell"><div class="cluster"><div class="i-title">Federalist No. 1</div><div class="i-rule"></div><div class="i-topic">General Introduction</div><div class="i-quote">"Societies of men are capable of establishing good government from reflection and choice."</div><div class="i-year">1787–1788</div></div></div>
+  <div class="cell"><div class="cluster"><div class="i-title">Federalist No. 1</div><div class="i-rule"></div><div class="i-topic">General Introduction</div><div class="i-quote">"Societies of men are capable of establishing good government from reflection and choice."</div><div class="i-year">1787–1788</div></div></div>
+
+  <!-- Federalist No. 2 × 2 -->
+  <div class="cell"><div class="cluster"><div class="i-title">Federalist No. 2</div><div class="i-rule"></div><div class="i-topic">Dangers from Foreign Force and Influence</div><div class="i-quote">"Providence has given this one connected country to one united people."</div><div class="i-year">1787–1788</div></div></div>
+  <div class="cell"><div class="cluster"><div class="i-title">Federalist No. 2</div><div class="i-rule"></div><div class="i-topic">Dangers from Foreign Force and Influence</div><div class="i-quote">"Providence has given this one connected country to one united people."</div><div class="i-year">1787–1788</div></div></div>
+
+</div>
+</body>
+</html>

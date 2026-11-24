@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NFC Labels — Federalist No. 1, 5, 7</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: #fff; }
+  @page { size: 8.5in 11in; margin: 0.4in; }
+  @media print { body { margin: 0; } .no-print { display: none; } }
+  .grid { display: flex; flex-wrap: wrap; width: 6.0in; margin: 0 auto; }
+  .cell { width: 2.0in; height: 2.0in; position: relative; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .guide { position: absolute; inset: 0; border-radius: 50%; border: 0.5pt dashed #ccc; }
+  .cluster { position: relative; width: 0.95in; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.04in; }
+  .i-title { font-size: 7pt; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; line-height: 1.2; text-wrap: balance; }
+  .i-rule { width: 0.3in; height: 0.4pt; background: #000; flex-shrink: 0; }
+  .i-topic { font-size: 5.5pt; color: #000; line-height: 1.4; text-wrap: balance; }
+  .i-quote { font-size: 5.5pt; font-style: italic; line-height: 1.45; color: #000; text-wrap: balance; }
+  .i-year { font-size: 5.5pt; letter-spacing: 0.1em; color: #000; text-transform: uppercase; padding-top: 0.015in; }
+</style>
+</head>
+<body>
+<div class="no-print" style="padding:0.2in; font-family:sans-serif; font-size:11pt; color:#555;">
+  Federalist No. 1, 5, 7 — one each &nbsp;|&nbsp; <button onclick="window.print()">Print</button>
+</div>
+<div class="grid">
+
+  <div class="cell"><div class="guide"></div><div class="cluster"><div class="i-title">Federalist No. 1</div><div class="i-rule"></div><div class="i-topic">General Introduction</div><div class="i-quote">"Societies of men are capable of establishing good government from reflection and choice."</div><div class="i-year">1787–1788</div></div></div>
+
+  <div class="cell"><div class="guide"></div><div class="cluster"><div class="i-title">Federalist No. 5</div><div class="i-rule"></div><div class="i-topic">Competing States and Peace</div><div class="i-quote">"America united will be more formidable to her enemies than America divided."</div><div class="i-year">1787–1788</div></div></div>
+
+  <div class="cell"><div class="guide"></div><div class="cluster"><div class="i-title">Federalist No. 7</div><div class="i-rule"></div><div class="i-topic">The Same Subject Continued</div><div class="i-quote">"Competition between States would render them liable to the intrigues of rival powers."</div><div class="i-year">1787–1788</div></div></div>
+
+</div>
+</body>
+</html>

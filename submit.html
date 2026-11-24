@@ -453,6 +453,204 @@
   .ticker-mine .ticker-meta { color: #000; font-weight: bold; }
   .ticker-text { font-size: 14px; line-height: 1.45; color: #000; font-family: Helvetica, Arial, sans-serif; }
   .ticker-mine .ticker-text { font-weight: bold; }
+
+  /* ── 3-phase success sequence ───────────────────────────────────── */
+
+  .confirm-mark {
+    font-size: 32px;
+    margin-bottom: 12px;
+    display: block;
+    animation: confirmPulse 1.2s ease-out forwards;
+  }
+  @keyframes confirmPulse {
+    0%   { opacity: 0; transform: scale(0.6); }
+    60%  { opacity: 1; transform: scale(1.1); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  .confirm-title {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 14px;
+    color: #000;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  .confirm-monitor {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #999;
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  .confirm-monitor::before {
+    content: '';
+    display: inline-block;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #000;
+    animation: monitorPulse 2s ease-in-out infinite;
+  }
+  @keyframes monitorPulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.2; }
+  }
+  .connect-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 6px;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  .connect-doc {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 14px;
+    color: #000;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  .connect-clause {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #555;
+    font-style: italic;
+    border-left: 2px solid #000;
+    padding-left: 12px;
+    margin-bottom: 16px;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  .connect-echo {
+    font-size: 15px;
+    line-height: 1.65;
+    color: #000;
+    margin-bottom: 16px;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  .connect-find {
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #bbb;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  .connect-loading {
+    font-size: 13px;
+    color: #bbb;
+    padding: 20px 0;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  .act-divider { border: none; border-top: 1px solid #000; margin: 0 0 16px; }
+  .act-q {
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 6px;
+    color: #000;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  .act-note {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 14px;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  .act-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .act-btn-yes {
+    display: block;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 16px;
+    font-size: 16px;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+  }
+  .act-btn-yes:hover { background: #333; }
+  .act-btn-no {
+    display: block;
+    background: transparent;
+    color: #555;
+    padding: 12px 16px;
+    font-size: 15px;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  .act-btn-no:hover { border-color: #000; color: #000; }
+  .act-legal {
+    font-size: 11px;
+    color: #aaa;
+    line-height: 1.5;
+    margin-top: 8px;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  .act-intl { font-size: 14px; line-height: 1.5; color: #000; font-family: Helvetica, Arial, sans-serif; }
+  .act-intl a { color: #000; }
+  .related-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 12px;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  .related-doc-card {
+    border: 1px solid #000;
+    padding: 14px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+  }
+  .related-doc-title {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 6px;
+    color: #000;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  .related-doc-clause {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 8px;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  .related-doc-hint {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #bbb;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  .related-back {
+    background: transparent;
+    border: none;
+    font-size: 13px;
+    color: #999;
+    cursor: pointer;
+    padding: 8px 0;
+    text-decoration: underline;
+    font-family: Helvetica, Arial, sans-serif;
+    margin-top: 4px;
+  }
   </style>
 <script src="https://cdn.jsdelivr.net/npm/bad-words@3.0.4/dist/bad-words.umd.js"></script>
 <script>history.scrollRestoration="manual";</script>
@@ -470,26 +668,46 @@
 
 <div class="success-view" id="success-view" style="display:none;">
 
-  <!-- Phase 1: Echo (shown first, then dissolves into ticker) -->
-  <div id="phase-echo" class="success-phase">
+  <!-- Phase 1: Confirmation -->
+  <div id="phase-confirm" class="success-phase">
     <div class="container">
-      <div class="success-title" id="success-title">Your response is now part of this installation’s record.</div>
+      <div class="confirm-mark">&#10022;</div>
+      <div class="confirm-title">Your voice is now in the record.</div>
       <div class="success-response" id="success-text"></div>
-      <div class="echo-block" id="echo-block"></div>
+      <div class="confirm-monitor">Also appearing on the gallery screen right now</div>
     </div>
   </div>
 
-  <!-- Phase 2: Archive ticker + Resistbot (fades in after echo) -->
-  <div id="phase-archive" class="success-phase" style="display:none;opacity:0;">
+  <!-- Phase 2: Historical connection -->
+  <div id="phase-connect" class="success-phase" style="display:none;opacity:0;">
     <div class="container">
-      <div class="archive-header">
-        <div class="success-title">Your response is now part of this installation’s record.</div>
-        <div class="archive-subhead">You’re joining a growing public record:</div>
+      <div class="connect-label">Your response connects to</div>
+      <div class="connect-doc" id="connect-doc"><div class="connect-loading">Finding your connection&hellip;</div></div>
+      <div class="connect-clause" id="connect-clause" style="display:none;"></div>
+      <div class="connect-echo" id="connect-echo" style="display:none;"></div>
+      <div class="connect-find" id="connect-find" style="display:none;"></div>
+    </div>
+  </div>
+
+  <!-- Phase 3: Action fork -->
+  <div id="phase-act" class="success-phase" style="display:none;opacity:0;">
+    <div class="container">
+      <hr class="act-divider">
+      <div id="act-fork">
+        <div class="act-q">Want to take this further?</div>
+        <p class="act-note">Writing to your elected representatives is always available &mdash; free, by text, in about 10 seconds.</p>
+        <div class="act-btns">
+          <a id="resistbot-yes-btn" href="#" class="act-btn-yes">Text my response to Congress &rarr;</a>
+          <button class="act-btn-no" onclick="showRelatedDocs()">Not now &mdash; show me more to explore</button>
+        </div>
+        <p class="act-legal">Tapping opens your Messages app. Text RESIST to 50409. Resistbot is a free, nonpartisan nonprofit &mdash; not affiliated with this installation.</p>
       </div>
-      <div class="archive-ticker-wrap">
-        <div class="archive-ticker" id="archive-ticker"></div>
+      <div id="related-docs" style="display:none;">
+        <div class="related-label">More in this installation to explore</div>
+        <div id="related-doc-1" class="related-doc-card"></div>
+        <div id="related-doc-2" class="related-doc-card"></div>
+        <button class="related-back" onclick="showActFork()">&larr; Back to the Congress option</button>
       </div>
-      <div class="resistbot-block" id="resistbot-block"></div>
     </div>
   </div>
 
@@ -613,12 +831,7 @@ function renderForm(doc) {
 
       <div class="error-msg" id="err"></div>
       <button type="submit" class="submit-btn" id="submit-btn">${t('submit_btn')}</button>
-      <div class="resistbot-opt-row" id="resistbot-opt-row" style="display:none;margin-top:12px;text-align:center;">
-        <label style="font-size:12px;color:#555;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;">
-          <input type="checkbox" id="resistbot-opt-in" checked style="accent-color:#000;width:15px;height:15px;">
-          Also send to my representatives in Congress via Resistbot
-        </label>
-      </div>
+
     </form>
   `;
 
@@ -626,11 +839,7 @@ function renderForm(doc) {
 
 
   const zipField = document.getElementById('zip_input');
-  const rbRow = document.getElementById('resistbot-opt-row');
-  function updateRbRow() {
-    if (rbRow) rbRow.style.display = /^\d{5}$/.test((zipField?.value||'').trim()) ? 'block' : 'none';
-  }
-  if (zipField) { zipField.addEventListener('input', updateRbRow); updateRbRow(); }
+  if (zipField) { zipField.addEventListener('input', function(){}); }
 
   document.getElementById('civic-form').addEventListener('submit', async e => {
     e.preventDefault();
@@ -673,34 +882,44 @@ function contentFilter(text) {
 
 
 
-function showResistbot(isUS, zip, response) {
-  const block = document.getElementById('resistbot-block');
-  if (!block) return;
+/* showResistbot replaced by populateResistbotBtn below */
+function populateResistbotBtn(response, isUS) {
+  const btn = document.getElementById('resistbot-yes-btn');
+  const fork = document.getElementById('act-fork');
+  if (!btn || !fork) return;
+  if (!isUS) {
+    // Replace fork with international option
+    fork.innerHTML = '<p class="act-intl">Outside the US? Most democracies have a similar process. <a href="https://www.mysociety.org/projects/" target="_blank" rel="noopener">mySociety.org</a> builds free civic contact tools for 30+ countries.</p>';
+    return;
+  }
   const smsWord = lang === 'es' ? 'RESISTIR' : 'RESIST';
-  const smsBody = encodeURIComponent(smsWord + '\n\n' + response);
+  btn.href = 'sms:50409?body=' + encodeURIComponent(smsWord + '\n\n' + response);
+}
 
-  const copy = 'font-size:14px;line-height:1.5;color:#000;margin:0;font-family:Helvetica,Arial,sans-serif;';
-  if (isUS) {
-    block.innerHTML = `
-      <p style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 10px;font-family:Helvetica,Arial,sans-serif;">
-        Take it further
-      </p>
-      <p style="${copy} margin-bottom:14px;">
-        What you just wrote can also go directly to your two U.S. senators and your House representative — by text, for free, in about 10 seconds.
-      </p>
-      <a href="sms:50409?body=${smsBody}" style="display:table;margin:0 auto;background:#000;color:#fff;text-decoration:none;padding:13px 32px;font-size:16px;font-family:Helvetica,Arial,sans-serif;text-align:center;border-radius:50px;cursor:pointer;">
-        Text my response to Congress &rarr;
-      </a>
-      <p style="${copy} margin-top:12px;color:#777;font-size:12px;line-height:1.5;">
-        Tapping opens your Messages app with your response already written. Just hit send to <strong>50409</strong>. Resistbot is a free, nonpartisan nonprofit — not affiliated with this installation.
-      </p>`;
-  } else {
-    block.innerHTML = `
-      <p style="${copy}">
-        Outside the US? Most democracies have a similar process.
-        <a href="https://www.mysociety.org/projects/" target="_blank" rel="noopener" style="color:#000;">mySociety.org</a>
-        builds free civic contact tools for 30+ countries.
-      </p>`;
+function showActFork() {
+  var fork = document.getElementById('act-fork');
+  var related = document.getElementById('related-docs');
+  if (fork) fork.style.display = 'block';
+  if (related) related.style.display = 'none';
+}
+
+function showRelatedDocs() {
+  var fork = document.getElementById('act-fork');
+  var related = document.getElementById('related-docs');
+  if (fork) fork.style.display = 'none';
+  if (related) {
+    related.style.display = 'block';
+    var docs = window._pr_related || [];
+    function makeCard(doc) {
+      if (!doc || !doc.title) return '<div style="font-size:13px;color:#999;font-family:Helvetica,Arial,sans-serif;">Explore the other documents hanging in this installation.</div>';
+      return '<div class="related-doc-title">' + esc(doc.title) + '</div>' +
+             (doc.clause ? '<div class="related-doc-clause">“' + esc(doc.clause) + '”</div>' : '') +
+             '<div class="related-doc-hint">Find it in the installation — scan its QR code</div>';
+    }
+    var c1 = document.getElementById('related-doc-1');
+    var c2 = document.getElementById('related-doc-2');
+    if (c1) c1.innerHTML = makeCard(docs[0]);
+    if (c2) c2.innerHTML = makeCard(docs[1]);
   }
 }
 
@@ -755,22 +974,22 @@ async function handleSubmit(doc) {
     // Proceed to success regardless — recording to backend is best-effort;
     // the civic action (ResistBot send) should never be blocked by a server error.
     if (!ok) console.warn('[PR] Backend record failed; proceeding to success screen anyway.');
+    // Stash state for use across phases
+    const isUS = /^\d{5}$/.test(visitorZip || '');
+    window._pr_response  = response;
+    window._pr_firstName = firstName;
+    window._pr_zip       = visitorZip;
+    window._pr_isUS      = isUS;
+    window._pr_related   = [];
     document.getElementById('main-view').style.display = 'none';
     document.getElementById('success-view').style.display = 'block';
     document.getElementById('success-text').textContent = '\u201c' + response + '\u201d';
-    const isUS = /^\d{5}$/.test(visitorZip || '');
-    showResistbot(isUS, visitorZip, response);
-    populateTicker(response, firstName, visitorZip);
-    const smsWord = lang === 'es' ? 'RESISTIR' : 'RESIST';
-    const smsBtn = document.getElementById('resistbot-sms-btn');
-    if (smsBtn) smsBtn.href = 'sms:50409?body=' + encodeURIComponent(smsWord + '\n\n' + response);
-    updateSuccessLang();
+    populateResistbotBtn(response, isUS);
     // Remember name and zip for next visit
     try {
       if (firstName) localStorage.setItem('pr_name', firstName);
       if (visitorZip) localStorage.setItem('pr_zip', visitorZip);
     } catch(e) {}
-
     window.scrollTo({ top: 0, behavior: 'smooth' });
     fetchEcho(response, doc.id);
   } catch (e) {
@@ -789,27 +1008,54 @@ function updateSuccessLang() {
   set('success-title',   'textContent', t('success_title'));
 }
 
-function startPhaseTransition() {
-  var pe = document.getElementById('phase-echo');
-  var pa = document.getElementById('phase-archive');
-  if (!pe || !pa) return;
-  pe.style.transition = 'opacity 0.8s';
-  pe.style.opacity = '0';
-  setTimeout(function() {
-    pe.style.display = 'none';
-    pa.style.display = 'block';
-    window.scrollTo(0, 0);
+function fadeOutEl(el, cb) {
+  if (!el) { if (cb) cb(); return; }
+  el.style.transition = 'opacity 0.6s';
+  el.style.opacity = '0';
+  setTimeout(function() { el.style.display = 'none'; if (cb) cb(); }, 650);
+}
+function fadeInEl(el, cb) {
+  if (!el) { if (cb) cb(); return; }
+  el.style.display = 'block';
+  window.scrollTo(0, 0);
+  requestAnimationFrame(function() {
     requestAnimationFrame(function() {
-      pa.style.transition = 'opacity 0.8s';
-      pa.style.opacity = '1';
+      el.style.transition = 'opacity 0.7s';
+      el.style.opacity = '1';
+      if (cb) setTimeout(cb, 700);
     });
-  }, 800);
+  });
 }
 
-function populateTicker(userResponse, userName, userZip) {
-  var ticker = document.getElementById('archive-ticker');
-  if (!ticker) return;
-  // Prototype sample responses — swap for real API fetch when backend is ready
+// Called after echo data arrives (or times out). Runs the full phase sequence.
+// p1 (Confirm) is already visible. p2 (Connect) shows for echoDelay ms, then p3 (Act).
+function startPhaseFlow(echoDelay) {
+  echoDelay = echoDelay || 1500;
+  var p1 = document.getElementById('phase-confirm');
+  var p2 = document.getElementById('phase-connect');
+  var p3 = document.getElementById('phase-act');
+
+  // p1 → p2
+  setTimeout(function() {
+    fadeOutEl(p1, function() {
+      fadeInEl(p2, function() {
+        // p2 → p3
+        setTimeout(function() {
+          fadeOutEl(p2, function() {
+            fadeInEl(p3);
+          });
+        }, echoDelay);
+      });
+    });
+  }, 3000); // 3s on confirmation screen
+}
+
+// Legacy alias (fetchEcho / other callers used to call startPhaseTransition)
+function startPhaseTransition() { startPhaseFlow(); }
+
+async function populateTicker(userResponse, userName, userZip) {
+  // Ticker removed from mobile. Kept as stub so monitor.html can still use the endpoint.
+  return;
   var samples = [
     {name:'Priya', zip:'10025', text:'If democracy means anything, it means everyone’s voice goes in the record — not just the loudest ones.'},
     {name:'Maria', zip:'10452', text:'I came here from Honduras. I never thought I could speak to Congress. I’m doing it now.'},
@@ -822,23 +1068,35 @@ function populateTicker(userResponse, userName, userZip) {
     {name:'Lisa', zip:'10128', text:'My kids are going to ask me what I did during this time. I want to have an answer.'},
     {name:'Marcus', zip:'10037', text:'The record keeps going whether we participate or not. I’d rather be in it.'},
   ];
+  // Try to fetch real submissions from API
+  var liveItems = [];
+  if (CONFIG.AI_URL && CONFIG.aiOnline) {
+    try {
+      var r = await fetch(CONFIG.AI_URL + '/submissions/recent?limit=20', {
+        signal: AbortSignal.timeout(4000)
+      });
+      if (r.ok) {
+        var d = await r.json();
+        liveItems = (d.submissions || []).filter(function(s) {
+          return s.text && s.text !== userResponse;
+        });
+      }
+    } catch(e) {}
+  }
+  var displayItems = liveItems.length >= 3 ? liveItems : samples;
   function makeItem(name, zip, text, isMe) {
     return '<div class="ticker-item' + (isMe ? ' ticker-mine' : '') + '">' +
-      '<div class="ticker-meta">' + esc(name) + (zip ? ', ' + esc(zip) : '') + '</div>' +
+      '<div class="ticker-meta">' + esc(name || 'Anonymous') + (zip ? ', ' + esc(zip) : '') + '</div>' +
       '<div class="ticker-text">' + esc(text) + '</div></div>';
   }
   var myItem = makeItem(userName || 'You', userZip || '', userResponse, true);
-  var rest = samples.map(function(s){ return makeItem(s.name, s.zip, s.text, false); }).join('');
-  // Duplicate for seamless infinite loop
+  var rest = displayItems.map(function(s){ return makeItem(s.name, s.zip, s.text, false); }).join('');
   ticker.innerHTML = '<div class="ticker-scroll">' + myItem + rest + myItem + rest + '</div>';
 }
 
 async function fetchEcho(text, docId) {
-  const block = document.getElementById('echo-block');
-  const loading = document.getElementById('echo-loading');
   if (!CONFIG.AI_URL || !CONFIG.aiOnline) {
-    if (block) block.style.display = 'none';
-    setTimeout(startPhaseTransition, 1500);
+    startPhaseFlow(0);  // skip p2 quickly (no data)
     return;
   }
   try {
@@ -846,21 +1104,54 @@ async function fetchEcho(text, docId) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ text, doc_id: docId }),
-      signal: AbortSignal.timeout(8000)
+      signal: AbortSignal.timeout(10000)
     });
-    if (!r.ok) throw new Error('echo failed');
+    if (!r.ok) throw new Error('echo ' + r.status);
     const d = await r.json();
-    // Use AI-generated echo if available, fall back to hardcoded
-    const echoText = d.generated_echo
-      ? esc(d.generated_echo)
-      : 'Your idea is connected to <strong>' + esc(d.match_title) + '</strong>, already hanging in this installation. People who believed the same thing kept sending it to their representatives until it changed the law. Find it, scan its QR code, and see what question it is still trying to answer.';
-    block.innerHTML =
-      '<div class="echo-intro">' + echoText + '</div>' +
-      '<div class="echo-clause">' + esc(d.match_clause) + '</div>';
-    setTimeout(startPhaseTransition, 5000);
+
+    // Stash related docs for the "not now" branch
+    window._pr_related = d.related_docs || [];
+
+    // Patch the submission record with echo data (best-effort, fire-and-forget)
+    if (CONFIG.AI_URL && CONFIG.aiOnline && window._pr_submission_id) {
+      fetch(CONFIG.AI_URL + '/submissions/' + window._pr_submission_id + '/echo', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          echo_match_title:  d.match_title  || '',
+          echo_match_clause: d.match_clause || '',
+          echo_generated:    d.generated_echo || '',
+        }),
+      }).catch(() => {});
+    }
+
+    // Populate phase-connect
+    const docEl    = document.getElementById('connect-doc');
+    const clauseEl = document.getElementById('connect-clause');
+    const echoEl   = document.getElementById('connect-echo');
+    const findEl   = document.getElementById('connect-find');
+    if (docEl)    docEl.textContent = d.match_title || '';
+    if (clauseEl && d.match_clause) {
+      clauseEl.textContent = '\u201c' + d.match_clause + '\u201d';
+      clauseEl.style.display = 'block';
+    }
+    if (echoEl && d.generated_echo) {
+      echoEl.textContent = d.generated_echo;
+      echoEl.style.display = 'block';
+    } else if (echoEl && d.match_title) {
+      echoEl.innerHTML = 'Your idea connects to <strong>' + esc(d.match_title) + '</strong>, already in this installation. People who believed the same thing kept showing up, kept sending letters, kept speaking on record \u2014 until it became law.';
+      echoEl.style.display = 'block';
+    }
+    if (findEl) {
+      findEl.textContent = 'Find it in the installation \u2014 scan its QR code to see what question it still hasn\u2019t answered.';
+      findEl.style.display = 'block';
+    }
+
+    // Show p2 for 7 seconds, then move to p3
+    startPhaseFlow(7000);
   } catch (e) {
-    if (block) block.style.display = 'none';
-    setTimeout(startPhaseTransition, 1500);
+    console.warn('[PR] fetchEcho failed:', e);
+    startPhaseFlow(0);
   }
 }
 
@@ -898,8 +1189,12 @@ async function toLocalServer(payload) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload),
   });
-  if (!r.ok) console.error('[PR] Local server submit error', r.status);
-  return r.ok;
+  if (!r.ok) { console.error('[PR] Local server submit error', r.status); return false; }
+  try {
+    const d = await r.json();
+    if (d.id) window._pr_submission_id = d.id;
+  } catch(e) {}
+  return true;
 }
 
 // Supabase kept as fallback — uncomment SUPABASE_URL in CONFIG to enable
@@ -975,4 +1270,37 @@ renderForm = function(doc) {
   <a href="https://docs.google.com/document/d/1m5hm90y40M-hqfDjAK0utWck-Farf3d_kqSVt-_vx7c/edit?tab=t.0" target="_blank" rel="noopener">About</a>
 </nav>
 </body>
-</html>
+</html>%                                                                                                                (base) emilyreardon@MacBook-Pro-9 ~ % cat ~/Documents/github/public-record/ai_server.py
+#!/usr/bin/env python3
+"""
+ai_server.py
+============
+Local FastAPI server for the Public Record installation.
+
+Endpoints:
+  GET  /health      → {"status": "ok", "docs": N}
+  POST /echo        → nearest corpus doc to visitor's response
+  GET  /clusters    → today's submission themes (via Ollama + Supabase)
+
+Set AI_URL in submit.html to 'http://<this-machine-ip>:8000' to activate.
+
+Usage:
+    python3 ai_server.py [--port 8000] [--host 0.0.0.0]
+
+Requirements: see requirements_ai.txt
+Run setup first: python3 chunk_and_embed.py
+"""
+
+import argparse
+import json
+import os
+import re
+import sqlite3
+import time
+from collections import Counter
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Optional
+
+import chromadb
+import requests

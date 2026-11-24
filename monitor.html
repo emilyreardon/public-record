@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Public Record — Gallery Monitor</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #000;
+  --fg: #fff;
+  --dim: rgba(255,255,255,0.45);
+  --border: rgba(255,255,255,0.15);
+  --accent: #fff;
+  --new-flash: rgba(255,255,255,0.08);
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ─── Layout ──────────────────────────────────────────────────── */
+.monitor {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  padding: 48px 64px 40px;
+  gap: 0;
+}
+
+/* ─── Header ──────────────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 32px;
+}
+.header-left {}
+.installation-name {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-bottom: 6px;
+}
+.project-title {
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+.project-subtitle {
+  font-size: 13px;
+  color: var(--dim);
+  margin-top: 6px;
+  letter-spacing: 0.3px;
+  line-height: 1.4;
+}
+.header-right {
+  text-align: right;
+}
+.live-dot {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+.live-dot::before {
+  content: '';
+  display: inline-block;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  animation: livePulse 2.4s ease-in-out infinite;
+}
+@keyframes livePulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.15; }
+}
+.count-display {
+  font-size: 52px;
+  font-weight: bold;
+  line-height: 1;
+  margin-top: 4px;
+  letter-spacing: -1px;
+}
+.count-label {
+  font-size: 11px;
+  color: var(--dim);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* ─── Feed ────────────────────────────────────────────────────── */
+.feed-wrap {
+  overflow: hidden;
+  position: relative;
+}
+/* Fade edges */
+.feed-wrap::before,
+.feed-wrap::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  height: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+.feed-wrap::before { top: 0;    background: linear-gradient(to bottom, #000 0%, transparent 100%); }
+.feed-wrap::after  { bottom: 0; background: linear-gradient(to top,    #000 0%, transparent 100%); }
+
+.feed {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  align-content: start;
+  height: 100%;
+  overflow: hidden;
+  padding: 12px 0;
+}
+
+/* ─── Submission card ─────────────────────────────────────────── */
+.card {
+  border: 1px solid var(--border);
+  padding: 20px 22px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.4s, opacity 0.4s;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 0;
+  max-height: 180px;
+}
+.card.card-new {
+  animation: cardNew 0.5s ease-out forwards;
+}
+@keyframes cardNew {
+  0%   { opacity: 0; transform: translateY(8px); background: var(--new-flash); }
+  100% { opacity: 1; transform: translateY(0);   background: transparent; }
+}
+.card-meta {
+  font-size: 10px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--dim);
+  flex-shrink: 0;
+}
+.card-text {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--fg);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  flex-grow: 1;
+}
+.card-doc {
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--dim);
+  flex-shrink: 0;
+  border-top: 1px solid var(--border);
+  padding-top: 8px;
+  margin-top: 2px;
+}
+
+/* ─── Clusters / themes ───────────────────────────────────────── */
+.footer {
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.footer-label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--dim);
+  flex-shrink: 0;
+}
+.clusters {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.cluster-pill {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.cluster-count {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1;
+}
+.cluster-theme {
+  font-size: 12px;
+  color: var(--dim);
+  letter-spacing: 0.3px;
+}
+
+/* ─── Empty state ─────────────────────────────────────────────── */
+.empty-state {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 16px;
+  opacity: 0.35;
+}
+.empty-mark { font-size: 48px; }
+.empty-text { font-size: 16px; letter-spacing: 1px; text-transform: uppercase; }
+
+/* ─── Ticker (single-column scrolling mode at bottom) ─────────── */
+.ticker-bar {
+  display: none; /* only shown in narrow mode */
+}
+</style>
+</head>
+<body>
+
+<div class="monitor">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-left">
+      <div class="installation-name" id="installation-name">New York, NY</div>
+      <div class="project-title">Public Record</div>
+      <div class="project-subtitle">A civic practice, built in public from democracy&rsquo;s primary sources</div>
+    </div>
+    <div class="header-right">
+      <div class="live-dot">Live</div>
+      <div class="count-display" id="count-display">0</div>
+      <div class="count-label">responses today</div>
+    </div>
+  </div>
+
+  <!-- Submission feed -->
+  <div class="feed-wrap">
+    <div class="feed" id="feed">
+      <div class="empty-state" id="empty-state">
+        <div class="empty-mark">&#10022;</div>
+        <div class="empty-text">Waiting for the first response</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer: theme clusters -->
+  <div class="footer" id="footer" style="display:none;">
+    <div class="footer-label">Today&rsquo;s themes</div>
+    <div class="clusters" id="clusters"></div>
+  </div>
+
+</div>
+
+<script>
+// ── Config ───────────────────────────────────────────────────────────────────
+// Set AI_URL to the laptop's local IP if serving over WiFi, e.g.:
+//   const AI_URL = 'http://192.168.1.42:8000';
+// For same-machine testing leave as localhost.
+const AI_URL  = (['localhost','127.0.0.1'].includes(location.hostname) || location.protocol==='file:')
+  ? 'http://localhost:8000'
+  : '';  // ← set to your laptop IP during installation
+
+const POLL_MS        = 8000;    // how often to fetch new submissions
+const CLUSTER_MS     = 60000;   // how often to refresh theme clusters
+const MAX_CARDS      = 24;      // max cards on screen at once
+const INSTALLATION   = 'New York, NY';
+
+// ── State ────────────────────────────────────────────────────────────────────
+let seenIds   = new Set();      // deduplicate by text fingerprint
+let cardEls   = [];             // ordered list of DOM card elements
+let totalCount = 0;
+
+// ── Helpers ──────────────────────────────────────────────────────────────────
+function textKey(text) {
+  return text.trim().toLowerCase().slice(0, 60);
+}
+
+function timeAgo(isoStr) {
+  const ms = Date.now() - new Date(isoStr + (isoStr.endsWith('Z') ? '' : 'Z')).getTime();
+  const min = Math.round(ms / 60000);
+  if (min < 1)  return 'just now';
+  if (min < 60) return min + 'm ago';
+  const hr = Math.round(min / 60);
+  return hr + 'h ago';
+}
+
+function esc(s) {
+  return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ── Render card ───────────────────────────────────────────────────────────────
+function makeCard(sub, isNew) {
+  const div = document.createElement('div');
+  div.className = 'card' + (isNew ? ' card-new' : '');
+
+  const metaParts = [sub.name || 'Anonymous'];
+  if (sub.zip) metaParts.push(sub.zip);
+  if (isNew) setTimeout(() => div.classList.remove('card-new'), 600);
+
+  // Show: response text, then which primary source it connected to (echo)
+  const sourceDoc = sub.echo_match_title || sub.doc_title || '';
+  div.innerHTML =
+    '<div class="card-meta">' + esc(metaParts.join(', ')) + '</div>' +
+    '<div class="card-text">' + esc(sub.text) + '</div>' +
+    (sourceDoc ? '<div class="card-doc">connects to: ' + esc(sourceDoc) + '</div>' : '');
+  return div;
+}
+
+function addCard(sub, isNew) {
+  const feed = document.getElementById('feed');
+  const empty = document.getElementById('empty-state');
+  if (empty) empty.remove();
+
+  const card = makeCard(sub, isNew);
+
+  // Prepend new cards, append old ones (so newest is top-left)
+  if (isNew) {
+    feed.insertBefore(card, feed.firstChild);
+    cardEls.unshift(card);
+  } else {
+    feed.appendChild(card);
+    cardEls.push(card);
+  }
+
+  // Trim old cards if over limit
+  while (cardEls.length > MAX_CARDS) {
+    const old = cardEls.pop();
+    old.style.opacity = '0';
+    setTimeout(() => old.remove(), 500);
+  }
+}
+
+// ── Update count display ──────────────────────────────────────────────────────
+function setCount(n) {
+  if (n === totalCount) return;
+  totalCount = n;
+  const el = document.getElementById('count-display');
+  if (el) el.textContent = n;
+}
+
+// ── Fetch submissions ─────────────────────────────────────────────────────────
+async function fetchSubmissions() {
+  if (!AI_URL) return;
+  try {
+    const r = await fetch(AI_URL + '/submissions/recent?limit=30', {
+      signal: AbortSignal.timeout(6000)
+    });
+    if (!r.ok) return;
+    const d = await r.json();
+    const subs = d.submissions || [];
+
+    // Find truly new ones
+    const newSubs = [];
+    for (const sub of subs) {
+      const key = textKey(sub.text || '');
+      if (!seenIds.has(key)) {
+        seenIds.add(key);
+        newSubs.push(sub);
+      }
+    }
+
+    // On first load: show all (oldest first)
+    if (cardEls.length === 0 && subs.length > 0) {
+      [...subs].reverse().forEach(s => {
+        const key = textKey(s.text || '');
+        seenIds.add(key);
+        addCard(s, false);
+      });
+    } else {
+      // On subsequent polls: prepend new ones
+      newSubs.reverse().forEach(s => addCard(s, true));
+    }
+
+    // Update count from health or submission length
+    try {
+      const h = await fetch(AI_URL + '/health', { signal: AbortSignal.timeout(3000) });
+      if (h.ok) {
+        const hd = await h.json();
+        if (typeof hd.submissions === 'number') setCount(hd.submissions);
+      }
+    } catch(e) {
+      setCount(seenIds.size);
+    }
+  } catch(e) {
+    console.warn('[monitor] fetch error:', e);
+  }
+}
+
+// ── Fetch clusters ────────────────────────────────────────────────────────────
+async function fetchClusters() {
+  if (!AI_URL) return;
+  try {
+    const r = await fetch(AI_URL + '/clusters', { signal: AbortSignal.timeout(8000) });
+    if (!r.ok) return;
+    const d = await r.json();
+    const clusters = d.clusters || [];
+    const footer = document.getElementById('footer');
+    const el = document.getElementById('clusters');
+    if (!el) return;
+
+    if (clusters.length === 0) {
+      if (footer) footer.style.display = 'none';
+      return;
+    }
+
+    el.innerHTML = clusters.map(c =>
+      '<div class="cluster-pill">' +
+        '<span class="cluster-count">' + esc(String(c.count)) + '</span>' +
+        '<span class="cluster-theme">' + esc(c.theme) + '</span>' +
+      '</div>'
+    ).join('');
+    if (footer) footer.style.display = 'flex';
+  } catch(e) {}
+}
+
+// ── Offline / no AI fallback ──────────────────────────────────────────────────
+function showOfflineMessage() {
+  const feed = document.getElementById('feed');
+  if (feed && !document.querySelector('.card')) {
+    feed.innerHTML =
+      '<div class="empty-state">' +
+        '<div class="empty-mark">&#10022;</div>' +
+        '<div class="empty-text">Connecting to installation server&hellip;</div>' +
+      '</div>';
+  }
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+document.getElementById('installation-name').textContent = INSTALLATION;
+
+(async function init() {
+  if (!AI_URL) { showOfflineMessage(); return; }
+  await fetchSubmissions();
+  await fetchClusters();
+  setInterval(fetchSubmissions, POLL_MS);
+  setInterval(fetchClusters, CLUSTER_MS);
+})();
+</script>
+</body>
+</html>

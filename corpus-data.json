@@ -1094,5 +1094,21 @@
     "prompt": "In 1968, the SCLC demanded five things: a job, an income, land, capital, and a voice in the programs that govern you. In 2025, which of these do you still not have?",
     "do": "Name the one you most need. Add it to the demand list.",
     "submit_template": "I demand ___."
+  },
+  {
+    "id": 138,
+    "type": "Core",
+    "title": "Bill of Rights",
+    "prompt": "Ten amendments, ratified in 1791. Together they drew a boundary around government power — and around you.",
+    "do": "Which of these ten feels most urgent to you right now? Write it down.",
+    "submit_template": "The right that matters most to me right now: ___."
+  },
+  {
+    "id": 139,
+    "type": "Core",
+    "title": "The Federalist Papers",
+    "prompt": "85 essays written in 1787–1788 to convince New Yorkers to ratify the Constitution. They argued about power, liberty, and what kind of country this could be.",
+    "do": "The argument is still going. What do you think this country could be?",
+    "submit_template": "This country could be ___."
   }
 ]

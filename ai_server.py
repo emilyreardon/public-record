@@ -1,39 +1,12 @@
-#!/usr/bin/env python3
-"""
-ai_server.py
-============
-Local FastAPI server for the Public Record installation.
-
-Endpoints:
-  GET  /health      → {"status": "ok", "docs": N}
-  POST /echo        → nearest corpus doc to visitor's response
-  GET  /clusters    → today's submission themes (via Ollama + Supabase)
-
-Set AI_URL in submit.html to 'http://<this-machine-ip>:8000' to activate.
-
-Usage:
-    python3 ai_server.py [--port 8000] [--host 0.0.0.0]
-
-Requirements: see requirements_ai.txt
-Run setup first: python3 chunk_and_embed.py
-"""
-
-import argparse
-import json
-import os
-import re
-import sqlite3
-import time
-from collections import Counter
-from datetime import datetime, timezone
-from pathlib import Path
-from typing import Optional
-
-import chromadb
-import requests
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
+from pathlib import Path
+from typing import Optional, List
+import os, sqlite3, json, re, argparse, time, requests, chromadb
+from datetime import datetime, timezone
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
@@ -64,10 +37,24 @@ def init_db():
             installation_name TEXT,
             visitor_zip       TEXT,
             consented         INTEGER DEFAULT 1,
-            ui_language       TEXT
+            ui_language       TEXT,
+            echo_match_title  TEXT,
+            echo_match_clause TEXT,
+            echo_generated    TEXT
         )
     """)
     con.commit()
+    # Add echo columns if upgrading an existing database
+    for col, coltype in [
+        ("echo_match_title",  "TEXT"),
+        ("echo_match_clause", "TEXT"),
+        ("echo_generated",    "TEXT"),
+    ]:
+        try:
+            con.execute(f"ALTER TABLE submissions ADD COLUMN {col} {coltype}")
+            con.commit()
+        except Exception:
+            pass  # column already exists
     con.close()
 
 init_db()
@@ -79,9 +66,23 @@ app = FastAPI(title="Public Record AI", version="1.0")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],   # installation is local network; fine to open
-    allow_methods=["GET", "POST"],
+    allow_methods=["GET", "POST", "PATCH"],
     allow_headers=["*"],
 )
+
+_STATIC_DIR = Path(__file__).parent
+
+@app.get("/monitor", include_in_schema=False)
+def monitor_page():
+    p = _STATIC_DIR / "monitor.html"
+    if p.exists():
+        return FileResponse(str(p), media_type="text/html")
+    return {"error": "monitor.html not found in the same directory as ai_server.py"}
+
+@app.get("/", include_in_schema=False)
+def root_redirect():
+    return FileResponse(str(_STATIC_DIR / "submit.html"), media_type="text/html") if (_STATIC_DIR / "submit.html").exists() else {"status": "ok"}
+
 
 # ── ChromaDB ──────────────────────────────────────────────────────────────────
 
@@ -273,11 +274,38 @@ def submit(req: SubmitRequest):
         con.execute(
             """INSERT INTO submissions
                (doc_id, doc_title, response_text, submit_template,
-                first_name, installation_name, visitor_zip, consented, ui_language)
-               VALUES (?,?,?,?,?,?,?,?,?)""",
+                first_name, installation_name, visitor_zip, consented, ui_language,
+                echo_match_title, echo_match_clause, echo_generated)
+               VALUES (?,?,?,?,?,?,?,?,?,?,?,?)""",
             (req.doc_id, req.doc_title, req.response_text, req.submit_template,
              req.first_name, req.installation_name, req.visitor_zip,
-             1 if req.consented else 0, req.ui_language)
+             1 if req.consented else 0, req.ui_language,
+             req.echo_match_title, req.echo_match_clause, req.echo_generated)
+        )
+        new_id = con.execute("SELECT last_insert_rowid()").fetchone()[0]
+        con.commit()
+        con.close()
+        return {"status": "ok", "id": new_id}
+    except Exception as e:
+        raise HTTPException(500, f"Database error: {e}")
+
+
+class EchoUpdateRequest(BaseModel):
+    echo_match_title:  Optional[str] = None
+    echo_match_clause: Optional[str] = None
+    echo_generated:    Optional[str] = None
+
+
+@app.patch("/submissions/{submission_id}/echo")
+def update_submission_echo(submission_id: int, req: EchoUpdateRequest):
+    """Patch a saved submission with echo data once the LLM has finished."""
+    try:
+        con = sqlite3.connect(SQLITE_PATH)
+        con.execute(
+            """UPDATE submissions
+               SET echo_match_title = ?, echo_match_clause = ?, echo_generated = ?
+               WHERE id = ?""",
+            (req.echo_match_title, req.echo_match_clause, req.echo_generated, submission_id)
         )
         con.commit()
         con.close()
@@ -352,14 +380,62 @@ def echo(req: EchoRequest):
     except Exception as e:
         print(f"[echo] LLM generation failed: {e}")
 
+    # Build related_docs from the 2nd and 3rd closest matches
+    related_docs = []
+    for idx in range(1, min(3, len(results["ids"][0]))):
+        rm = results["metadatas"][0][idx]
+        rd = results["documents"][0][idx]
+        r_sentences = re.split(r"(?<=[.!?])\s+", rd)
+        r_clause = next((s for s in r_sentences if 20 < len(s) < 200), r_sentences[0][:160])
+        related_docs.append({
+            "title":  rm.get("title", ""),
+            "clause": r_clause,
+            "id":     rm.get("corpus_id", -1),
+        })
+
     return {
         "match_id":       meta.get("corpus_id", -1),
         "match_title":    meta.get("title", ""),
         "match_clause":   clause,
         "generated_echo": generated_echo,
         "distance":       round(distance, 4),
+        "related_docs":   related_docs,
     }
 
+
+
+
+@app.get("/submissions/recent")
+def submissions_recent(limit: int = 20):
+    """Return the most recent consented submissions for the live ticker."""
+    limit = min(max(1, limit), 50)
+    try:
+        con = sqlite3.connect(SQLITE_PATH)
+        rows = con.execute(
+            """SELECT first_name, visitor_zip, response_text, created_at,
+                      doc_title, echo_match_title, echo_generated
+               FROM submissions
+               WHERE consented = 1 AND response_text IS NOT NULL
+               ORDER BY created_at DESC LIMIT ?""",
+            (limit,)
+        ).fetchall()
+        con.close()
+        return {
+            "submissions": [
+                {
+                    "name":              r[0] or "Anonymous",
+                    "zip":               r[1] or "",
+                    "text":              r[2],
+                    "created_at":        r[3],
+                    "doc_title":         r[4] or "",
+                    "echo_match_title":  r[5] or "",
+                    "echo_generated":    r[6] or "",
+                }
+                for r in rows
+            ]
+        }
+    except Exception as e:
+        raise HTTPException(500, f"Database error: {e}")
 
 @app.get("/clusters")
 def clusters(force: bool = False):
